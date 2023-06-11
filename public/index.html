@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <style>
+      * {
+        box-sizing: border-box;
+        padding: 0;margin: 0;
+      }
+    </style>
   </head>
   <body>
     <noscript>
@@ -14,4 +20,24 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
+  <script>
+    window.onload=function () {
+      window_change();
+        window.addEventListener('resize',()=>{
+          window_change();
+        })
+    }
+    // 获取窗口大小
+    function window_change() {
+      const width= document.documentElement.clientWidth
+     const height=document.documentElement.clientHeight
+    //  console.log(width,height)
+     const app= document.getElementById('app');
+     app.style.width=width+'px'
+     app.style.height=height+'px'
+    //  app.style.backgroundColor='red'
+      
+    }
+  </script>
+  
 </html>
