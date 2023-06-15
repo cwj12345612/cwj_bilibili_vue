@@ -10,6 +10,16 @@
       * {
         box-sizing: border-box;
         padding: 0;margin: 0;
+      
+      }
+      input {
+        outline: none;
+      }
+      li {
+        list-style: none;
+      }
+      a {
+        text-decoration: none;
       }
     </style>
   </head>
@@ -22,22 +32,37 @@
   </body>
   <script>
     window.onload=function () {
-      window_change();
+      const scrollbarWidth=  getScrollbarWidth();
+      window_change(scrollbarWidth);
         window.addEventListener('resize',()=>{
-          window_change();
+          window_change(scrollbarWidth);
+          
         })
     }
     // 获取窗口大小
-    function window_change() {
+    function window_change(scrollbarWidth) { 
       const width= document.documentElement.clientWidth
      const height=document.documentElement.clientHeight
-    //  console.log(width,height)
      const app= document.getElementById('app');
-     app.style.width=width+'px'
+     app.style.width=(width - scrollbarWidth )+'px'
      app.style.height=height+'px'
-    //  app.style.backgroundColor='red'
-      
+     app.style.backgroundColor='pink'
+    //  console.log(app.style.width);
     }
+    //获取滚动条的宽度
+    function getScrollbarWidth() {
+    var odiv = document.createElement('div'),//创建一个div
+        styles = {
+            width: '100px',
+            height: '100px',
+            overflowY: 'scroll'//让他有滚动条
+        }, i, scrollbarWidth;
+    for (i in styles) odiv.style[i] = styles[i];
+    document.body.appendChild(odiv);//把div添加到body中
+    scrollbarWidth = odiv.offsetWidth - odiv.clientWidth;//相减
+    odiv.remove();//移除创建的div
+    return scrollbarWidth;//返回滚动条宽度
+}
   </script>
   
 </html>

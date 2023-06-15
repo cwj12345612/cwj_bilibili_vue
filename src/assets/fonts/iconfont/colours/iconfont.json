@@ -1,0 +1,205 @@
+{
+  "id": "4115827",
+  "name": "cwj-bilibili-vue_colour",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "2462068",
+      "name": "ic_user level_0",
+      "font_class": "ic_userlevel_",
+      "unicode": "e6cb",
+      "unicode_decimal": 59083
+    },
+    {
+      "icon_id": "2462072",
+      "name": "ic_user level_1",
+      "font_class": "ic_userlevel_1",
+      "unicode": "e6cc",
+      "unicode_decimal": 59084
+    },
+    {
+      "icon_id": "2462074",
+      "name": "ic_user level_2",
+      "font_class": "ic_userlevel_2",
+      "unicode": "e6cd",
+      "unicode_decimal": 59085
+    },
+    {
+      "icon_id": "2462075",
+      "name": "ic_user level_3",
+      "font_class": "ic_userlevel_3",
+      "unicode": "e6ce",
+      "unicode_decimal": 59086
+    },
+    {
+      "icon_id": "2462076",
+      "name": "ic_user level_4",
+      "font_class": "ic_userlevel_4",
+      "unicode": "e6cf",
+      "unicode_decimal": 59087
+    },
+    {
+      "icon_id": "2462079",
+      "name": "ic_user level_5",
+      "font_class": "ic_userlevel_5",
+      "unicode": "e6d0",
+      "unicode_decimal": 59088
+    },
+    {
+      "icon_id": "2462080",
+      "name": "ic_user level_6",
+      "font_class": "ic_userlevel_6",
+      "unicode": "e6d1",
+      "unicode_decimal": 59089
+    },
+    {
+      "icon_id": "2508788",
+      "name": "电视剧-01",
+      "font_class": "dianshiju-",
+      "unicode": "e6d4",
+      "unicode_decimal": 59092
+    },
+    {
+      "icon_id": "2508789",
+      "name": "编辑推荐",
+      "font_class": "bianjituijian",
+      "unicode": "e6d5",
+      "unicode_decimal": 59093
+    },
+    {
+      "icon_id": "2508790",
+      "name": "电视剧",
+      "font_class": "dianshiju",
+      "unicode": "e6d6",
+      "unicode_decimal": 59094
+    },
+    {
+      "icon_id": "2508791",
+      "name": "冬",
+      "font_class": "dong",
+      "unicode": "e6d7",
+      "unicode_decimal": 59095
+    },
+    {
+      "icon_id": "2508792",
+      "name": "电影",
+      "font_class": "dianying",
+      "unicode": "e6d8",
+      "unicode_decimal": 59096
+    },
+    {
+      "icon_id": "2508793",
+      "name": "广告",
+      "font_class": "guanggao",
+      "unicode": "e6d9",
+      "unicode_decimal": 59097
+    },
+    {
+      "icon_id": "2508794",
+      "name": "春",
+      "font_class": "chun",
+      "unicode": "e6da",
+      "unicode_decimal": 59098
+    },
+    {
+      "icon_id": "2508795",
+      "name": "鬼畜",
+      "font_class": "guixu",
+      "unicode": "e6db",
+      "unicode_decimal": 59099
+    },
+    {
+      "icon_id": "2508796",
+      "name": "番剧推荐",
+      "font_class": "fanjutuijian",
+      "unicode": "e6dc",
+      "unicode_decimal": 59100
+    },
+    {
+      "icon_id": "2508797",
+      "name": "国产动画推荐",
+      "font_class": "guochandonghuatuijian",
+      "unicode": "e6dd",
+      "unicode_decimal": 59101
+    },
+    {
+      "icon_id": "2508799",
+      "name": "生活",
+      "font_class": "shenghuo",
+      "unicode": "e6de",
+      "unicode_decimal": 59102
+    },
+    {
+      "icon_id": "2508800",
+      "name": "时尚",
+      "font_class": "shishang",
+      "unicode": "e6df",
+      "unicode_decimal": 59103
+    },
+    {
+      "icon_id": "2508801",
+      "name": "索引",
+      "font_class": "suoyin",
+      "unicode": "e6e0",
+      "unicode_decimal": 59104
+    },
+    {
+      "icon_id": "2508802",
+      "name": "时间表",
+      "font_class": "shijianbiao",
+      "unicode": "e6e1",
+      "unicode_decimal": 59105
+    },
+    {
+      "icon_id": "2508803",
+      "name": "我的追番",
+      "font_class": "wodezhuifan",
+      "unicode": "e6e2",
+      "unicode_decimal": 59106
+    },
+    {
+      "icon_id": "2508804",
+      "name": "科技-04",
+      "font_class": "keji-",
+      "unicode": "e6e3",
+      "unicode_decimal": 59107
+    },
+    {
+      "icon_id": "2508805",
+      "name": "完结推荐",
+      "font_class": "wanjietuijian",
+      "unicode": "e6e4",
+      "unicode_decimal": 59108
+    },
+    {
+      "icon_id": "2508806",
+      "name": "游戏",
+      "font_class": "youxi",
+      "unicode": "e6e5",
+      "unicode_decimal": 59109
+    },
+    {
+      "icon_id": "2508807",
+      "name": "直播",
+      "font_class": "zhibo",
+      "unicode": "e6e6",
+      "unicode_decimal": 59110
+    },
+    {
+      "icon_id": "2508808",
+      "name": "娱乐",
+      "font_class": "yule",
+      "unicode": "e6e7",
+      "unicode_decimal": 59111
+    },
+    {
+      "icon_id": "2508809",
+      "name": "最新连载",
+      "font_class": "zuixinlianzai",
+      "unicode": "e6e8",
+      "unicode_decimal": 59112
+    }
+  ]
+}
