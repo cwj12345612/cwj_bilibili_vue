@@ -8,7 +8,7 @@ import { mapGetters,mapActions,mapMutations,mapState } from 'vuex';
  
 export default {
     components:{
- 
+            
               },
     data() {
           return {

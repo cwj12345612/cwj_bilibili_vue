@@ -18,7 +18,7 @@
         <template v-for="entry in right_list">
             <a  :href="entry.href">
                 <div class="icon" >
-                    <i :class="`iconfont ${entry.icon}`" style="font-size: 27px;"></i>
+                    <i :class="`iconfont ${entry.icon}`" style="font-size: 27px;position: absolute;bottom: 0;left: 50%;margin-left: -13.5px;"></i>
                 </div>
                 <div class="title">
                     <span>{{ entry.title }}</span>
@@ -146,7 +146,7 @@ div.header {
     height: var(--height);
     width: 100%;
     padding:0  24px;
-    background-color: blueviolet;
+    background-color: green;
 }
 .left {
     float: left;
@@ -235,12 +235,13 @@ div.header {
     margin-left: 1%;
     font-size: 13px;
     color: #ffffff;
+    /* position: relative; */
 }
 .right .icon {
     width: 100%;
     height: 50%;
     /* background-color: green; */
-    line-height: calc(var(--height) / 2);
+  position: relative;
     text-align: center;
     
 } 
@@ -262,7 +263,7 @@ div.header {
 .creation .create {
     height: 34px;
     width: 80%;
-    /* background-color: blueviolet; */
+    background-color: pink;
     position: absolute;
     right: 0;
     top: calc((var(--height) - 34px) / 2);
