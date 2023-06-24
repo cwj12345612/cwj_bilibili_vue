@@ -36,18 +36,20 @@
       window_change(scrollbarWidth);
         window.addEventListener('resize',()=>{
           window_change(scrollbarWidth);
-          
+   
         })
     }
     // 获取窗口大小
     function window_change(scrollbarWidth) { 
-      const width= document.documentElement.clientWidth
+      const width= document.documentElement.clientWidth -scrollbarWidth;
      const height=document.documentElement.clientHeight
      const app= document.getElementById('app');
-     app.style.width=(width - scrollbarWidth )+'px'
-     app.style.height=height+'px'
+    //  1380
+
+     app.style.width=(width>=1380 ? width :1380)+'px'
+     app.style.height=height*2+'px'
      app.style.backgroundColor='pink'
-    //  console.log(app.style.width);
+      // console.log(app.style.width);
     }
     //获取滚动条的宽度
     function getScrollbarWidth() {

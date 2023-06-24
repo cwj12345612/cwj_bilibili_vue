@@ -3,7 +3,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 const routes = [
  {
   path:'/',
-  component:()=>import('@/views/index.vue'),
+  component:()=>import('@/views//index/index.vue'),
   meta:{
     title:'主页'
   }

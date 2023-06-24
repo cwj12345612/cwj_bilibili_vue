@@ -1,9 +1,11 @@
 <template>
 
+  <img src="../../assets/logo.png"  alt="">
+
 </template>
  
 <script>
- 
+
 import { mapGetters,mapActions,mapMutations,mapState } from 'vuex';
  
 export default {
@@ -12,14 +14,15 @@ export default {
               },
     data() {
           return {
-           
+           src:require('../../assets/images//初夏之星.png')
+          
                  }
          },
     computed:{
 
              },
     created() {
-
+        
               },
     mounted() {
 
@@ -40,5 +43,6 @@ export default {
 }
 </script>
 <style  scoped>
+
 
 </style>

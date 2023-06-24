@@ -11,5 +11,8 @@ export default {
 }
 </script>
 <style>
-
+.type_area {
+  width: 100%;
+  padding: 0 60px;
+}
 </style>
