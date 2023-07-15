@@ -1,6 +1,6 @@
 <template>
-  <bilibili_head></bilibili_head>
-  <router-view/>
+  <bilibili_head style="position: absolute;"></bilibili_head>
+  <router-view/> 
 </template>
 <script>
 import bilibili_head from '@/components/header/index.vue'

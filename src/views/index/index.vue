@@ -1,20 +1,26 @@
 <template>
 
-  <img src="../../assets/logo.png"  alt="">
+<div class="index">
+<img :src="big_pic"  alt="">
+<navigation></navigation>
+<slideshowvideos></slideshowvideos>
+</div>
 
 </template>
  
-<script>
+<script >
 
 import { mapGetters,mapActions,mapMutations,mapState } from 'vuex';
- 
+ import navigation from './navigation/index.vue'
+ import slideshowvideos from './slideshowvideos/index.vue'
 export default {
     components:{
-            
+    navigation,
+    slideshowvideos
               },
     data() {
           return {
-           src:require('../../assets/images//初夏之星.png')
+          big_pic:require('@/assets/images/header.png')
           
                  }
          },
@@ -43,6 +49,5 @@ export default {
 }
 </script>
 <style  scoped>
-
 
 </style>

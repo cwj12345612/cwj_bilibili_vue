@@ -143,11 +143,10 @@ div.header {
     --height : 64px
 }
 .header {
- 
     height: var(--height);
     width: 100%;
     padding:0  24px;
-    background-color: green;
+    /* background-color: green; */
 }
 .left {
     float: left;
