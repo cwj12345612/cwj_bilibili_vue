@@ -1,14 +1,10 @@
 import { createStore } from 'vuex'
-
+import systemConfig from './modules/systemConfig'
 export default createStore({
-  state: {
+ 
+  modules: 
+  {
+    systemConfig
   },
-  getters: {
-  },
-  mutations: {
-  },
-  actions: {
-  },
-  modules: {
-  }
+ 
 })

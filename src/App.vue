@@ -1,5 +1,5 @@
 <template>
-  <bilibili_head style="position: absolute;"></bilibili_head>
+  <bilibili_head ></bilibili_head>
   <router-view/> 
 </template>
 <script>

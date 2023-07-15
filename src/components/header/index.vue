@@ -1,13 +1,13 @@
 <template>
- <div class="header">
+ <div class="header" :style="`position:${headerclass.position}; background-color:${headerclass.backgroundcolor}`" >
     <ul class="left">
         <template v-for="entry in left_list">
-            <a :href="entry.href">
+            <a :href="entry.href" :style="`color: ${headerclass.leftcolour};`">
                 <span>{{ entry.title }}</span>
             </a>
         </template>
     </ul>
-    <div class="search">
+    <div v-if="headerclass.searchexsits" class="search">
         <input type="search" placeholder="3年A班">
         <i  class="iconfont icon-sousuo"></i>
     </div>
@@ -16,7 +16,7 @@
            <img src="@/assets/images/头像.png" alt="">
         </div>
         <template v-for="entry in right_list">
-            <a  :href="entry.href">
+            <a  :href="entry.href" :style="`color: ${headerclass.rightcolour};`">
                 <div class="icon" >
                     <i :class="`iconfont ${entry.icon}`" style="font-size: 27px;position: absolute;bottom: 0;left: 50%;margin-left: -13.5px;"></i>
                 </div>
@@ -25,8 +25,8 @@
                 </div>
             </a>
         </template>
-        <div class="creation">
-            <a class="create" href="#">
+        <div class="creation" >
+            <a class="create" href="#" :style="`color: ${headerclass.uploadcolour};`">
                 <i class="iconfont icon-tianjia"></i>
                 <span>投稿</span>
             </a>
@@ -115,7 +115,9 @@ export default {
                  }
          },
     computed:{
-
+        ...mapState({
+            headerclass:(state)=>state.systemConfig.headerclass
+        })
              },
     created() {
 
@@ -140,6 +142,7 @@ export default {
 </script>
 <style scoped>
 div.header {
+ 
     --height : 64px
 }
 .header {
