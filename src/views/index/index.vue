@@ -4,6 +4,7 @@
 <img :src="big_pic"  alt="">
 <navigation></navigation>
 <slideshowvideos></slideshowvideos>
+<list></list>
 </div>
 
 </template>
@@ -13,10 +14,12 @@
 import { mapGetters,mapActions,mapMutations,mapState } from 'vuex';
  import navigation from './navigation/index.vue'
  import slideshowvideos from './slideshowvideos/index.vue'
+ import list from './list/index.vue'
 export default {
     components:{
     navigation,
-    slideshowvideos
+    slideshowvideos,
+    list
               },
     data() {
           return {
@@ -49,5 +52,10 @@ export default {
 }
 </script>
 <style  scoped>
-
+.index {
+      width: 100%;
+}
+img {
+      width: 100%;
+}
 </style>

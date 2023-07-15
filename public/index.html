@@ -35,39 +35,27 @@
   </body>
   <script>
     window.onload=function () {
-      const scrollbarWidth=  getScrollbarWidth();
-      window_change(scrollbarWidth);
+    
+      window_change();
         window.addEventListener('resize',()=>{
-          window_change(scrollbarWidth);
+          window_change();
    
         })
     }
     // 获取窗口大小
-    function window_change(scrollbarWidth) { 
-      const width= document.documentElement.clientWidth -scrollbarWidth;
-     const height=document.documentElement.clientHeight
+    function window_change() { 
+      const width= document.documentElement.clientWidth;
+      // console.log(width)
+    //  const height=document.documentElement.clientHeight
      const app= document.getElementById('app');
     //  1380
 
      app.style.width=(width>=1380 ? width :1380)+'px'
-     app.style.height=height*2+'px'
+    //  app.style.height=height*10+'px'
      app.style.backgroundColor='pink'
       // console.log(app.style.width);
     }
-    //获取滚动条的宽度
-    function getScrollbarWidth() {
-    var odiv = document.createElement('div'),//创建一个div
-        styles = {
-            width: '100px',
-            height: '100px',
-            overflowY: 'scroll'//让他有滚动条
-        }, i, scrollbarWidth;
-    for (i in styles) odiv.style[i] = styles[i];
-    document.body.appendChild(odiv);//把div添加到body中
-    scrollbarWidth = odiv.offsetWidth - odiv.clientWidth;//相减
-    odiv.remove();//移除创建的div
-    return scrollbarWidth;//返回滚动条宽度
-}
+   
   </script>
   
 </html>
