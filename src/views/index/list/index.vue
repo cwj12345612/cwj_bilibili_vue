@@ -36,6 +36,7 @@
             <img :src="video.pic"  alt="#">
             <div class="icon">
                 <i class="iconfont icon-dianshiju" ></i>
+                <span style="color: black;font-size: 15px;">电视剧</span>
             </div>
 
         </a>
@@ -140,10 +141,11 @@ export default {
 
 }
 .left {
+    /* display: flex; */
     float: left;
     width: 80%;
     /* background-color: blueviolet; */
-    height: 100%;
+    /* height: 100%; */
 }
 
 .left img {
@@ -158,8 +160,8 @@ export default {
     float: left;
     height: 225px;
     width: calc(100% / 4);
-        border-radius: 10px;
-margin-bottom: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
 
 .video .pic {
@@ -243,7 +245,7 @@ margin-bottom: 10px;
 position: absolute;
 top: 10px;
 left: 20px;
-width: 40px;
+width: 70px;
 height: 20px;
 background-color: whitesmoke;
 text-align: center;

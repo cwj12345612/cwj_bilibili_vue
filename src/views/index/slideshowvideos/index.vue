@@ -227,6 +227,9 @@ export default {
 }
 
 .carouselbottom {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: #9499a0;
     width: 100%;
     height: calc((50% * 1.7) - (100% * 0.7) + 20px);
     /* background-color: bisque; */
@@ -262,8 +265,8 @@ export default {
 
 .trabecula li {
     float: left;
-    width: 12px;
-    height: 12px;
+    width: 15px;
+    height: 15px;
 
 }
 
@@ -271,9 +274,13 @@ export default {
     margin-top: 2px;
     margin-left: 2px;
     display: block;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     border-radius: 4px;
     background-color: #ffffff66;
     cursor: pointer;
-}</style>
+}
+.trabecula li:nth-child(3)  span {
+    background-color: #f6f7f8;
+}
+</style>
