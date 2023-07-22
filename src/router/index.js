@@ -14,6 +14,13 @@ const routes = [
   meta:{
     title:'搜索结果'
   }
+ },
+ {
+  path:'/play',
+  component:()=>import('@/views/play'),
+  meta:{
+    title:'播放页面'
+  }
  }
 ]
 

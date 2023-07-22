@@ -1,5 +1,5 @@
 <template>
- <div class="header" :style="`position:${headerclass.position}; background-color:${headerclass.backgroundcolor}`" >
+ <div class="header" :style="`position:${headerclass.position}; background-color:${headerclass.backgroundcolor}`"  >
     <ul class="left">
         <template v-for="entry in left_list">
             <a :href="entry.href" :style="`color: ${headerclass.leftcolour};`">
@@ -117,7 +117,8 @@ export default {
     computed:{
         ...mapState({
             headerclass:(state)=>state.systemConfig.headerclass
-        })
+        }),
+        
              },
     created() {
 
