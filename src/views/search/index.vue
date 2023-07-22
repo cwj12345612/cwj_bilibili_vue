@@ -36,7 +36,7 @@
             </div>
       </div>
       <div class="list">
-            <div class="video" style="background-color: aqua;" v-for="video in videolist.slice(0,Math.min(5*6  , videolist.length))">  
+            <div class="video"  v-for="video in videolist.slice(0,Math.min(5*6  , videolist.length))">  
                   <a class="pic" :href="video.href">
                     <img :src="video.pic" alt="#">
                     <span class="playsize">
@@ -376,7 +376,7 @@ export default {
                   position: 'none',
                   leftcolour: 'black',
                   rightcolour: 'black',
-                  backgroundcolor: 'palevioletred',
+                  backgroundcolor: '#ffffff',
                   searchexsits: false
             })
       },
@@ -413,7 +413,7 @@ export default {
 .search {
       width: 100%;
       height: 50px;
-      background-color: orange;
+      /* background-color: orange; */
       position: relative;
 }
 
@@ -454,7 +454,7 @@ form {
       margin-top: 20px;
       width: 100%;
 
-      background-color: palevioletred;
+      /* background-color: palevioletred; */
 
 }
 
@@ -495,7 +495,7 @@ form {
       padding: 10px var(--index-padding-leftrigth) 0 var(--index-padding-leftrigth);
       width: 100%;
       height: 50px;
-      background-color: blueviolet;
+      /* background-color: blueviolet; */
       position: relative;
       transition: all 0.5s;
 }
@@ -506,6 +506,7 @@ button.more {
       text-align: center;
       line-height: 34px;
       border-radius: 6px;
+      border: 1px solid;
       top:10px;
       width: 95px;
       height: 34px;
@@ -536,7 +537,7 @@ ul:nth-child(n+2){
 .list {
       width: 100%;
       padding: 0 var(--index-padding-leftrigth);
-      background-color: orange;
+      /* background-color: orange; */
       /* height: 500px; */
 }
 .list img {
@@ -596,6 +597,9 @@ ul:nth-child(n+2){
     height: 20%;
     padding: 5px 0;
     font-size: 15px;
+}
+.list .title:hover {
+      border-bottom: none;
 }
 
 .bottom {

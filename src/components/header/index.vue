@@ -266,7 +266,7 @@ div.header {
 .creation .create {
     height: 34px;
     width: 80%;
-    background-color: pink;
+    background-color: #fb7299;
     position: absolute;
     right: 0;
     top: calc((var(--height) - 34px) / 2);
