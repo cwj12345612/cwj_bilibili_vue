@@ -34,7 +34,7 @@
                                     A
                               </div>
                               <input type="text" placeholder="发个弹幕见证一下">
-                              <div class="right">
+                              <div class="right" style="color: #18191c;">
                                     发送
                               </div>
                         </div>
@@ -779,7 +779,7 @@ video {
       float: right;
       width: 60%;
       height: 32px;
-      /* background-color: aqua; */
+      background-color: aqua;
       border-radius: 8px;
       overflow: hidden;
 }
