@@ -24,6 +24,10 @@
       a {
         text-decoration: none;
       }
+      img {
+        width: 100%;
+        height: 100%;
+      }
     </style>
   </head>
   <body>
@@ -33,29 +37,6 @@
     <div id="app"></div>
     <!-- built files will be auto injected -->
   </body>
-  <script>
-    window.onload=function () {
-    
-      window_change();
-        window.addEventListener('resize',()=>{
-          window_change();
-   
-        })
-    }
-    // 获取窗口大小
-    function window_change() { 
-      const width= document.documentElement.clientWidth;
-      // console.log(width)
-    //  const height=document.documentElement.clientHeight
-     const app= document.getElementById('app');
-    //  1380
-
-     app.style.width=(width>=1380 ? width :1380)+'px'
-    //  app.style.height=height*10+'px'
-    //  app.style.backgroundColor='pink'
-      // console.log(app.style.width);
-    }
-   
-  </script>
+  
   
 </html>

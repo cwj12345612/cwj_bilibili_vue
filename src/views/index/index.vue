@@ -1,61 +1,56 @@
 <template>
-
-<div class="index">
-<img :src="big_pic"  alt="">
-<navigation></navigation>
-<slideshowvideos></slideshowvideos>
-<list></list>
-</div>
-
+      <div class="index">
+          <index_header></index_header>
+      </div>
 </template>
  
 <script >
-
-import { mapGetters,mapActions,mapMutations,mapState } from 'vuex';
- import navigation from './navigation/index.vue'
- import slideshowvideos from './slideshowvideos/index.vue'
- import list from './list/index.vue'
+ import index_header from './header/index.vue'
+import { mapGetters, mapActions, mapMutations, mapState } from 'vuex';
+import navigation from './navigation/index.vue'
+import slideshowvideos from './slideshowvideos/index.vue'
+import list from './list/index.vue'
 export default {
-    components:{
-    navigation,
-    slideshowvideos,
-    list
-              },
-    data() {
-          return {
-          big_pic:require('@/assets/images/header.png')
-          
-                 }
-         },
-    computed:{
+      components: {
+            index_header,
+           
+      },
+      data() {
+            return {
+                  big_pic: require('@/assets/images/header.png')
 
-             },
-    created() {
-        
-              },
-    mounted() {
+            }
+      },
+      computed: {
 
-              },
-    watch:{
+      },
+      created() {
 
-          },
+      },
+      mounted() {
 
-    beforeCreate(){
+      },
+      watch: {
 
-                  },
-    beforeDestroy() {
+      },
 
-                    },
-    deactivated() {
+      beforeCreate() {
 
-                   },
+      },
+      beforeDestroy() {
+
+      },
+      deactivated() {
+
+      },
 }
 </script>
 <style  scoped>
 .index {
-      width: 100%;
+      width: 100vw;
+      height: 100vh;
+      
 }
-img {
-      width: 100%;
-}
+
+
 </style>
