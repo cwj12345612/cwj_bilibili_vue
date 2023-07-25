@@ -1,10 +1,9 @@
 import { createStore } from 'vuex'
-import systemConfig from './modules/systemConfig'
+import pageconfig from './modules/pageconfig'
 export default createStore({
- 
   modules: 
   {
-    systemConfig
+    pageconfig
   },
  
 })

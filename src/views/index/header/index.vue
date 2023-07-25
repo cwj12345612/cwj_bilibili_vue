@@ -48,10 +48,11 @@ export default {
 .header {
       width: 100%;
       height: 20vh;
+      min-height: 155px;
+      max-height: 240px;
       z-index: -1;
       display: flex;
-      padding: 0 64px;
-
+      padding: 0 40px;
       align-items: flex-end;
 
 
@@ -66,10 +67,9 @@ export default {
 }
 
 .header .logo {
-
       width: 15%;
       height: 50%;
-      margin-bottom: 10px;
+      margin-bottom: 2vh;
       /* background-color: orchid; */
       display: flex;
       justify-content: center;

@@ -1,18 +1,23 @@
 <template>
-  <bilibili_head ></bilibili_head>
-  <router-view/> 
+  <bilibili_head></bilibili_head>
+  <router-view />
 </template>
-<script>
+<script setup>
 import bilibili_head from '@/components/header/index.vue'
-export default {
-  components:{
-  bilibili_head
-}
-}
+import {
+  onMounted,
+} from 'vue'
+import {
+  useStore,
+} from 'vuex'
+const store = useStore()
+onMounted(() => {
+  store.commit('pageconfig/initglobaloffsetWidth')
+})
 </script>
-<style>
-.type_area {
-  width: 100%;
-  padding: 0 60px;
+<style scoped>
+.app {
+
+  position: relative;
 }
 </style>

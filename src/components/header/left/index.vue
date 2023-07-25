@@ -71,9 +71,16 @@ export default {
 }
 
 .left .item {
+    display: block;
     /* display: flex; */
     align-items: center;
     color: #ffffff;
     font-size: 14px;
+    transition: all 0.3s;
+   
+}
+
+.left .item:hover  {
+transform: translateY(-50%);
 }
 </style>
