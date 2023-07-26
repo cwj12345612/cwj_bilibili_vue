@@ -5,54 +5,15 @@
  </div>
 </template>
  
-<script>
+<script setup>
 import slideshowvideos_left from './left.vue'
  import slideshowvideos_right from './right.vue'
-import { mapGetters,mapActions,mapMutations,mapState } from 'vuex';
- 
-export default {
-    components:{
-        slideshowvideos_right,
-        slideshowvideos_left
-              },
-    data() {
-          return {
-           
-                 }
-         },
-    computed:{
-        videowidth(){
 
-        },
-        videoheight(){
 
-        }
-             },
-    created() {
-
-              },
-    mounted() {
-       
-    
-              },
-    watch:{
-
-          },
-
-    beforeCreate(){
-
-                  },
-    beforeDestroy() {
-
-                    },
-    deactivated() {
-
-                   },
-}
 </script>
 <style scoped>
 .slideshowvideos{
-    width: 100%;
+    /* width: 100%; */
     padding: 0 64px;
      height:56vh;
    max-height: 780px;

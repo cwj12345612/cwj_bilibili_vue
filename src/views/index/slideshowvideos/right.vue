@@ -20,10 +20,8 @@ import {
 } from 'vue'
 import videodetail from '@/components/video/index.vue'
 import Mock from 'mockjs';
-import { useStore } from 'vuex';
-const store=useStore();
-const widthcoefficient=0.172
-const heightcoefficient=0.9
+
+
 const videolist = reactive(Mock.mock({
     'list|6': [
         {
@@ -41,16 +39,12 @@ const videolist = reactive(Mock.mock({
 
 
 const videoconfig = reactive({
-    width: 0 ,
-    height: 0
+    width: '32%' ,
+    height: '47%'
 })
 
 
-watch(()=>store.state.pageconfig.global.clientWidth,(val)=>{
-    // console.log(val)
-videoconfig.width=val*widthcoefficient
-videoconfig.height=videoconfig.width* heightcoefficient
-},{immediate:true})
+
 
 </script>
 <style scoped>
@@ -59,8 +53,8 @@ videoconfig.height=videoconfig.width* heightcoefficient
     justify-content: space-between;
     flex-wrap: wrap;
     align-content: space-between;
-   /* height: 100%; */
-    /* width: 100%; */
-    background-color: brown;
+   height: 100%;
+    width: 60%;
+    /* background-color: brown; */
 }
 </style>

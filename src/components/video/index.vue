@@ -1,6 +1,6 @@
 <template>
-    <div class="video" :style="`width: ${videoconfig.width}px;
-     height: ${videoconfig.height}px;
+    <div class="video" :style="`width: ${videoconfig.width};
+     height: ${videoconfig.height};
  `
         ">
         <div class="img">
@@ -46,7 +46,8 @@ const props = defineProps({
   
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+
     /* background-color: #ffffff; */
     /* padding: 0 8px; */
 
@@ -76,6 +77,7 @@ const props = defineProps({
 .title {
     width: 100%;
     height: 20%;
+    max-height: 45px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;

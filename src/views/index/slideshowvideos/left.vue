@@ -1,5 +1,5 @@
 <template>
- <div class="left">
+ <div class="left" ref="slideshowvideos_left">
     <a href="#" class="bigpic">
         <img src="@/assets/images/轮播图.png" alt="">
     </a>
@@ -22,55 +22,31 @@
  </div>
 </template>
  
-<script>
+<script setup>
  
-import { mapGetters,mapActions,mapMutations,mapState } from 'vuex';
- 
-export default {
-    components:{
- 
-              },
-    data() {
-          return {
+ import {
+    ref,
+    onMounted,
+    reactive,
+    watch,
+    computed
+} from 'vue'
+import {useStore } from 'vuex';
+const store=useStore()
 
-                 }
-         },
-    computed:{
-
-             },
-    created() {
-
-              },
-    mounted() {
-
-              },
-    watch:{
-
-          },
-
-    beforeCreate(){
-
-                  },
-    beforeDestroy() {
-
-                    },
-    deactivated() {
-
-                   },
-}
 </script>
 <style scoped>
 .left {
-    width: calc((80%)  );
-    height:100%;
+    width: 38.5%;
+    height:calc(47% + 6% + 47% * 0.6);
     background-color: cadetblue;
     border-radius: 8px;
     overflow: hidden;
-
+    /* padding-right: 3.75%; */
 }
 .bigpic {
     display: block;
-    width: 100%;
+    /* width: 100%; */
     height: 80%;
     /* background-color: tomato; */
 }
