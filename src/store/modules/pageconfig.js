@@ -13,7 +13,7 @@ export default {
        
          const setWH = () => {
             state.windows.clientWidth = document.getElementById('app').clientWidth
-            state.windows.clientHeight = document.getElementById('app').clientHeight
+            state.windows.clientHeight = state.windows.clientWidth
          }
          setWH()
          window.addEventListener('resize', () => {

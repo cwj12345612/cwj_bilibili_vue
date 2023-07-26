@@ -9,7 +9,8 @@ const routes = [
   }
  },
  {
-  path:'/search',
+  path:'/search/:search',
+  name:'search',
   component:()=>import('@/views/search'),
   meta:{
     title:'搜索结果'

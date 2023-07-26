@@ -47,7 +47,7 @@ defineProps({
   
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
 
     /* background-color: #ffffff; */
     /* padding: 0 8px; */

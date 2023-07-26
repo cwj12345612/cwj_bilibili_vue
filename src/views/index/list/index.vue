@@ -22,18 +22,25 @@ const store=useStore()
    min-height: 460px;
     height: '47%'
 */
-const videoconfig = reactive({
-    width: 0,
-    height:0
-})
-watch(()=>store.state.pageconfig.windows,(val)=>{
+const videoconfig = reactive({})
+
+const setWh=()=>{
+   const val=store.state.pageconfig.windows
    videoconfig.width=((val.clientWidth - 2*64) * 0.6 * 0.32)+'px'
-   const nh=  val.clientHeight  *0.56 * 0.47
-   videoconfig.height= (nh< 460 ? (460 * 0.47) :nh > 780 ? (780*0.47) : nh) +'px';
-},{deep:true})
+   const nh=  val.clientHeight  * 0.56 * 0.33
+   console.log(nh  )
+   videoconfig.height= ((nh < 460 ) ? (460 * 0.47) :((nh > 780) ? ( 780 * 0.47) : nh)) +'px';
+   // console.log(videoconfig.height)
+
+  
+}
+
+onMounted(setWh)
+watch(()=>store.state.pageconfig.windows,setWh,{deep:true})
 </script>
 <style scoped>
 .list {
+   margin-top: 3vh;
     display: flex;
     justify-content: space-between;
     padding: 0 64px;

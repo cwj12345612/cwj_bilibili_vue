@@ -1,49 +1,36 @@
 <template>
  <div class="search">
-      <input type="text" placeholder="请输入搜索内容">
-      <button class="icon">
+      <input type="text" placeholder="请输入搜索内容" v-model="search"  @keyup.enter.native="submit">
+      <button class="icon" @click="submit">
             <i class="iconfont icon-sousuo"></i>
       </button>
  </div>
 </template>
  
-<script>
+
  
-import { mapGetters,mapActions,mapMutations,mapState } from 'vuex';
- 
-export default {
-    components:{
- 
-              },
-    data() {
-          return {
+<script setup>
 
-                 }
-         },
-    computed:{
+import {
+      ref,
+      watch,
+      } from 'vue'
 
-             },
-    created() {
+import {
 
-              },
-    mounted() {
-
-              },
-    watch:{
-
-          },
-
-    beforeCreate(){
-
-                  },
-    beforeDestroy() {
-
-                    },
-    deactivated() {
-
-                   },
+      } from 'vuex'
+      import {
+            useRouter
+      } from 'vue-router'
+const search=ref('vue3入门到精通')
+const router=useRouter()
+const submit=()=>{
+      if(!search.value || !(search.value.trim()))   return false
+      router.push({name:'search',params:{'search':search.value}})
+      
 }
 </script>
+
 <style scoped>
 .search {
       background-color: #f1f2f3;
