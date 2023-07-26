@@ -3,7 +3,7 @@
           <index_header></index_header>
           <navigation></navigation>
             <slideshowvideos></slideshowvideos>
-            <!-- <list></list> -->
+            <list></list>
       </div>
 </template>
  

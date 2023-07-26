@@ -12,7 +12,12 @@ import {
 } from 'vuex'
 const store = useStore()
 onMounted(() => {
-  store.commit('pageconfig/initglobaloffsetWidth')
+ 
+    setTimeout(() => {
+      store.commit('pageconfig/initWindowsHeightWidth')
+    }, 100);
+ 
+ 
 })
 </script>
 <style scoped>

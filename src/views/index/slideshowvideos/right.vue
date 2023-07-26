@@ -1,11 +1,11 @@
 <template>
     <div class="right" 
     >
-    <videodetail 
+    <videocard 
         :videoconfig="videoconfig"
         v-for="video in videolist.slice(0)"
         :video="video"
-        ></videodetail>
+        ></videocard>
      
     </div>
 </template>
@@ -18,7 +18,7 @@ import {
     watch,
     computed
 } from 'vue'
-import videodetail from '@/components/video/index.vue'
+import videocard from '@/components/video/videocard.vue'
 import Mock from 'mockjs';
 
 
@@ -39,7 +39,7 @@ const videolist = reactive(Mock.mock({
 
 
 const videoconfig = reactive({
-    width: '32%' ,
+    width: '32%',
     height: '47%'
 })
 

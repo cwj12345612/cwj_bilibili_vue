@@ -39,7 +39,7 @@ const store=useStore()
 .left {
     width: 38.5%;
     height:calc(47% + 6% + 47% * 0.6);
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
     border-radius: 8px;
     overflow: hidden;
     /* padding-right: 3.75%; */
@@ -53,7 +53,7 @@ const store=useStore()
 .bottom {
 width: 100%;
 height: 20%;
-
+background-color: gray;
 padding: 3%;
 
 

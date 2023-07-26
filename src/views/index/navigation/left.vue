@@ -82,6 +82,6 @@ export default {
     width: 46px;
     height: 46px;
     border-radius: 23px;
-    background-color: burlywood;
+    background-color: palevioletred;
 }
 </style>

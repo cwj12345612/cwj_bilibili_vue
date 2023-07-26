@@ -1,4 +1,5 @@
 <template>
+   
     <div class="video" :style="`width: ${videoconfig.width};
      height: ${videoconfig.height};
  `
@@ -20,7 +21,7 @@
             </div>
         </div>
         <a class="title" :href="video.url">
-            {{ video.title }}
+            {{video.title }}
         </a>
         <a class="author" href="#">
             <i class="iconfont icon-UPzhu"></i>
@@ -35,7 +36,7 @@
 import {
     ref
 } from 'vue'
-const props = defineProps({
+defineProps({
     videoconfig: Object,
     video: Object
 })
@@ -103,4 +104,5 @@ const props = defineProps({
 
 .author span {
     margin-right: 3%;
-}</style>
+}
+</style>

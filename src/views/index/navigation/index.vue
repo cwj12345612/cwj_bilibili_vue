@@ -54,7 +54,7 @@ export default {
     height: 24vh;
     max-height: 130px;
     min-height: 100px;
-    background-color: orange;
+    /* background-color: orange; */
     display: flex;
     justify-content: space-between;
     align-items: center;

@@ -1,24 +1,21 @@
 <template>
- <div class="left" >
-    <videocard 
-        :videoconfig="videoconfig"
+ <div class="right">
+<categorycard
+:videoconfig="videoconfig"
         v-for="video in videolist.slice(0)"
         :video="video"
-      style="margin-bottom: 5vh;"
-        ></videocard>
+      style="margin-bottom: 5vh; "
+></categorycard>
  </div>
 </template>
  
 <script setup>
- import {
-      ref,
-      onMounted,
-      reactive,
-
- } from 'vue'
-import videocard from '@/components/video/videocard.vue'
+import {
+reactive,
+} from 'vue'
 import Mock  from 'mockjs';
-const videolist = reactive(Mock.mock({
+ import categorycard from '@/components/video/categorycard.vue'
+ const videolist = reactive(Mock.mock({
     'list|33': [
         {
             id: Mock.mock('@id'), title: Mock.mock('@cword(50,60)'), url: Mock.mock('@url'), img: require('@/assets/images/视频图片.png'),url:'#',
@@ -31,20 +28,16 @@ const videolist = reactive(Mock.mock({
            author:Mock.mock('@cname(3,4)'),
            datetime: Mock.mock('@now(yy-MM-dd)')
         }
-    ]}).list)
+    ]}).list.slice(0,9))
 defineProps({
     videoconfig:Object
 })
 
 </script>
 <style scoped>
-.left{
-    flex-wrap: wrap;
-      width: calc(40% + (60% * 0.32 * 2 + (60% * 0.02)) );
-    height: 100%;
-      /* background-color: orangered; */
-      display: flex;
-      justify-content: space-between;
-
+.right {
+    width: calc(60% * 0.32);
+    /* height: 100%; */
+    /* background-color: thistle; */
 }
 </style>

@@ -1,52 +1,45 @@
 <template>
  <div class="list">
-    <list_left></list_left>
+    <list_left :videoconfig="videoconfig"></list_left>
+    <list_right  :videoconfig="videoconfig"></list_right>
  </div>
 </template>
  
-<script>
+<script setup>
  import list_left from './left.vue'
-import { mapGetters,mapActions,mapMutations,mapState } from 'vuex';
- 
-export default {
-    components:{
-        list_left,
-              },
-    data() {
-          return {
-
-                 }
-         },
-    computed:{
-
-             },
-    created() {
-
-              },
-    mounted() {
-
-              },
-    watch:{
-
-          },
-
-    beforeCreate(){
-
-                  },
-    beforeDestroy() {
-
-                    },
-    deactivated() {
-
-                   },
-}
+ import list_right from './right.vue'
+ import {
+    reactive,
+    ref,
+    watch,
+    onMounted
+ }from 'vue'
+import { useStore } from 'vuex';
+const store=useStore()
+/*
+   height:56vh;
+   max-height: 780px;
+   min-height: 460px;
+    height: '47%'
+*/
+const videoconfig = reactive({
+    width: 0,
+    height:0
+})
+watch(()=>store.state.pageconfig.windows,(val)=>{
+   videoconfig.width=((val.clientWidth - 2*64) * 0.6 * 0.32)+'px'
+   const nh=  val.clientHeight  *0.56 * 0.47
+   videoconfig.height= (nh< 460 ? (460 * 0.47) :nh > 780 ? (780*0.47) : nh) +'px';
+},{deep:true})
 </script>
 <style scoped>
 .list {
-    padding: 0 5vw;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 64px;
     width: 100%;
     /* 没有高度 */
-    /* height: 60vh; */
-    background-color: teal;
+    /* height: 100vh; */
+    /* background-color: teal; */
 }
 </style>

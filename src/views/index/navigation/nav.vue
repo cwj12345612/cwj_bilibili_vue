@@ -86,6 +86,7 @@ flex-wrap: wrap;
  justify-content: center;
     align-items: center;
     border-radius: 6px;
+    border: 0.5px solid grey;
 }
 
 .nav ul li.more a:hover i {

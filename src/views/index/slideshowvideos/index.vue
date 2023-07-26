@@ -19,7 +19,7 @@ import slideshowvideos_left from './left.vue'
    max-height: 780px;
    min-height: 460px;
    /* flex-direction: row-reverse; */
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
     display: flex;
     justify-content: space-between;
 }
