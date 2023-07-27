@@ -1,6 +1,6 @@
 <template>
  <div class="list">
-    <list_left :videoconfig="videoconfig"></list_left>
+    <list_left ></list_left>
     <list_right  :videoconfig="videoconfig"></list_right>
  </div>
 </template>

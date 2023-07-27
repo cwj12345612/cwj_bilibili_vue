@@ -2,7 +2,7 @@
     <div class="right" 
     >
     <videocard 
-        :videoconfig="videoconfig"
+       
         v-for="video in videolist.slice(0)"
         :video="video"
         ></videocard>
@@ -30,7 +30,6 @@ const videolist = reactive(Mock.mock({
             amount: Mock.mock({ 'amount|100-5000': 5000 }).amount,
             barragequantity: Mock.mock({ 'barragequantity|400-2000': 2000 }).barragequantity,
             duration: '18:04',
-           
            },
            author:Mock.mock('@cname(3,4)'),
            datetime: Mock.mock('@now(yy-MM-dd)')
@@ -38,10 +37,7 @@ const videolist = reactive(Mock.mock({
     ]}).list)
 
 
-const videoconfig = reactive({
-    width: '32%',
-    height: '47%'
-})
+
 
 
 

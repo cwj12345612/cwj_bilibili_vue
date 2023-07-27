@@ -1,7 +1,7 @@
 <template>
  <div class="right">
 <categorycard
-:videoconfig="videoconfig"
+
         v-for="video in videolist.slice(0)"
         :video="video"
       style="margin-bottom: 5vw; "
@@ -29,9 +29,7 @@ import Mock  from 'mockjs';
            datetime: Mock.mock('@now(yy-MM-dd)')
         }
     ]}).list.slice(0,9))
-defineProps({
-    videoconfig:Object
-})
+
 
 </script>
 <style scoped>

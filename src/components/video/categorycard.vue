@@ -1,6 +1,6 @@
 <template>
-  <div class="categorycard" :style="`width: ${videoconfig.width};
-         height: ${videoconfig.height};`
+  <div class="categorycard" :style="`width: ${w};
+         height: ${h};`
     ">
     <div class="img">
       <img :src="video.img" alt="#">
@@ -27,13 +27,30 @@
  
 <script setup>
 import {
-  watch
+    ref,computed
 } from 'vue'
+import {
+useStore
+} from 'vuex'
+const store=useStore()
 defineProps({
-  videoconfig: Object,
+  // videoconfig: Object,
   video: Object
 })
+const w= computed(()=>{
+    // console.log(( store.state.pageconfig.windows.clientWidth * 0.18 )+'px')
+ return  ( store.state.pageconfig.windows.clientWidth * 0.6 * 0.29 )+'px'
+})
+const h=computed(()=>{
+    // console.log(typeof w.value)
+    let temp=parseFloat(w.value)  *0.9
+    // console.log(temp);
+    temp = (temp<(460*0.47) ? (460 * 0.47) : (temp>(780*0.47) ?(780*0.47) :temp))
+    // console.log(temp);
+    // console.log(hh)
 
+    return (temp)+'px'
+})
 </script>
 <style scoped>
 .categorycard {

@@ -1,7 +1,7 @@
 <template>
  <div class="left" >
     <videocard 
-        :videoconfig="videoconfig"
+      
         v-for="video in videolist.slice(0)"
         :video="video"
       style="margin-bottom: 5vw;"
@@ -32,9 +32,7 @@ const videolist = reactive(Mock.mock({
            datetime: Mock.mock('@now(yy-MM-dd)')
         }
     ]}).list)
-defineProps({
-    videoconfig:Object
-})
+
 
 </script>
 <style scoped>
@@ -42,7 +40,8 @@ defineProps({
 
     flex-wrap: wrap;
       width: calc(40% + (60% * 0.32 * 2 + (60% * 0.02)) );
-    height: 100%;
+      /* width: calc(calc(60% * 0.29 * 4) + calc()); */
+    /* height: 100%; */
       /* background-color: orangered; */
       display: flex;
       justify-content: space-between;
