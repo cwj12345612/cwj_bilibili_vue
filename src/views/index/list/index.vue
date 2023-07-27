@@ -28,7 +28,7 @@ const setWh=()=>{
    const val=store.state.pageconfig.windows
    videoconfig.width=((val.clientWidth - 2*64) * 0.6 * 0.32)+'px'
    const nh=  val.clientHeight  * 0.56 * 0.33
-   console.log(nh  )
+   // console.log(nh  )
    videoconfig.height= ((nh < 460 ) ? (460 * 0.47) :((nh > 780) ? ( 780 * 0.47) : nh)) +'px';
    // console.log(videoconfig.height)
 
@@ -40,7 +40,7 @@ watch(()=>store.state.pageconfig.windows,setWh,{deep:true})
 </script>
 <style scoped>
 .list {
-   margin-top: 3vh;
+   margin-top:4vw;
     display: flex;
     justify-content: space-between;
     padding: 0 64px;

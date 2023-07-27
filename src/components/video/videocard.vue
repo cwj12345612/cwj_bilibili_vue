@@ -48,7 +48,9 @@ defineProps({
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
+    
+    /* min-width: 240px;
+    max-width: 380px; */
     /* background-color: #ffffff; */
     /* padding: 0 8px; */
 

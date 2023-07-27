@@ -1,9 +1,13 @@
-<template></template>
+<template>
+<div class="search"></div>
+
+</template>
  
 <script setup>
 
 import {
-      onMounted
+      onMounted,
+      ref,
 } from 'vue'
 
 import {
@@ -12,9 +16,19 @@ import {
 import {
       useRoute
 } from 'vue-router'
-useRoute()
+const search=ref()
+const route=useRoute()
 onMounted(() => {
-      // console.log(useRoute().params.search)
+      console.log(route.params.search)
+      search.value=route.params.search
 })
 </script>
-<style scoped></style>
+<style scoped>
+.search{
+      padding: 0 64px;
+      display: flex;
+      background-color: orange;
+      width: 100%;
+      height: 50vw;
+}
+</style>

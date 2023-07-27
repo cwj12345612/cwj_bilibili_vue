@@ -6,27 +6,24 @@
       </button>
  </div>
 </template>
- 
-
- 
 <script setup>
-
 import {
       ref,
       watch,
       } from 'vue'
 
 import {
-
       } from 'vuex'
       import {
-            useRouter
+            useRouter,useRoute
       } from 'vue-router'
 const search=ref('vue3入门到精通')
 const router=useRouter()
 const submit=()=>{
       if(!search.value || !(search.value.trim()))   return false
-      router.push({name:'search',params:{'search':search.value}})
+    window.open(router.resolve({
+            name:'search',params:{'search':search.value}
+      }).href,'_blank')
       
 }
 </script>

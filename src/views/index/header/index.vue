@@ -47,15 +47,13 @@ export default {
 <style scoped>
 .header {
       width: 100%;
-      height: 20vh;
+      height: 20vw;
       min-height: 155px;
       max-height: 240px;
       z-index: -1;
       display: flex;
       padding: 0 40px;
       align-items: flex-end;
-
-
       /* 加载背景图 */
       background-image: url('@/assets/images/header.png');
       /* 背景图垂直、水平均居中 */

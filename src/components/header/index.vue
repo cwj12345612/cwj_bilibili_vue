@@ -1,5 +1,5 @@
 <template>
-    <header>
+    <header class="scroll">
         <header_left></header_left>
         <search ></search>
         <header_right></header_right>
@@ -12,11 +12,9 @@
 import header_left from './left/index.vue'
 import header_right from './right/index.vue'
 import search from '@/components/search/index.vue'
-
 </script>
 <style scoped>
 header {
-    
     display: flex;
     width: 100%;
     /* flex-grow: 1; */
@@ -28,11 +26,10 @@ header {
     /* 相对父元素 */
     position: absolute;
     /* position: fixed;  top: 0; */
-
 }
 
 .scroll {
-    background-color: orange;
-    color: black;
+    
+    background-color: black;
 }
 </style>

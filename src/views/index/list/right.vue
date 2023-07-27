@@ -4,7 +4,7 @@
 :videoconfig="videoconfig"
         v-for="video in videolist.slice(0)"
         :video="video"
-      style="margin-bottom: 3vh; "
+      style="margin-bottom: 5vw; "
 ></categorycard>
  </div>
 </template>
