@@ -38,11 +38,11 @@ useStore
     width: 100%;
     padding: 0 64px;
     /* height: 50vw; */
-    background-color: orange;
+    /* background-color: orange; */
 }
 .saishi {
     width: 100%;
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
   
 }
 

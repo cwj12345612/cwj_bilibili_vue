@@ -1,6 +1,8 @@
 <template>
 <div class="list">
-    <div class="title" :style="`height: ${h*0.2}px;`" >
+    <div class="title" :style="`height: ${h*0.2}px;`" 
+    
+    >
        
             <i class="iconfont-color icon-zhibo" style="font-size: 50px;"></i><span>直播</span>
     </div>
@@ -63,12 +65,12 @@ const videolist = reactive(Mock.mock({
     display: flex;
     justify-content: flex-start;
     align-items: flex-end;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
 }
 ul {
     width: 100%;
 display: flex;
 justify-content: space-between;
-background-color: orchid;
+/* background-color: orchid; */
 }
 </style>
