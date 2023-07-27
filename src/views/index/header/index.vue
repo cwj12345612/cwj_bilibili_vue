@@ -1,48 +1,14 @@
 <template>
       <div class="header">
             <div class="logo">
-                  <i class="iconfont icon-bilibili" style="font-size: 50px;
-       color: aqua;"></i>
+                  <i class="iconfont icon-bilibili" style="font-size: 50px;"></i>
             </div>
       </div>
 </template>
  
-<script>
+<script setup>
 
-import { mapGetters, mapActions, mapMutations, mapState } from 'vuex';
 
-export default {
-      components: {
-
-      },
-      data() {
-            return {
-
-            }
-      },
-      computed: {
-
-      },
-      created() {
-
-      },
-      mounted() {
-
-      },
-      watch: {
-
-      },
-
-      beforeCreate() {
-
-      },
-      beforeDestroy() {
-
-      },
-      deactivated() {
-
-      },
-}
 </script>
 <style scoped>
 .header {

@@ -3,51 +3,23 @@
           <index_header></index_header>
           <navigation></navigation>
             <slideshowvideos></slideshowvideos>
-            <list></list>
+            <!-- <list></list> -->
+            <!-- <categorycard></categorycard> -->
       </div>
 </template>
  
-<script >
+<script setup>
+import {
+      ref,
+      reactive
+} from 'vue'
  import index_header from './header/index.vue'
-import { mapGetters, mapActions, mapMutations, mapState } from 'vuex';
 import navigation from './navigation/index.vue'
 import slideshowvideos from './slideshowvideos/index.vue'
 import list from './list/index.vue'
-export default {
-      components: {
-           index_header,
-           navigation,
-           slideshowvideos,
-           list
-      },
-      data() {
-            return {
-                  big_pic: require('@/assets/images/header.png')
-            }
-      },
-      computed: {
+// const big_pic= require('@/assets/images/header.png')
 
-      },
-      created() {
-
-      },
-      mounted() {
-
-      },
-      watch: {
-
-      },
-
-      beforeCreate() {
-
-      },
-      beforeDestroy() {
-
-      },
-      deactivated() {
-
-      },
-}
+import categorycard from '@/components/video/categorycard.vue'
 </script>
 <style  scoped>
 .index {

@@ -1,5 +1,7 @@
 <template>
- <div class="left" ref="slideshowvideos_left">
+ <div class="left" ref="slideshowvideos_left" 
+ :style="`height: ${ h  };`"
+ >
     <a href="#" class="bigpic">
         <img src="@/assets/images/轮播图.png" alt="">
     </a>
@@ -32,13 +34,26 @@
     computed
 } from 'vue'
 import {useStore } from 'vuex';
+
+
 const store=useStore()
+
+const h=computed(()=>{
+    // console.log(typeof w.value)
+    let temp=parseFloat( store.state.pageconfig.windows.clientWidth * 0.6 * 0.29 )  *0.9
+    // console.log(temp);
+    temp = (temp<(460*0.47) ? (460 * 0.47) : (temp>(780*0.47) ?(780*0.47) :temp))
+    // console.log(temp);
+    // console.log(hh)
+    return (temp * 1.6 ) +'px'
+})
+
 
 </script>
 <style scoped>
 .left {
     width: 38.5%;
-    height:calc(47% + 6% + 47% * 0.6);
+    /* height:calc(100%); */
     /* background-color: cadetblue; */
     border-radius: 8px;
     overflow: hidden;

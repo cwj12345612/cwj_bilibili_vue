@@ -39,10 +39,7 @@
 import {
     ref,computed
 } from 'vue'
-import {
-useStore
-} from 'vuex'
-const store=useStore()
+
 defineProps({
     // videoconfig: Object,
     video: Object
@@ -52,6 +49,10 @@ defineProps({
    max-height: 780px;
    min-height: 460px;
 */
+import {
+useStore
+} from 'vuex'
+const store=useStore()
 const w= computed(()=>{
     // console.log(( store.state.pageconfig.windows.clientWidth * 0.18 )+'px')
  return  ( store.state.pageconfig.windows.clientWidth * 0.6 * 0.29 )+'px'
@@ -63,7 +64,6 @@ const h=computed(()=>{
     temp = (temp<(460*0.47) ? (460 * 0.47) : (temp>(780*0.47) ?(780*0.47) :temp))
     // console.log(temp);
     // console.log(hh)
-
     return (temp)+'px'
 })
 </script>
