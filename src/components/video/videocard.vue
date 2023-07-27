@@ -59,7 +59,7 @@ const w= computed(()=>{
 })
 const h=computed(()=>{
     // console.log(typeof w.value)
-    let temp=parseFloat(w.value)  *0.9
+    let temp=store.state.pageconfig.windows.clientWidth * 0.6 * 0.29  *0.9
     // console.log(temp);
     temp = (temp<(460*0.47) ? (460 * 0.47) : (temp>(780*0.47) ?(780*0.47) :temp))
     // console.log(temp);

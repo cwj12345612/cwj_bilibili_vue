@@ -4,7 +4,7 @@
           <navigation></navigation>
             <slideshowvideos></slideshowvideos>
             <!-- <list></list> -->
-            <!-- <categorycard></categorycard> -->
+            <categorylist></categorylist>
       </div>
 </template>
  
@@ -19,7 +19,7 @@ import slideshowvideos from './slideshowvideos/index.vue'
 import list from './list/index.vue'
 // const big_pic= require('@/assets/images/header.png')
 
-import categorycard from '@/components/video/categorycard.vue'
+import categorylist from '@/views/index/categorylist/index.vue'
 </script>
 <style  scoped>
 .index {

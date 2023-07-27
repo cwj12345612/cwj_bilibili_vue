@@ -36,12 +36,6 @@ const videolist = reactive(Mock.mock({
         }
     ]}).list)
 
-
-
-
-
-
-
 </script>
 <style scoped>
 .right {
