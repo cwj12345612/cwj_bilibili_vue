@@ -15,7 +15,7 @@ import slideshowvideos_left from './left.vue'
 .slideshowvideos{
     /* width: 100%; */
     padding: 0 64px;
-     height:56vh;
+     /* height:56vh; */
    max-height: 780px;
    min-height: 460px;
    /* flex-direction: row-reverse; */

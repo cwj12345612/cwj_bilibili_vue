@@ -1,7 +1,7 @@
 <template>
- <div class="list">
+ <div class="list" :style="`margin-top: ${margintop};`">
     <list_left ></list_left>
-    <list_right  :videoconfig="videoconfig"></list_right>
+    <list_right  ></list_right>
  </div>
 </template>
  
@@ -12,8 +12,10 @@
     reactive,
     ref,
     watch,
-    onMounted
+    onMounted,
+    computed
  }from 'vue'
+
 import { useStore } from 'vuex';
 const store=useStore()
 /*
@@ -22,25 +24,17 @@ const store=useStore()
    min-height: 460px;
     height: '47%'
 */
-const videoconfig = reactive({})
+const  margintop=computed(()=>{
+   const max=11
+  const mt= store.state.pageconfig.windows.clientWidth * 0.03
+      // console.log(mt);
+      return mt+'px';
+   })
 
-const setWh=()=>{
-   const val=store.state.pageconfig.windows
-   videoconfig.width=((val.clientWidth - 2*64) * 0.6 * 0.32)+'px'
-   const nh=  val.clientHeight  * 0.56 * 0.33
-   // console.log(nh  )
-   videoconfig.height= ((nh < 460 ) ? (460 * 0.47) :((nh > 780) ? ( 780 * 0.47) : nh)) +'px';
-   // console.log(videoconfig.height)
-
-  
-}
-
-onMounted(setWh)
-watch(()=>store.state.pageconfig.windows,setWh,{deep:true})
 </script>
 <style scoped>
 .list {
-   margin-top:4vw;
+   /* margin-top:4vw; */
     display: flex;
     justify-content: space-between;
     padding: 0 64px;

@@ -4,7 +4,7 @@
 
         v-for="video in videolist.slice(0)"
         :video="video"
-      style="margin-bottom: 5vw; "
+      :style="`margin-bottom: ${marginbottom};` "
 ></categorycard>
  </div>
 </template>
@@ -12,8 +12,14 @@
 <script setup>
 import {
 reactive,
+ref,
+computed
 } from 'vue'
+import {
+useStore
+} from 'vuex'
 import Mock  from 'mockjs';
+const store=useStore()
  import categorycard from '@/components/video/categorycard.vue'
  const videolist = reactive(Mock.mock({
     'list|33': [
@@ -29,7 +35,13 @@ import Mock  from 'mockjs';
            datetime: Mock.mock('@now(yy-MM-dd)')
         }
     ]}).list.slice(0,9))
-
+const marginbottom=computed(()=>{
+  let temp=  store.state.pageconfig.windows.clientWidth * 0.05
+//   console.log(temp)
+  temp = (temp>71.25 ? 71.25 : (temp<65 ? 65 :temp))
+//   console.log(temp)
+  return temp+'px'
+})
 
 </script>
 <style scoped>
