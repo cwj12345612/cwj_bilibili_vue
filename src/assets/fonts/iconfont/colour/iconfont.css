@@ -1,129 +1,128 @@
 @font-face {
-  font-family: "colour"; /* Project id 4115827 */
-  /* Color fonts */
-  src: 
-       url('iconfont.woff2?t=1690500772258') format('woff2'),
-       url('iconfont.woff?t=1690500772258') format('woff'),
-       url('iconfont.ttf?t=1690500772258') format('truetype');
+    font-family: "colour"; /* Project id 4115827 */
+    /* Color fonts */
+    src: url('iconfont.woff2?t=1690500772258') format('woff2'),
+    url('iconfont.woff?t=1690500772258') format('woff'),
+    url('iconfont.ttf?t=1690500772258') format('truetype');
 }
 
 .colour {
-  font-family: "colour" !important;
-  font-size: 16px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: "colour" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 .colouric_userlevel_:before {
-  content: "\e6cb";
+    content: "\e6cb";
 }
 
 .colouric_userlevel_1:before {
-  content: "\e6cc";
+    content: "\e6cc";
 }
 
 .colouric_userlevel_2:before {
-  content: "\e6cd";
+    content: "\e6cd";
 }
 
 .colouric_userlevel_3:before {
-  content: "\e6ce";
+    content: "\e6ce";
 }
 
 .colouric_userlevel_4:before {
-  content: "\e6cf";
+    content: "\e6cf";
 }
 
 .colouric_userlevel_5:before {
-  content: "\e6d0";
+    content: "\e6d0";
 }
 
 .colouric_userlevel_6:before {
-  content: "\e6d1";
+    content: "\e6d1";
 }
 
 .colourdianshiju-:before {
-  content: "\e6d4";
+    content: "\e6d4";
 }
 
 .colourbianjituijian:before {
-  content: "\e6d5";
+    content: "\e6d5";
 }
 
 .colourdianshiju:before {
-  content: "\e6d6";
+    content: "\e6d6";
 }
 
 .colourdong:before {
-  content: "\e6d7";
+    content: "\e6d7";
 }
 
 .colourdianying:before {
-  content: "\e6d8";
+    content: "\e6d8";
 }
 
 .colourguanggao:before {
-  content: "\e6d9";
+    content: "\e6d9";
 }
 
 .colourchun:before {
-  content: "\e6da";
+    content: "\e6da";
 }
 
 .colourguixu:before {
-  content: "\e6db";
+    content: "\e6db";
 }
 
 .colourfanjutuijian:before {
-  content: "\e6dc";
+    content: "\e6dc";
 }
 
 .colourguochandonghuatuijian:before {
-  content: "\e6dd";
+    content: "\e6dd";
 }
 
 .colourshenghuo:before {
-  content: "\e6de";
+    content: "\e6de";
 }
 
 .colourshishang:before {
-  content: "\e6df";
+    content: "\e6df";
 }
 
 .coloursuoyin:before {
-  content: "\e6e0";
+    content: "\e6e0";
 }
 
 .colourshijianbiao:before {
-  content: "\e6e1";
+    content: "\e6e1";
 }
 
 .colourwodezhuifan:before {
-  content: "\e6e2";
+    content: "\e6e2";
 }
 
 .colourkeji-:before {
-  content: "\e6e3";
+    content: "\e6e3";
 }
 
 .colourwanjietuijian:before {
-  content: "\e6e4";
+    content: "\e6e4";
 }
 
 .colouryouxi:before {
-  content: "\e6e5";
+    content: "\e6e5";
 }
 
 .colourzhibo:before {
-  content: "\e6e6";
+    content: "\e6e6";
 }
 
 .colouryule:before {
-  content: "\e6e7";
+    content: "\e6e7";
 }
 
 .colourzuixinlianzai:before {
-  content: "\e6e8";
+    content: "\e6e8";
 }
 
