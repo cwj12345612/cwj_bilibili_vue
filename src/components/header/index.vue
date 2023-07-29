@@ -1,6 +1,6 @@
 <template>
 <header :class="[headerclass.scroll,headerclass.pagename]">
-   <header_left v-if="show.left"></header_left>
+   <header_left v-if="show.left" ></header_left>
 <header_search v-if="show.search"></header_search>
 <header_right v-if="show.right"></header_right>
 </header>
@@ -9,7 +9,7 @@
  
 <script setup>
 import header_left from './left.vue'
-import header_search from '@/components/searchinput'
+import header_search from '@/components/search'
 import header_right from './right.vue'
 import {
 reactive,
@@ -21,14 +21,16 @@ computed
 import {
 useStore,
     } from 'vuex'
-   
+   const store=useStore()
 const headerclass=reactive({
         // pagename:store.state.pageconfig.nowpage.name,
-        // srocll:false,
-    })
-   
+        // scroll:false,
+    })  
     headerclass.pagename=computed(()=>{
-        return useStore().state.pageconfig.nowpage.name
+        return store.state.pageconfig.nowpage.name
+    })
+    headerclass.scroll=computed(()=>{
+        return store.state.pageconfig.nowpage.isscroll ? 'scroll' :undefined
     })
 const show=reactive({
     left:true,
@@ -36,26 +38,28 @@ const show=reactive({
     right:true,
 })
 show.search=computed(()=>{
-    if(headerclass.pagename!=='search') return true
-    if(headerclass.scroll==0) return true
+    if(store.state.pageconfig.nowpage.name!=='searchpage') return true
+    if(headerclass.scroll) return true
     return false
 })
-onMounted(()=>{
-    window.addEventListener('scroll',()=>{
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-         headerclass.scroll = (scrollTop==0 ? undefined: 'scroll')
-    })
-
-
+show.left =computed(()=>{
+    if(store.state.pageconfig.nowpage.name!=='searchpage') return true
+    if(!headerclass.scroll) return true
+    return false
+})
+show.right=computed(()=>{
+    if(store.state.pageconfig.nowpage.name!=='searchpage') return true
+    if(!headerclass.scroll) return true
+    return false
 })
 </script>
 <style scoped>
 header {
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
     height: 64px;
     width: 100%;
     max-width: 2560px;
-      min-width: 1380px;
+    min-width: 1380px;
     padding: 0 24px;
     display: flex;
     justify-content: space-between;

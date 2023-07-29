@@ -10,12 +10,14 @@ const router = createRouter({
 })
 
 router.beforeEach((to, from, next) => {
-    console.log("前置路由守卫")
+    console.log("前置路由守卫"+to.name)
     // console.log(to)
-
+    // 设置当前路由name到vuex
     if (to.name) {
         store.commit('pageconfig/setnowpagename', to.name)
     }
+    //监听页面是否滚动
+    store.commit('pageconfig/Listenerisscroll')
     next()
 })
 

@@ -1,7 +1,13 @@
 //默认路由
 
 export default [
-
+    // .articlepage,
+    // .creativepage,
+    // .errorpage,
+    // .momentspage,
+    // .myspacepage,
+    // .playpage,
+    // .searchpage,
     {
         path: '/',
         component: () => import('@/views/homepage/index.vue'),
@@ -13,12 +19,12 @@ export default [
     },
     {
         path: '/article',
-        name: 'article',
+        name: 'articlepage',
         component: () => import('@/views/article')
     },
     {
         path: '/category',
-        name: 'category',
+        name: 'creativepage',
         component: () => import('@/views/category')
     },
     {
@@ -28,26 +34,27 @@ export default [
     },
     {
         path: '/moments',
-        name: 'moments',
+        name: 'momentspage',
         component: () => import('@/views/moments')
     },
     {
         path: '/myspace',
-        name: 'myspace',
+        name: 'myspacepage',
         component: () => import('@/views/myspace')
     },
     {
         path: '/play',
-        name: 'play',
+        name: 'playpage',
         component: () => import('@/views/playpage')
     },
     {
         path: '/search',
+        name:'searchpage',
         component: () => import('@/views/searchpage')
     },
     {
         path: '/:w+',
-        name: '*',
+        name: 'errorpage',
         component: () => import('@/views/error/404.vue')
 
     },

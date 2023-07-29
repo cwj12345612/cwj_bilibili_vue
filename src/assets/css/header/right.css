@@ -5,3 +5,13 @@
 .scroll {
     color: #1c1d20;
 }
+
+.articlepage,
+.creativepage,
+.errorpage,
+.momentspage,
+.myspacepage,
+.playpage,
+.searchpage {
+    color: #1c1d20;
+}

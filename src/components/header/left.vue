@@ -23,6 +23,7 @@ onMounted
 import {
 useStore
     } from 'vuex'
+    const store=useStore()
    const list=reactive([
                 { id: 1, icon: 'colourless colourlessbilibili', title: '首页', href: '#' },
                 { id: 2, title: '番剧', href: '#' },
@@ -39,14 +40,11 @@ useStore
         // pagename:'',
     })
     leftclass.pagename=computed(()=>{
-        return useStore().state.pageconfig.nowpage.name
+        return store.state.pageconfig.nowpage.name
     })
-onMounted(()=>{
-    window.addEventListener('scroll',()=>{
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-         leftclass.scroll = (scrollTop==0 ? undefined: 'scroll')
+    leftclass.scroll=computed(()=>{
+        return store.state.pageconfig.nowpage.isscroll ? 'scroll' :undefined
     })
-})
 </script>
 <style scoped>
 ul {
@@ -56,7 +54,6 @@ ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
 }
 .item {
     font-size: 14px;

@@ -4,7 +4,6 @@
             <a :href="headavatar.href">
                 <img :src="headavatar.avatarsrc" :alt="headavatar.id">
             </a>
-
         </li>
 
         <li class="item" 
@@ -32,17 +31,16 @@
 <script setup>
 import Mock from 'mockjs'
 import {
-    reactive,
-    ref,
-    onMounted,
-    computed
-} from 'vue'
+reactive,
+ref,
+computed,
+onMounted
+    } from 'vue'
 
 import {
 useStore
-} from 'vuex'
-
-
+    } from 'vuex'
+const store=useStore()
 const headavatar = reactive({
     id: Mock.mock('@id()'),
     avatarsrc: require('@/assets/images/头像.png'),
@@ -63,20 +61,14 @@ const list = reactive([
 ])
 
 const rightclass=reactive({
-    // pagename:'',
-    // srcoll
-})
-rightclass.pagename=computed(()=>{
-        return useStore().state.pageconfig.nowpage.name
+        // pagename:'',
     })
-    onMounted(()=>{
-    window.addEventListener('scroll',()=>{
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-         rightclass.scroll = (scrollTop==0 ? undefined: 'scroll')
+    rightclass.pagename=computed(()=>{
+        return store.state.pageconfig.nowpage.name
     })
-
-
-})
+    rightclass.scroll=computed(()=>{
+        return store.state.pageconfig.nowpage.isscroll ? 'scroll' :undefined
+    })
 </script>
 <style scoped>
 .right {
@@ -112,7 +104,6 @@ rightclass.pagename=computed(()=>{
     flex-direction: column;
     align-items: center;
     font-size: 16px;
-    /* color: #ffffff; */
 }
 .right .item i {
     transition: all 0.3s;
