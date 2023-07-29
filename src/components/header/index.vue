@@ -1,5 +1,5 @@
 <template>
-<header :class="[headerclass.scroll,headerclass.pagename]">
+<header :class="[headerclass.scroll,headerclass.pagename]" :style="`transform:translateY(calc(${translateY}px))`">
    <header_left v-if="show.left" ></header_left>
 <header_search v-if="show.search"></header_search>
 <header_right v-if="show.right"></header_right>
@@ -52,6 +52,13 @@ show.right=computed(()=>{
     if(!headerclass.scroll) return true
     return false
 })
+const translateY=ref(0)
+onMounted(()=>{
+    window.addEventListener('scroll',()=>{
+        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+        translateY.value=scrollTop
+    })
+})
 </script>
 <style scoped>
 header {
@@ -64,8 +71,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
-    top: 0;
+   position: absolute;
+   transform: translateY(0);
+   /* z-index: 2; */
+   top: 0;
 }
 </style>
 <style scoped src="@/assets/css/header/header.css"></style>

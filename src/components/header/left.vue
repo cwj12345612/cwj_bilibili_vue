@@ -1,5 +1,5 @@
 <template>
-<ul class="left">
+<ul class="left" :style="style">
     <li v-for="li in list">
 
 <a class="item" :class="[leftclass.pagename,leftclass.scroll]" :href="li.href">
@@ -23,7 +23,8 @@ onMounted
 import {
 useStore
     } from 'vuex'
-    const store=useStore()
+    import  num from '@/utils/number'
+const store=useStore()
    const list=reactive([
                 { id: 1, icon: 'colourless colourlessbilibili', title: '首页', href: '#' },
                 { id: 2, title: '番剧', href: '#' },
@@ -38,19 +39,29 @@ useStore
             ])
     const leftclass=reactive({
         // pagename:'',
+        
     })
     leftclass.pagename=computed(()=>{
         return store.state.pageconfig.nowpage.name
     })
     leftclass.scroll=computed(()=>{
+        // console.log(Date.now())
         return store.state.pageconfig.nowpage.isscroll ? 'scroll' :undefined
     })
+const style=reactive({})
+
+style.width=computed(()=>{
+    const h=store.state.pageconfig.windows.clientWidth * (527 / 1425)
+    return num.scopenumber(h,423,611)+'px';
+})
+
 </script>
 <style scoped>
 ul {
     height: 80%;
-    width: 40%;
-    background-color: blueviolet;
+    max-width: 611px;
+    min-width: 423px;
+    /* background-color: blueviolet; */
     display: flex;
     justify-content: space-between;
     align-items: center;

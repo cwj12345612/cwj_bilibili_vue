@@ -1,5 +1,5 @@
 <template>
-    <ul class="right">
+    <ul class="right" :style="style">
         <li class="headavatar">
             <a :href="headavatar.href">
                 <img :src="headavatar.avatarsrc" :alt="headavatar.id">
@@ -40,6 +40,7 @@ onMounted
 import {
 useStore
     } from 'vuex'
+    import num from '@/utils/number'
 const store=useStore()
 const headavatar = reactive({
     id: Mock.mock('@id()'),
@@ -69,12 +70,19 @@ const rightclass=reactive({
     rightclass.scroll=computed(()=>{
         return store.state.pageconfig.nowpage.isscroll ? 'scroll' :undefined
     })
+    const style=reactive({})
+    style.width=computed(()=>{
+        const w=store.state.pageconfig.windows.clientWidth * (466 / 1425);
+        return num.scopenumber(w,326,482)+'px'
+    })
 </script>
 <style scoped>
 .right {
+    max-width: 482px;
+    min-width: 326px;
     height: 80%;
-    width: 35%;
-    background-color: cadetblue;
+    /* width: 35%; */
+    /* background-color: cadetblue; */
     display: flex;
     justify-content: space-between;
     align-items: center;

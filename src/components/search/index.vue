@@ -35,19 +35,18 @@ useStore
     justify-content: space-around;
     align-items: center;
     width: 25%;
-    height: 80%;
+    height: 65%;
     
   background-color: #f2f3f4;
   border-radius: 8px;
   overflow: hidden;
 }
 input {
-    height: 80%;
-    width: 85%;
+    height: 70%;
+    width: 80%;
    border: none;
    /* background-color: #f2f3f4; */
    background-color: #f2f3f4;
-   
 }
 </style>
 
