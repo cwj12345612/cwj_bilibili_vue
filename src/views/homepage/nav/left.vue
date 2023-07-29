@@ -1,6 +1,6 @@
 <template>
 
-<div class="left" :style="`width: ${width};`">
+<div class="left" :style="style">
 
 </div>
 </template>
@@ -17,11 +17,13 @@ import {
 useStore
     } from 'vuex'
 const store=useStore()
-import num from '@/utils/number'
-const width=computed(()=>{
-    const h=store.state.pageconfig.windows.clientWidth * (210 / 1425)
+import dynamic from '@/utils/dynamic';
+const style=computed(()=>{
+    // const h=store.state.pageconfig.windows.clientWidth * (210 / 1425)
     // console.log(h)
-    return num.scopenumber(h,154,234+20)+'px'
+    return dynamic.dynamicsize(
+        {normal:210,max:234+20,min:153}
+    )
 })
 </script>
 <style scoped>

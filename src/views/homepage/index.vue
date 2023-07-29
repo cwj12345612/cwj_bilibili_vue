@@ -23,9 +23,8 @@ const store=useStore()
 #homepage{
     position: relative;
     z-index: -1;
-  
     width: 100%;
-    
+   
     background-color: chocolate;
     height: 500px;
 }

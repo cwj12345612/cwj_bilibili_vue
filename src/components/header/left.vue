@@ -23,7 +23,7 @@ onMounted
 import {
 useStore
     } from 'vuex'
-    import  num from '@/utils/number'
+    import  dynamic from '@/utils/dynamic'
 const store=useStore()
    const list=reactive([
                 { id: 1, icon: 'colourless colourlessbilibili', title: '首页', href: '#' },
@@ -48,11 +48,12 @@ const store=useStore()
         // console.log(Date.now())
         return store.state.pageconfig.nowpage.isscroll ? 'scroll' :undefined
     })
-const style=reactive({})
-
-style.width=computed(()=>{
-    const h=store.state.pageconfig.windows.clientWidth * (527 / 1425)
-    return num.scopenumber(h,423,611)+'px';
+const style=computed(()=>{
+    // const h=store.state.pageconfig.windows.clientWidth * (527 / 1425)
+    // console.log('left')
+    return dynamic.dynamicsize(
+        {normal:527,max:611,min:423}
+    )
 })
 
 </script>

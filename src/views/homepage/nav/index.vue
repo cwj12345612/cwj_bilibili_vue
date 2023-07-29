@@ -1,30 +1,38 @@
 <template>
-<div class="nav" :style="`height: ${height};`">
-<homepage_nav_left></homepage_nav_left>
-</div>
+    <div class="nav" :style="style">
+        <homepage_nav_left></homepage_nav_left>
+    </div>
 </template>
  
 <script setup>
 import homepage_nav_left from './left.vue'
 import {
-ref,
-computed
-    } from 'vue'
+    ref,
+    reactive,
+    watch,
+    computed
+} from 'vue'
 
 import {
-useStore
-    } from 'vuex'
-import num from '@/utils/number.js'
+    useStore
+} from 'vuex'
+import dynamic from '@/utils/dynamic'
 
-const store  =useStore();
-const height=computed(()=>{
-  const h=  store.state.pageconfig.windows.clientHeight * (110 / 1425)
-  return num.scopenumber(h,130,100)+'px';
+const store = useStore();
+
+const style=computed(()=>{
+    return dynamic.dynamicsize(
+        undefined,
+        {normal:110,max:130,min:100}
+    )
 })
-
+// watch(()=>style,()=>{
+//     console.log('监听'+store)
+//     console.log('监听'+JSON.stringify(style.value))
+// },{immediate:true,deep:true})
 </script>
 <style scoped>
-.nav{
+.nav {
     background-color: palevioletred;
     padding: 0 64px;
     width: 100%;

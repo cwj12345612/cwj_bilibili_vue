@@ -1,3 +1,4 @@
+
 export default {
     /*
     判断number是否在m1~m2/m2~m1范围内 
@@ -11,5 +12,6 @@ export default {
         if(number>=min && number<=max ) return number
         if(number<min) return min
         if(number>max) return max
-    }
+    },
+   
 }

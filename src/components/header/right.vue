@@ -40,7 +40,7 @@ onMounted
 import {
 useStore
     } from 'vuex'
-    import num from '@/utils/number'
+    import dynamic from '@/utils/dynamic';
 const store=useStore()
 const headavatar = reactive({
     id: Mock.mock('@id()'),
@@ -70,10 +70,11 @@ const rightclass=reactive({
     rightclass.scroll=computed(()=>{
         return store.state.pageconfig.nowpage.isscroll ? 'scroll' :undefined
     })
-    const style=reactive({})
-    style.width=computed(()=>{
+    const style=computed(()=>{
         const w=store.state.pageconfig.windows.clientWidth * (466 / 1425);
-        return num.scopenumber(w,326,482)+'px'
+        return dynamic.dynamicsize(
+            {normal:466,max:482,min:326}
+        )
     })
 </script>
 <style scoped>
