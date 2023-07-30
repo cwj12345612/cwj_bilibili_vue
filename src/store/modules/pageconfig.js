@@ -1,52 +1,42 @@
-// 页面相关参数
+//当前页面相关参数 挂载到vuex
 export default {
-    name: 'pageconfig',
-    state: {
-        windows: {
-            clientWidth: 0,
-            clientHeight: 0
-         },
-        nowpage: {
-            name: '',
-            isscroll:false,
+    state:{
+        nowpage:{
+            name:undefined,
+            width:0,
+            height:0,
+            scroll:0,
+
         }
     },
-    mutations: {
-        // 设置当前页面路由的name
-        setnowpagename(state, name) {
-            // console.log('当前页面'+name)
-            state.nowpage.name = name
+    mutations:{
+        //页面加载完成时 获取页面宽度和监听窗口大小变化
+        initnowpagewidth(state){
+            const setWH = () => {
+                state.nowpage.width = document.getElementById('app').clientWidth
+                state.nowpage.height = document.getElementById('app').clientHeight
+             }
+             setWH()
+             window.addEventListener('resize', setWH )
         },
-        // 监听当前页面是否滚动
-        Listenerisscroll(state){
-           
-          const scroll=  ()=>{
+        // 监听页面是否滚动
+        listenerscroll(state){
+            const scroll=  ()=>{
                 var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-                state.nowpage.isscroll=scrollTop!=0
-                // console.log(state.nowpage.isscroll)
+                state.nowpage.scroll=scrollTop
+                // console.log(state.nowpage.scroll)
             }
             scroll()
-            window.addEventListener('scroll',()=>{
-                // console.log('页面滚动')
-                scroll()
-            })
-           
-        },
-        // 初始化整个页面的宽度 并监听窗口大小改变
-      initWindowsHeightWidth(state) {
-        
-        const setWH = () => {
-           state.windows.clientWidth = document.getElementById('app').clientWidth
-           state.windows.clientHeight = state.windows.clientWidth
-            // console.log(state.windows.clientWidth)
+            window.addEventListener('scroll',scroll)
         }
-        setWH()
-        window.addEventListener('resize', () => {
-           setWH()
-        })
-     }
     },
-    actions: {},
-    getters: {},
+    actions:{
+
+    },
+    getters:{
+
+    },
+    name:'pageconfig',
     namespaced: true
+  
 }
