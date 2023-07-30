@@ -1,7 +1,7 @@
 <template>
 <!-- 首页 -->
 <div id="homepage">
-    
+    <img src="@/assets/images/header.png" alt="">
 </div>
 </template>
  
