@@ -2,13 +2,18 @@
 export default [
     {
         path:'/',
-        name:'home',
+        name:'homepage',
 component:()=>import('@/views/home/index.vue')
 },
 {
     path:'/search/:req',
-    name:'search',
+    name:'searchpage',
     component:()=>import('@/views/search')
+},
+{
+    path:'/article',
+    name:'articlepage',
+    component:()=>import('@/views/article')
 }
 
 ]

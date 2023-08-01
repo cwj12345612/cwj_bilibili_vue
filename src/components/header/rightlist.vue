@@ -1,5 +1,5 @@
 <template>
-    <div class="right" :style="style">
+    <div class="right" :style="style" :class="Object.values(ca)">
         <li class="headavatar">
             <a :href="headavatar.href">
                 <img :src="headavatar.avatarsrc" :alt="headavatar.id">
@@ -36,17 +36,19 @@ import {
 import {
 
 } from 'vuex'
+defineProps({
+    ca:Object
+})
 import Mock from 'mockjs'
 import dynamicsize from '@/utils/dynamicsize';
 
 //#region  动态样式
 const style = dynamicsize.dynamicWH(
-    { normal: 466, max: 482, min: 322 }
+    { normal: 466, max: 482, min: 326 }
 )
 const dynamicWH = (width, height) => {
     return dynamicsize.dynamicWH(
-        width ? width : undefined,
-        height ? height : undefined
+      width,height
     ).value
 }
 //#endregion 
@@ -74,13 +76,15 @@ const list = reactive([
 </script>
 <style scoped>
 .right {
+    flex-grow: 0;
+  flex-shrink: 0;
     max-width: 482px;
     min-width: 322px;
     height: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: teal;
+    /* background-color: teal; */
 }
 
 a {
@@ -132,3 +136,5 @@ a {
     color: #ffffff;
 }
 </style>
+
+<style scoped src="@/assets/css/head/rightlist.css"></style>

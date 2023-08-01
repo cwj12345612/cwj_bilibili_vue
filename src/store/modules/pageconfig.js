@@ -14,7 +14,7 @@ export default {
         initnowpagewidth(state){
             const setWH = () => {
                 state.nowpage.width = document.getElementById('app').clientWidth
-                state.nowpage.height = document.getElementById('app').clientHeight
+                state.nowpage.height = document.getElementById('app').clientWidth
              }
              setWH()
              window.addEventListener('resize', setWH )

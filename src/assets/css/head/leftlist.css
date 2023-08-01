@@ -1,6 +1,13 @@
-.homepage {
+
+
+.left.homepage a{
     color: #ffffff;
 }
-.search {
-    color: #3e3d3e;
+.left.scroll a{   
+    color: #18191c;
 }
+.left.articlepage a,
+.left.searchpage a{
+    color: #18191c;
+}
+

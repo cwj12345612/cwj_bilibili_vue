@@ -1,7 +1,7 @@
 <template>
     <!-- 文章 专栏 -->
 <div class="article">
-    文章 专栏
+  
 </div>
 
 </template>

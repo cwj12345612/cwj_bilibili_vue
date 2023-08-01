@@ -1,12 +1,16 @@
 <template>
-    <header :style="style">
-        <head_leftlist></head_leftlist>
-        <head_rightlist></head_rightlist>
+    <header :style="style" :class="Object.values(ca) ">
+        <head_leftlist :ca="ca" v-if="ca.name!=='searchpage' || !ca.scroll" ></head_leftlist>
+        <head_search :ca="ca" v-if="ca.name!='searchpage'"></head_search>
+        <head_search_search :ca="ca" v-if="ca.name=='searchpage' && ca.scroll"></head_search_search>
+        <head_rightlist :ca="ca" v-if="ca.name!=='searchpage' || !ca.scroll"></head_rightlist>
     </header>
 </template>
  
 <script setup>
 import head_leftlist from './leftlist.vue'
+import head_search from '../search/head_search.vue'
+import head_search_search from '@/components//search/searchpage_search.vue'
 import head_rightlist from './rightlist.vue'
 import {
     reactive,
@@ -16,6 +20,7 @@ import {
 import {
     useStore, mapState
 } from 'vuex'
+const store = useStore()
 import dynamicsize from '@/utils/dynamicsize'
 const translateY = ref(0)
 const style = computed(() => {
@@ -34,8 +39,23 @@ onMounted(() => {
         // console.log(JSON.stringify(style.value))
     })
 })
-
-
+const scrollTop=ref(0);
+onMounted(()=>{
+    window.addEventListener('scroll',()=>{
+       scrollTop.value = document.documentElement.scrollTop || document.body.scrollTop;
+    })
+})
+const ca = computed(()=>{
+    const cl={};
+         const name = store.state.pageconfig.nowpage.name
+     cl.name=name
+     if (scrollTop.value != 0) {
+            cl.scroll = 'scroll'
+        } else {
+            cl.scroll = null
+        }
+    return cl
+})
 </script>
 
 <style scoped>
@@ -53,4 +73,7 @@ header {
     min-width: calc(1012px + 24px * 2);
     /*  */
 }
+
 </style>
+
+<style scoped src="@/assets/css/head/head.css"></style>
