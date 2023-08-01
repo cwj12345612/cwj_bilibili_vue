@@ -25,7 +25,7 @@ import {
 
     } from 'vuex'
 // (816+30)x66
-
+import  Mock  from 'mockjs';
 const style=dynamicsize.dynamicWH(
     {normal:816+30,max:1436+30+2,min:677+30+1},
     {normal:66,max:78,min:66},
@@ -38,29 +38,30 @@ const dynamicWH=(width,height)=>{
 
 ).value
 }
+
 const navlist=reactive([
-                {title:'番剧',href:'#',},
-                {title:'电视剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-                {title:'番剧',href:'#',},
-               
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2)'),href:'#',},              
+                        
             ])
 </script>
 <style scoped>

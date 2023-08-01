@@ -30,7 +30,7 @@ const style=dynamicsize.dynamicWH(
 </script>
 <style scoped>
 .nav{
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
   
    max-width: 1980px;
    max-height: 130px;
