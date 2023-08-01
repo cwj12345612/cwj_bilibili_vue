@@ -82,6 +82,10 @@ position: relative;
     overflow: hidden;
     word-break: break-all;
     white-space: nowrap;
+   
+}
+.title a {
+    color: #ffffff;
 }
 .title li {
   background: rgba(0, 0, 0, 0.5);
