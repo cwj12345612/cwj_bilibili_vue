@@ -43,7 +43,7 @@ const style=dynamicsize.dynamicWH(
 
 }
 .more .right {
-    
+  display: block;
     /* background-color: palevioletred; */
 }
 </style>

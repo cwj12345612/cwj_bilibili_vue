@@ -1,7 +1,7 @@
 <template>
 <div class="search" :class="Object.values(ca)" :style="dynamicWH({normal:store.state.pageconfig.nowpage.scroll == 0 ? 413:337,max:500,min:253})" :aa="store.state.pageconfig.nowpage.scroll">
-    <input type="search" placeholder="请输入搜索内容" :style="dynamicWH({normal:store.state.pageconfig.nowpage.scroll == 0 ? 359 :283,max:(2+8)*2+424,min:(2+8)*2+179})">
-    <button>
+    <input v-model="text" type="search" @keyup.enter.native="submit" placeholder="请输入搜索内容" :style="dynamicWH({normal:store.state.pageconfig.nowpage.scroll == 0 ? 359 :283,max:(2+8)*2+424,min:(2+8)*2+179})">
+    <button @click="submit">
         <i class="colourless sousuo"></i>
     </button>
 </div>
@@ -13,18 +13,17 @@
 import {
 reactive,
 ref,
-computed,onMounted
+computed,onMounted,watch
     } from 'vue'
-
+import { useRouter,useRoute} from 'vue-router'
+const router=useRouter()
 import {
 useStore
     } from 'vuex'
-    const store=useStore();
 
-   
-
+    const store=useStore();   
+//#region
 import dynamicsize from '@/utils/dynamicsize';
-
 const dynamicWH=(width,height)=>{
     return dynamicsize.dynamicWH(  width,height).value
 }
@@ -45,6 +44,18 @@ const ca = computed(()=>{
         }
     return cl
 })
+//#endregion
+
+const text=ref('你好世界')
+const submit=()=>{
+  const temp= text.value.trim()
+ if(temp==='') {
+    alert('请输入搜索内容')
+    return false;
+ }else {
+    router.push({path:'/search',query:{text:temp}})
+ }
+}
 </script>
 <style scoped>
 .search {

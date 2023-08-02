@@ -3,7 +3,7 @@
 <ul class="navlist" :style="style">
 <li v-for="item in navlist"  :href="item.href" >
     <a :href="item.href">{{ item.title }}</a>
-
+   
 </li>
 <li class="more">
     <a href="#">
@@ -80,7 +80,9 @@ const navlist=reactive([
     grid-template-columns: repeat(11,1fr);
     grid-template-rows: repeat(2,1fr);
 }
+
 li  {
+    position: relative;
     font-size: 14px;
    background-color: #f6f7f8;
 border-radius: 6px;
