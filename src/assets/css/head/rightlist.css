@@ -3,11 +3,11 @@
 .right.homepage .item a{
    color: #ffffff;
 }
-
+.right.playpage .item a,
 .right.articlepage .item a,
 .right.searchpage .item a{
    color: #18191c;
 }
-.right.scroll .item a{   
+/* .right.scroll .item a{   
     color: #18191c;
-}
+} */

@@ -22,6 +22,12 @@ component:()=>import('@/views/home/index.vue')
     }
 },
 {
+path:'/play',
+name:'playpage',
+component:()=>import('@/views/play')
+},
+
+{
     path:'/article',
     name:'articlepage',
     component:()=>import('@/views/article')
