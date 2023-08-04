@@ -1,94 +1,94 @@
 <template>
-
-<div class="king">
-<a href="#" class="img">
-<img src="@/assets/images/轮播图.png" alt="">
-</a>
-<div class="bottom">
-<div class="title">
-    <a href="#">{{ title }}</a>
-    <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-    </ul>
-</div>
-<div class="button">
-    <button >
-        <i class="colourless fanhui"></i>
-    </button>
-    <button >
-        <i class="colourless gengduo"></i>
-    </button>
-</div>
-</div>
-</div>
+    <div class="king">
+      <ul class="carousel" ref="homepage_carousel">
+        <li v-for="li in list">
+            <a :href="li.href" >
+            <img :src="li.src" alt="">
+        </a>
+        </li>
+      </ul>
+  
+    </div>
 </template>
  
 <script setup>
 
 import {
-ref,
-onMounted
-    } from 'vue'
+    ref,
+    reactive,
+    onMounted
+} from 'vue'
 
 import {
 
-    } from 'vuex'
+} from 'vuex'
 import Mock from 'mockjs'
-const title=ref(Mock.mock('@cword(20)'))
+
+const list=reactive([
+    {id:Mock.mock('@id()'),title:Mock.mock('@cword(3,10)'),href:'#',src:require('@/assets/images/1.webp')},
+    {id:Mock.mock('@id()'),title:Mock.mock('@cword(3,10)'),href:'#',src:require('@/assets/images/2.webp')},
+    {id:Mock.mock('@id()'),title:Mock.mock('@cword(3,10)'),href:'#',src:require('@/assets/images/3.webp')},
+    {id:Mock.mock('@id()'),title:Mock.mock('@cword(3,10)'),href:'#',src:require('@/assets/images/4.webp')},
+
+])
+
+
 
 </script>
 <style scoped>
-.king{
+.king {
     /* background-color: orange; */
     background: rgba(0, 0, 0, 0.2);
     height: calc(calc((100% - 20px) / 2)*1.6 + 20px);
     border-radius: 8px;
     overflow: hidden;
-
+    position: relative;
 }
-.king .img {
-    display: block;
+.king ul {
+    position: absolute;
+    left: 0;
+    background-color: aqua;
+   height: 80%;
+   display: flex;
+   align-items: center;
+   /* justify-content: center; */
+}
+.king ul li{
     width: 100%;
-    height: 80%;
-    /* background-color: turquoise; */
+    height: 100%;
+    flex-shrink: 0;
 }
-.bottom  {
+.bottom {
     width: 100%;
     height: 20%;
     /* background-color: cadetblue; */
     background-clip: content-box;
     padding: 10px 10px 0 10px;
-position: relative;
+    position: relative;
 
 }
+
 .bottom .title {
     float: left;
     /* background-color: orangered; */
     width: 70%;
     height: 80%;
     display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+    flex-direction: column;
+    justify-content: space-around;
     text-overflow: ellipsis;
     overflow: hidden;
     word-break: break-all;
     white-space: nowrap;
-   
+
 }
+
 .title a {
     color: #ffffff;
 }
+
 .title li {
-  background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.5);
     float: left;
     width: 12px;
     height: 12px;
@@ -96,6 +96,7 @@ position: relative;
     border-radius: 6px;
     cursor: pointer;
 }
+
 .button {
     float: right;
     width: 10%;
@@ -104,13 +105,13 @@ position: relative;
     display: flex;
     justify-content: space-between;
 }
+
 .button button {
-   cursor: pointer;
+    cursor: pointer;
     background: rgba(0, 0, 0, 0.5);
     border: none;
     border-radius: 3px;
     width: 40%;
     height: 100%;
-color: #f2f3f4;
-}
-</style>
+    color: #f2f3f4;
+}</style>
