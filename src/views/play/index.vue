@@ -9,6 +9,8 @@
 )">
 <play_playerWrap></play_playerWrap>
 <play_tool></play_tool>
+<play_comment></play_comment>
+
 </div>
     <div class="right" 
     :style="dynamicWH(
@@ -22,6 +24,7 @@
 import play_title from './title'
 import play_playerWrap from './playerwrap'
 import play_tool from './tool'
+import play_comment from './comment'
 import {
 
     } from 'vue'
