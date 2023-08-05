@@ -1,16 +1,17 @@
 
-/* header.scroll{
+header.scroll{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
      background-color: #ffffff;
 }
 
-header.searchpage.scroll {
+/* header.searchpage.scroll {
     justify-content: center;
 } */
 header.playpage,
 header.articlepage,
 header.searchpage {
-  
+    margin-bottom: 5px;
+    position: relative;
      background-color: #ffffff;
      box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
 }

@@ -28,7 +28,8 @@ const style = computed(() => {
         ...dynamicsize.dynamicWH(
             { normal: 1425, max: 2512 + 24 * 2, min: 1012 + 24 * 2 }
         ).value,
-        // ...{ 'transform': `translateY(${translateY.value}px)` },
+        ...{ 'transform': `translateY(${translateY.value}px)` },
+        // top:translateY+'px'
     }
 })
 onMounted(() => {
@@ -42,7 +43,7 @@ onMounted(() => {
 const scrollTop=ref(0);
 onMounted(()=>{
     window.addEventListener('scroll',()=>{
-    //    scrollTop.value = document.documentElement.scrollTop || document.body.scrollTop;
+       scrollTop.value = document.documentElement.scrollTop || document.body.scrollTop;
     })
 })
 const ca = computed(()=>{
@@ -54,14 +55,14 @@ const ca = computed(()=>{
         } else {
             cl.scroll = null
         }
-        cl.scroll=null
+        // cl.scroll=null
     return cl
 })
 </script>
 
 <style scoped>
 header {
-    /* position: absolute; */
+    position: absolute;
     /* transform: translateY(); */
     width: 100%;
     padding: 0 24px;
