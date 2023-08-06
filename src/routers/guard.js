@@ -8,6 +8,7 @@ const router= createRouter({
 })
 router.beforeEach((to)=>{
     if(to.name) {
+        // console.log(to.name)
         store.state.pageconfig.nowpage.name=to.name
         // console.log(to.name)
     }

@@ -66,6 +66,7 @@ const dynamicWH=(width,height)=>{
     justify-content: space-between;
     overflow: hidden;
 }
+
 .video .img {
    width: 100%;
    height: 60%;
@@ -97,7 +98,7 @@ position: relative;
     color: #18191c;
 }
 .title a:hover {
-    color: skyblue;
+    color: #00aeec;
 }
 .author  {
     width: 100%;
@@ -110,6 +111,6 @@ position: relative;
     color: #9490a0;
 }
 .author:hover {
-    color: skyblue;
+    color: #00aeec;
 }
 </style>

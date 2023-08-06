@@ -75,7 +75,7 @@ onMounted(()=>{
 
     flex-grow: 0;
     width: 100%;
-    padding: 0 12px;
+    /* padding: 0 5px; */
     background-color: blanchedalmond;
     display: flex;
     align-items: center;

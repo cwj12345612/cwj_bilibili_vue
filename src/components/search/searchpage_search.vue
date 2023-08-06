@@ -36,6 +36,7 @@ const dynamicWH=(width,heigth)=>{
 //#endregion
 const text=ref('')
 onMounted(()=>{
+    console.log(route.query.text)
    text.value= route.query.text
 })
 const submit=()=>{
