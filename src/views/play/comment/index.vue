@@ -6,7 +6,7 @@
                 <span style="color: grey;">44</span>
             </div>
             <div class="top_new" style="margin-left: 20px;display: flex; width: 15%;justify-content: space-around;">
-                <span class="style">最热</span>
+                <span class="style" style="color: #18191c; transform: scale(1.2);">最热</span>
                 <span>|</span>
                 <span class="style">最新</span>
             </div>

@@ -1,6 +1,6 @@
 <template>
     <div class="playerWrap" :style="dynamicWH(undefined, { normal: 422, max: 1009, min: 422 },)">
-        <div class="video">
+        <div class="video" id="playwrapvideo">
         </div>
         <div class="sender" :style="dynamicWH(undefined, { normal: 46, max: 56, min: 46 },)">
             <div class="person_info">
@@ -30,9 +30,11 @@
 </template>
  
 <script setup>
+import Player from 'xgplayer'
+// import 'xgplayer/dist/index.min.css';
 
 import {
-    ref
+    ref,reactive,onMounted
 } from 'vue'
 
 import {
@@ -43,9 +45,18 @@ const dynamicWH = (width, height) => {
     return dynamicsize.dynamicWH(width, height).value
 }
 const open = ref(true)
-
+let player =reactive({})
+onMounted(()=>{
+    player= new Player({
+    id: 'playwrapvideo',
+    url: 'http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4',
+    height:'100%',
+    width:'100%'
+})
+})
 </script>
 <style scoped>
+@import url('xgplayer/dist/index.min.css');
 .playerWrap {
     display: flex;
     flex-direction: column;
