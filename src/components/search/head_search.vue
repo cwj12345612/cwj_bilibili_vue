@@ -108,6 +108,8 @@ button:hover {
 }
 
 .search.playpage,
-.search.articlepage {
+.search.articlepage,
+.search.spacepage
+{
     background-color: #f2f3f4;
 }</style>

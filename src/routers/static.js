@@ -21,6 +21,11 @@ component:()=>import('@/views/play')
     path:'/article',
     name:'articlepage',
     component:()=>import('@/views/article')
+},
+{
+    path:'/space',
+    name:'spacepage',
+    component:()=>import('@/views/space')
 }
 
 ]

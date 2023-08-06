@@ -9,7 +9,8 @@ header.searchpage.scroll {
 }
 header.playpage,
 header.articlepage,
-header.searchpage {
+header.searchpage,
+header.spacepage {
     margin-bottom: 5px;
     position: relative;
     z-index: 10086;
