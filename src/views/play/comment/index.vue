@@ -25,13 +25,7 @@
                 
             </div>
             </div>
-            <ul class="items">
-                <li>
-                    <div class="maincomment">
-                        
-                    </div>
-                </li>
-            </ul>
+         
         </div>
     </div>
 </template>
@@ -55,7 +49,7 @@ const dynamicWH = (width, height) => {
     margin-top: 24px;
     width: 100%;
     height: 400px;
-    background-color: orange;
+    /* background-color: orange; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,7 +58,7 @@ const dynamicWH = (width, height) => {
 
 .comment .head {
     width: 100%;
-    background-color: teal;
+    /* background-color: teal; */
     display: flex;
     align-items: center;
     flex-grow: 0;
@@ -83,14 +77,14 @@ const dynamicWH = (width, height) => {
 .comment .main {
  background-clip: content-box;
     height: 100%;
-    background-color: tomato;
+    /* background-color: tomato; */
     padding-left: 5%;
     width: 100%;
  
 }
 .comment .main .send {
     grid-column: span 2;
-    background-color: #00aeec;
+    /* background-color: #00aeec; */
     height: 50px;
     display: grid;
     grid-template-columns: 1fr 14fr;
@@ -107,7 +101,7 @@ const dynamicWH = (width, height) => {
 .comment .main .send .input {
   height: 40px;
   width: 100%;
-    background-color: orange;
+    /* background-color: orange; */
     border-radius: 8px; 
     overflow: hidden;
     display: grid;
@@ -138,24 +132,5 @@ color: #f1f2f3;
 .comment .main .send .button:hover{
     background-color: #00aeec;
 }
-.comment .main .items {
-    display: grid;
-    height: 200px;
-    background-color: brown;
-    grid-column-gap: 20px;
-    grid-template-columns: 1fr 14fr;
-    grid-template-rows: repeat(5,1fr);
-    justify-content: center;
-    align-content: center;
-}
-.comment .main .items  li {
-    background-color: chartreuse;
-    grid-column: span 2;
-    display: grid;
-    grid-column-gap: 20px;
-    grid-template-columns: 1fr 14fr;
-    grid-template-rows: repeat(1,1fr);
-    justify-content: center;
-    align-content: center;
-}
+
 </style>

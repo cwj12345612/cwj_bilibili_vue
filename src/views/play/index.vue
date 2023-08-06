@@ -15,7 +15,10 @@
     <div class="right" 
     :style="dynamicWH(
     {normal:350,max:411,min:350},
-)"></div>
+)">
+<play_danmulist></play_danmulist>
+<play_list></play_list>
+</div>
 </div>
 </div>
 </template>
@@ -25,6 +28,8 @@ import play_title from './title'
 import play_playerWrap from './playerwrap'
 import play_tool from './tool'
 import play_comment from './comment'
+import play_danmulist from './danmulist'
+import play_list from './list'
 import {
 
     } from 'vue'
@@ -54,12 +59,5 @@ const dynamicWH=(width,height)=>{
     display: flex;
     justify-content: space-between;
 }
-.play .main .left{
-  height: 80%;
-    /* background-color: orangered; */
-}
-.play .main .right{
-height: 200px;
-background-color: blueviolet;
-}
+
 </style>

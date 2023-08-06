@@ -84,7 +84,7 @@ const dynamicWH=(width,height)=>{
 </script>
 <style scoped>
 .title {
-   background-color: teal;
+   /* background-color: teal; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -94,7 +94,7 @@ const dynamicWH=(width,height)=>{
     float: left;
     height: 100%;
    padding-top: 22px;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 .detailtitle .info{
     margin-top: 10px;  
@@ -105,7 +105,7 @@ const dynamicWH=(width,height)=>{
 }
 .title .athor {
     float: right;
-    background-color: palegreen;
+    /* background-color: palegreen; */
     height: 100%;
    
     display: flex;

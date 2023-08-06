@@ -102,6 +102,7 @@ button:hover {
 .search.scroll {
     background-color: #f2f3f4de;
 }
+.search.playpage,
 .search.articlepage{
     background-color:#f2f3f4;
 }
