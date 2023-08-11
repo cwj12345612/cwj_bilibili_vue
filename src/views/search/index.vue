@@ -30,9 +30,7 @@ const dynamicWH = (w, h) => {
   return dynamicsize.dynamicWH(w, h).value
 }
 const style = dynamicWH({ normal: 1305, max: 2024, min: 1004 },)
-watch(() => style.padding, () => {
-  // console.log(style)
-}, { immediate: true, deep: true })
+
 import {
   useStore
 } from 'vuex'

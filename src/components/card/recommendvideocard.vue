@@ -6,9 +6,9 @@
     <span class="time">10:14</span>
 </div>
 <div class="detail">
-    <p class="title">
+    <a class="title" href="#">
         {{ title }}
-    </p>
+    </a>
     <a class="up" href="#">
         <i class="colourless UPzhu"></i>
         <span>责任全在美方</span>
@@ -70,7 +70,9 @@ overflow: hidden;
     flex-direction: column;
     justify-content: flex-start;
 }
-.detail p.title {
+.detail a.title {
+    color: black;
+    cursor: pointer;
     width: 100%;
     height: 50%;
     max-height: 42px;

@@ -2,18 +2,23 @@
 header.scroll{
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
      background-color: #ffffff;
+     position: fixed;
 }
 
 header.searchpage.scroll {
     justify-content: center;
 }
-header.playpage,
-header.articlepage,
-header.searchpage,
-header.spacepage {
+.playpage,
+.articlepage,
+.searchpage,
+.spacepage {
     margin-bottom: 5px;
     position: relative;
     z-index: 10086;
      background-color: #ffffff;
-     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+     /* box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px; */
+}
+header.spacepage.scroll{
+    position: relative;
+    box-shadow: none;
 }

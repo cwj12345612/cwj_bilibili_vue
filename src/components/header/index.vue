@@ -28,16 +28,12 @@ const style = computed(() => {
         ...dynamicsize.dynamicWH(
             { normal: 1425, max: 2512 + 24 * 2, min: 1012 + 24 * 2 }
         ).value,
-        ...{ 'transform': `translateY(${translateY.value}px)` },
-        // top:translateY+'px'
     }
 })
 onMounted(() => {
     window.addEventListener('scroll', () => {
         var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
         translateY.value = scrollTop
-        // console.log(scrollTop)
-        // console.log(JSON.stringify(style.value))
     })
 })
 const scrollTop=ref(0);
