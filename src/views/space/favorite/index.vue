@@ -110,15 +110,18 @@ onMounted(() => {
 }
 
 .favorite .nav {
+  
     width: 209px;
     height: 100%;
     float: left;
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
     border-right: 1px solid #f4f5f7;
     padding: 0 5px;
     padding-left: 25px;
 }
-
+.favorite .nav .item{
+    margin-bottom: 20px;
+}
 .favorite .nav .createlist {
     overflow: auto;
     width: 100%;
@@ -127,10 +130,11 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
-
+   
 }
 
 .favorite .nav .top {
+   
     height: 54px;
     width: 100%;
     display: flex;

@@ -23,7 +23,7 @@ component:()=>import('@/views/play')
     component:()=>import('@/views/article')
 },
 {
-    path:'/space',
+    path:'/space/',
     name:'spacepage',
     redirect:'/space/home',
     component:()=>import('@/views/space'),
@@ -36,6 +36,14 @@ component:()=>import('@/views/play')
             path:'favorite',
             component:()=>import('@/views/space/favorite')
         },
+        {
+            path:'bangumi',
+            component:()=>import('@/views/space/bangumi')
+        },
+        {
+            path:'setting',
+            component:()=>import('@/views/space/setting')
+        }
        
     ]
 }

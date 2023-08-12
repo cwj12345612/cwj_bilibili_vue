@@ -27,27 +27,27 @@
                 <i class="colourless shouyeweixuanzhong"></i>
                 <span>主页</span>
             </router-link></li>
-            <li><router-link to="/" active-class="active">
+            <!-- <li><router-link to="/" active-class="active">
                 <i class="colourless dongtaiweixuanzhong"></i>
                 <span>动态</span>
-            </router-link></li>
-            <li><router-link  to="/">
+            </router-link></li> -->
+            <!-- <li><router-link  to="/">
                 <i class="colourless chuangzuozhongxin"></i>
                 <span>投稿</span>
-           </router-link></li>
-            <li ><router-link to="/" active-class="active">
+           </router-link></li> -->
+            <!-- <li ><router-link to="/" active-class="active">
                 <i class="colourless bofangshu"></i>
                 <span>合集与列表</span>
-           </router-link></li>
-            <li ><router-link to="/space/favorite"  active-class="active">
+           </router-link></li> -->
+            <li ><router-link :to="`/space/favorite`"  active-class="active">
                 <i class="colourless shoucang"></i>
                 <span>收藏</span>
            </router-link></li>
-            <li><router-link to="/" active-class="active">
+            <li><router-link to="/space/bangumi" active-class="active">
                 <i class="colourless zhuifanshu"></i>
                 <span>订阅</span>
            </router-link></li>
-            <li><router-link to="/" active-class="active">
+            <li><router-link to="/space/setting" active-class="active">
                 <i class="colourless shezhi"></i>
                 <span>设置</span>
            </router-link></li>
