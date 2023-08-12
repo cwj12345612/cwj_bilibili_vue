@@ -25,7 +25,19 @@ component:()=>import('@/views/play')
 {
     path:'/space',
     name:'spacepage',
-    component:()=>import('@/views/space')
+    redirect:'/space/home',
+    component:()=>import('@/views/space'),
+    children:[
+        {
+            path:'home',
+            component:()=>import('@/views/space/home')
+        },
+        {
+            path:'favorite',
+            component:()=>import('@/views/space/favorite')
+        },
+       
+    ]
 }
 
 ]

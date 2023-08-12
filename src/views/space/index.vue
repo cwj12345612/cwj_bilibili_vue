@@ -23,34 +23,34 @@
     </div>
     <div class="nav" :class="ca">
         <ul class="leftlist">
-            <li><a href="#">
+            <li><router-link to="/space/home" active-class="active" >
                 <i class="colourless shouyeweixuanzhong"></i>
                 <span>主页</span>
-            </a></li>
-            <li><a href="#">
+            </router-link></li>
+            <li><router-link to="/" active-class="active">
                 <i class="colourless dongtaiweixuanzhong"></i>
                 <span>动态</span>
-            </a></li>
-            <li><a href="#">
+            </router-link></li>
+            <li><router-link  to="/">
                 <i class="colourless chuangzuozhongxin"></i>
                 <span>投稿</span>
-            </a></li>
-            <li><a href="#">
+           </router-link></li>
+            <li ><router-link to="/" active-class="active">
                 <i class="colourless bofangshu"></i>
                 <span>合集与列表</span>
-            </a></li>
-            <li><a href="#">
+           </router-link></li>
+            <li ><router-link to="/space/favorite"  active-class="active">
                 <i class="colourless shoucang"></i>
                 <span>收藏</span>
-            </a></li>
-            <li><a href="#">
+           </router-link></li>
+            <li><router-link to="/" active-class="active">
                 <i class="colourless zhuifanshu"></i>
                 <span>订阅</span>
-            </a></li>
-            <li><a href="#">
+           </router-link></li>
+            <li><router-link to="/" active-class="active">
                 <i class="colourless shezhi"></i>
                 <span>设置</span>
-            </a></li>
+           </router-link></li>
         </ul>
         <div class="search">
             <input type="search" placeholder="搜索视频、动态">
@@ -80,12 +80,14 @@
 
         </ul>
     </div>
+<!-- <space_home></space_home> -->
+<router-view></router-view>
 </div>
 
 </template>
 
 <script setup>
-
+import space_home from './home'
 import {
 ref,reactive,computed,onMounted
     } from 'vue'
@@ -112,8 +114,8 @@ onMounted(()=>{
 <style scoped>
 .space{
     /* width: 100%; */
-    height: 1000px;
-    background-color: orange;
+    /* height: 1000px; */
+    /* background-color: orange; */
     position: relative;
     /* transform:translate(0,0); */
 }
@@ -208,6 +210,13 @@ padding-bottom: 16px;
     justify-content: space-between;
     align-items: center;
 }
+.space .nav .leftlist li:has(>a.active){
+    /* color: #23c9ed; */
+    border-bottom: #23c9ed 1px solid;
+}
+.space .nav .leftlist li a.active {
+      color: #23c9ed;
+}
 .space .nav .leftlist li a  {
   
     color: #3f3e3f;
@@ -218,7 +227,6 @@ padding-bottom: 16px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
 }
 .space .nav .leftlist li:hover a{
     color: #23c9ed;
@@ -265,9 +273,9 @@ padding-bottom: 16px;
     padding-left: 8px;
 }
 .space .nav.scroll {
+    z-index: 10086;
     position: fixed;
     top: 0;
-    
 width: inherit;
 }
 </style>

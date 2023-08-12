@@ -7,9 +7,10 @@ const router= createRouter({
     routes:static_routes
 })
 router.beforeEach((to)=>{
-    if(to.name) {
-        // console.log(to.name)
-        store.state.pageconfig.nowpage.name=to.name
+    //设置当前页面的名字
+    if(to.matched[0].name) {
+        // console.log(to.matched[0].name)
+        store.state.pageconfig.nowpage.name=to.matched[0].name
         // console.log(to.name)
     }
 })
