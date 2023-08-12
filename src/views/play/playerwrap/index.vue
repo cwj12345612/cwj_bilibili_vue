@@ -7,7 +7,7 @@
                 <span>115在观看</span><span>,</span>
                 <span>已装填 2142 条弹幕</span>
             </div>
-            <div class="danmu" title="关闭弹幕" @click="open = !open" style="cursor: pointer;">
+            <div class="cwjdanmu" title="关闭弹幕" @click="open = !open" style="cursor: pointer;">
                 <i class="colourless bofangqi-danmukai" v-if="open"></i>
                 <i class="colourless bofangqi-danmuguan" v-if="!open"></i>
             </div>
@@ -16,11 +16,11 @@
             </div>
             <div class="sendmsg">
                 <span class="fontstyle">A</span>
-                <input type="text" placeholder="发个弹幕">
+                <input type="text" placeholder="发个弹幕" >
 
                 <span class="liyi">弹幕礼仪</span>
 
-                <div class="send">
+                <div class="send" @click="senddanmu">
                     发送
                 </div>
             </div>
@@ -31,32 +31,104 @@
  
 <script setup>
 import Player from 'xgplayer'
+import Danmu from 'xgplayer/es/plugins/danmu'
+// import FlvPlugin from 'xgplayer-flv'
 // import 'xgplayer/dist/index.min.css';
 
 import {
-    ref,reactive,onMounted
+    ref,reactive,onMounted,computed,watch
 } from 'vue'
 
 import {
-
+useStore
 } from 'vuex'
+const store=useStore()
+import  Mock  from 'mockjs'
 import dynamicsize from '@/utils/dynamicsize';
 const dynamicWH = (width, height) => {
     return dynamicsize.dynamicWH(width, height).value
 }
 const open = ref(true)
 let player =reactive({})
+const comments =reactive(
+    [{
+  duration: 10000,         //弹幕持续显示时间,毫秒(最低为5000毫秒)
+  id: 10086,               //弹幕id，需唯一
+  start: 0,           //弹幕出现时间, 单位：ms 毫秒
+  prior: false,          //该条弹幕优先显示，默认false
+  color: false,          //该条弹幕为彩色弹幕，默认false
+  txt: '测试弹幕',              //弹幕文字内容
+  style: {                 //弹幕自定义样式
+    color: '#ff9500',         //例：'#ff9500',
+    fontSize: '20px',      // 例：'20px',
+    padding: '2px 11px'        //例： 2px 11px',
+  },
+//   mode: String,           // 例：'top', 显示模式，top顶部居中，bottom底部居中，scroll滚动，默认为scroll
+  
+},
+{
+  duration: 10000,         //弹幕持续显示时间,毫秒(最低为5000毫秒)
+  id: 10010,               //弹幕id，需唯一
+  start: 10010,           //弹幕出现时间, 单位：ms 毫秒
+  prior: false,          //该条弹幕优先显示，默认false
+  color: false,          //该条弹幕为彩色弹幕，默认false
+  txt: '测试e3r4t5',              //弹幕文字内容
+  style: {                 //弹幕自定义样式
+    color: '#ff9500',         //例：'#ff9500',
+    fontSize: '20px',      // 例：'20px',
+    padding: '2px 11px'        //例： 2px 11px',
+  },
+//   mode: String,           // 例：'top', 显示模式，top顶部居中，bottom底部居中，scroll滚动，默认为scroll
+  
+},
+],
+)
+
+const senddanmu=()=>{
+    // console.log('发送弹幕'+Date.now());
+    const com={
+  duration: 10000,         //弹幕持续显示时间,毫秒(最低为5000毫秒)
+  id:  Date.now(),               //弹幕id，需唯一
+//   start: 0,           //弹幕出现时间, 单位：ms 毫秒
+  prior: false,          //该条弹幕优先显示，默认false
+  color: false,          //该条弹幕为彩色弹幕，默认false
+  txt: Mock.mock('@cword(10)'),              //弹幕文字内容
+  style: {                 //弹幕自定义样式
+    color: '#ff9500',         //例：'#ff9500',
+    fontSize: '20px',      // 例：'20px',
+    padding: '2px 11px'        //例： 2px 11px',
+  },
+//   mode: String,           // 例：'top', 显示模式，top顶部居中，bottom底部居中，scroll滚动，默认为scroll
+  
+}
+// console.log(player.plugins.danmu)
+// Player.plugins.danmu.sendComment(com);
+
+player.plugins.danmu.sendComment(com)
+
+}
 onMounted(()=>{
     player= new Player({
     id: 'playwrapvideo',
     url: 'http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4',
     height:'100%',
-    width:'100%'
+    width:'100%',
+    // plugins:[FlvPlugin],
+    // download:true,
+    pip:true,
+    mini: true,
+    plugins:[Danmu],
+    danmu:{
+        comments:comments,
+        closeDefaultBtn:false
+    }
 })
+
 })
 </script>
 <style scoped>
 @import url('xgplayer/dist/index.min.css');
+@import url('xgplayer/es/plugins/danmu/index.css');
 .playerWrap {
     display: flex;
     flex-direction: column;
@@ -82,7 +154,7 @@ onMounted(()=>{
     justify-content: space-evenly;
 }
 
-.playerWrap .sender .danmu i {
+.playerWrap .sender .cwjdanmu i {
     font-size:30px;
 }
 

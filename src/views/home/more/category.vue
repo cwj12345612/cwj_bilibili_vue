@@ -31,7 +31,7 @@
                 </button>
             </div>
             <ul class="rankinglist">
-                    <li v-for="index in 10">
+                    <li v-for="index in mock({'num|5-10':10}).num">
                     <h3>{{ index }}</h3>
                     <span>{{ mock('@cword(50)') }}</span>
                     </li>
