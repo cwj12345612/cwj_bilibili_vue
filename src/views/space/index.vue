@@ -83,11 +83,11 @@
 </div>
 
 </template>
- 
+
 <script setup>
 
 import {
-ref,reactive,computed
+ref,reactive,computed,onMounted
     } from 'vue'
 
 import {
@@ -99,17 +99,23 @@ const dynamicWH = (w, h) => {
   return dynamicsize.dynamicWH(w, h).value
 }
 const ca=computed(()=>{
+
+// console.log(store.state.pageconfig.nowpage.scroll)
     return {
-        'scroll':store.state.pageconfig.nowpage.scroll!=0 
+        'scroll':store.state.pageconfig.nowpage.scroll>(192+64) 
     }
 })
+onMounted(()=>{
 
+})
 </script>
 <style scoped>
 .space{
-    width: 100%;
+    /* width: 100%; */
     height: 1000px;
     background-color: orange;
+    position: relative;
+    /* transform:translate(0,0); */
 }
 .space .h{
     width: 100%;
@@ -258,5 +264,10 @@ padding-bottom: 16px;
     background: none;
     padding-left: 8px;
 }
-
+.space .nav.scroll {
+    position: fixed;
+    top: 0;
+    
+width: inherit;
+}
 </style>

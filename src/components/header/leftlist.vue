@@ -29,7 +29,7 @@ const style=dynamicsize.dynamicWH(
     {normal:458,max:437,min:423}
 )
 const list=reactive( [
-                { id: 1, icon: 'colourless bilibili', title: '首页', href: '#' },
+                { id: 1, icon: 'colourless bilibili', title: '首页', href: '/' },
                 { id: 2, title: '番剧', href: '#' },
                 { id: 3, title: '直播', href: '#' },
                 { id: 4, title: '游戏中心', href: '#' },

@@ -1,7 +1,8 @@
 <template>
 <div class="more" :style="style">
-<homepage_more_leftlist class="left"></homepage_more_leftlist>
-<homepage_more_rightlist class="right"></homepage_more_rightlist>
+<!-- <homepage_more_leftlist class="left"></homepage_more_leftlist>
+<homepage_more_rightlist class="right"></homepage_more_rightlist> -->
+<homepage_more_category v-for="index in 5"></homepage_more_category>
 
 </div>
 
@@ -10,6 +11,7 @@
 <script setup>
 import homepage_more_leftlist from './leftlist.vue'
 import homepage_more_rightlist from './rightlist.vue'
+import homepage_more_category from './category.vue'
 import {
 
     } from 'vue'
@@ -26,17 +28,16 @@ const style=dynamicsize.dynamicWH(
 <style scoped>
 .more {
     margin-top: 20px;
-    /* background-color: orange; */
-    display: grid;
-    /* height: 500px; */
-   grid-gap: 20px;
+    /* background-color: orange;
+    display: grid; */
+    /* height: 1000px; */
+   /* grid-gap: 20px;
    grid-template-columns: repeat(5,1fr);
-   /* grid-template-rows: repeat(2,1fr); */
+   grid-template-rows: repeat(2,1fr); */
 }
 .more .left {
     /* background-color: chocolate; */
     grid-column: span 4;
-    
   display: grid;
   grid-template-columns: repeat(4,1fr);
   grid-gap: 20px;
