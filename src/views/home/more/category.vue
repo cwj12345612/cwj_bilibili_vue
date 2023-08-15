@@ -76,11 +76,10 @@ const dynamicWH=(w,h)=>{
 .category .list {
     /* background-color: orangered; */
     grid-column: span 4;
-
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 50px 1fr 1fr;
+    /* grid-template-rows: 50px 1fr 1fr; */
 }
 .category .list .title{
     /* background-color: aquamarine; */
@@ -109,6 +108,7 @@ const dynamicWH=(w,h)=>{
     grid-column: span 4;
     display: grid;
     gap: 20px;
+
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: repeat(2,1fr);
     justify-content: center;

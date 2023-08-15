@@ -2,7 +2,9 @@
     <header :style="style" :class="Object.values(ca) ">
         <head_leftlist :ca="ca" v-if="ca.name!=='searchpage' || !ca.scroll" ></head_leftlist>
         <head_search :ca="ca" v-if="ca.name!='searchpage'"></head_search>
-        <head_search_search :ca="ca" v-if="ca.name=='searchpage' && ca.scroll"></head_search_search>
+   
+        <head_search_search :ca="ca" v-if="store.state.pageconfig.nowpage.name==='searchpage' && ca.scroll"></head_search_search>
+   
         <head_rightlist :ca="ca" v-if="ca.name!=='searchpage' || !ca.scroll"></head_rightlist>
     </header>
 </template>
@@ -10,7 +12,7 @@
 <script setup>
 import head_leftlist from './leftlist.vue'
 import head_search from '../search/head_search.vue'
-import head_search_search from '@/components//search/searchpage_search.vue'
+import head_search_search from '@/components/search/searchpage_search.vue'
 import head_rightlist from './rightlist.vue'
 import {
     reactive,
@@ -60,7 +62,7 @@ const ca = computed(()=>{
 header {
     position: absolute;
     /* transform: translateY(); */
-    width: 100%;
+    /* width: 100%; */
     padding: 0 24px;
     height: 64px;
     /* background-color: blueviolet; */

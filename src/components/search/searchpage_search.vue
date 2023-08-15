@@ -3,7 +3,7 @@
 <div class="searchpage_search" :class="ca" :style="style">
     <i class="colourless sousuo" style="font-size: 25px;color: #00aeec;margin-left: 15px;"></i>
     <input type="search" :style="dynamicWH({normal:466,max:468,min:308})" placeholder="请输入搜索内容"  v-model="text" @keyup.enter.native="submit">
-    <button @click="submit">搜索</button>
+    <button @click="submit" @keyup.enter="submit">搜索</button>
 </div>
 
 </template>
@@ -36,7 +36,8 @@ const dynamicWH=(width,heigth)=>{
 //#endregion
 const text=ref('')
 onMounted(()=>{
-    console.log(route.query.text)
+    // console.log(JSON.stringify(route))
+    // console.log(route.matched)
    text.value= route.query.text
 })
 const submit=()=>{
@@ -46,7 +47,7 @@ const submit=()=>{
     alert('请输入搜索内容')
     return false;
  }else {
-    router.push({path:'/search',query:{text:temp}})
+    router.push({name:'searchpage',query:{text:temp}})
  }
 }
 </script>

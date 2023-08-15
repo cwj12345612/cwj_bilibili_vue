@@ -7,10 +7,10 @@
                 <span>115在观看</span><span>,</span>
                 <span>已装填 2142 条弹幕</span>
             </div>
-            <div class="cwjdanmu" title="关闭弹幕" @click="open = !open" style="cursor: pointer;">
+            <!-- <div class="cwjdanmu" title="关闭弹幕" @click="open = !open" style="cursor: pointer;">
                 <i class="colourless bofangqi-danmukai" v-if="open"></i>
                 <i class="colourless bofangqi-danmuguan" v-if="!open"></i>
-            </div>
+            </div> -->
             <div class="setdanmu" style="cursor: pointer;" >
                 <i class="colourless shezhi" style="font-size: 30px;"></i>
             </div>
@@ -44,6 +44,7 @@ useStore
 } from 'vuex'
 const store=useStore()
 import  Mock  from 'mockjs'
+import PIP from 'xgplayer/es/plugins/pip';
 import dynamicsize from '@/utils/dynamicsize';
 const dynamicWH = (width, height) => {
     return dynamicsize.dynamicWH(width, height).value
@@ -117,7 +118,7 @@ onMounted(()=>{
     // download:true,
     pip:true,
     mini: true,
-    plugins:[Danmu],
+    plugins:[Danmu,PIP],
     danmu:{
         comments:comments,
         closeDefaultBtn:false

@@ -37,10 +37,10 @@
     </div>
     <div class="deatil">
         <h3 class="title">
-            {{ mock('@cword(20)') }}
+            {{ mock('@cword(5,20)') }}
         </h3>
         <div class="synopsis">
-            {{ mock('@cword(100)') }}
+            {{ mock('@cword(4,30)') }}
         </div>
         <div class="other">
             <div>

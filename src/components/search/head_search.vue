@@ -4,7 +4,7 @@
         :aa="store.state.pageconfig.nowpage.scroll">
         <input v-model="text" type="search" @keyup.enter.native="submit" :placeholder="placeholder"
             :style="dynamicWH({ normal: store.state.pageconfig.nowpage.scroll == 0 ? 359 : 283, max: (2 + 8) * 2 + 424, min: (2 + 8) * 2 + 179 })">
-        <button @click="submit">
+        <button @click.prevent="submit" @keyup.enter.prevent="submit">
             <i class="colourless sousuo"></i>
         </button>
     </div>
@@ -54,7 +54,10 @@ const submit = () => {
     let temp = text.value.trim()
     temp = temp != '' ? temp : placeholder.value;
     //  console.log(temp)
-    router.push({ path: '/search', query: { text: temp } })
+    router.push(
+        { name: 'searchpage',
+         query: { text: temp } }
+                 )
 }
 </script>
 <style scoped>
