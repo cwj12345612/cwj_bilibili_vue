@@ -1,9 +1,11 @@
 <template>
     <div class="king">
       <ul class="carousel" id="homepage_carousel"
-      
+      :style="`width: ${(list.length+1) * 100}%;`"
       >
-        <li v-for="li in list">
+        <li v-for="li in list"  
+       
+        >
             <a :href="li.href" >
             <img :src="li.src" alt="">
         </a>
@@ -65,13 +67,7 @@ const index=ref(0);
 const  num=ref(0);
 const click=(val)=>{
    
-//     // console.log('你好')
-//    const ul= document.getElementById('homepage_carousel')
-//    console.log(ul.offsetWidth)
-//    console.log(ul.offsetLeft)
-//   num.value+= ((val===1) ? 100: (-100))
-// // ul.style.e=-num.value
-// ul.style.left=num.value+'px'
+
 }
 let time=null
 const anime=()=>{
@@ -83,6 +79,7 @@ const anime=()=>{
         // console.log('d')
         const ul= document.getElementById('homepage_carousel')
         num.value-=ul.querySelector('li').offsetWidth
+        console.log(ul.style.width,ul.getElementsByTagName('li')[index.value].offsetWidth)
         if(Math.abs(num.value)>=list.length * ul.querySelector('li').offsetWidth){
             // console.log("最后一个")
             num.value=0;
@@ -120,28 +117,22 @@ onBeforeUnmount(()=>{
     /* background-color: aqua; */
    height: 80%;
  /* width: 500%; */
-   /* display: block; */
-   display: flex;
+   display: block;
+   /* display: flex;
    align-items: center;
-   justify-content: flex-start;
+   justify-content: flex-start; */
    /* width: 500%; */
    /* justify-content: center; */
 }
 .king ul.carousel li{
-    width: 100%;
-    /* float: left; */
+   
+    float: left;
     height: 100%;
-    flex-shrink: 0;
+   
     /* float: left; */
    
 }
-.king ul.carousel li a{
-   
-      display: flex;
-    
-            width: 100%;
-            height: 100%;
-}
+
 .bottom{
     background: rgba(0, 0, 0, 0.1);
     /* background-color: orange; */
