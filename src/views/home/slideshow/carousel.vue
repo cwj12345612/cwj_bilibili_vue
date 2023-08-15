@@ -1,7 +1,7 @@
 <template>
     <div class="king">
       <ul class="carousel" id="homepage_carousel"
-      :style="`width: ${(list.length+1) * 100}%;`"
+      
       >
         <li v-for="li in list"  
        
@@ -117,18 +117,21 @@ onBeforeUnmount(()=>{
     /* background-color: aqua; */
    height: 80%;
  /* width: 500%; */
-   display: block;
-   /* display: flex;
-   align-items: center;
+   /* display: block; */
+   display: flex;
+   justify-content: flex-start;
+   /* align-items: center;
    justify-content: flex-start; */
    /* width: 500%; */
    /* justify-content: center; */
 }
 .king ul.carousel li{
-   
-    float: left;
-    height: 100%;
-   
+   flex-shrink: 0;
+   flex-grow: 0;
+    /* float: left; */
+    /* height: 100%; */
+   /* width: 100%;
+   height: 100%; */
     /* float: left; */
    
 }
