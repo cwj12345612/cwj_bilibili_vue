@@ -1,10 +1,20 @@
 <template>
 <ul class="left" :style="style" :class="Object.values(ca)">
-    <li v-for="li in list">
-<a class="item" :href="li.href" >
+    <li v-for="(li,index) in list"  @mousemove.stop="show" @mouseout="none">
+<a class="item" :href="li.href">
     <i v-if="li.icon" :class="li.icon"></i>
     <span>{{ li.title }}</span>
 </a>
+<div  class="card" 
+v-if="index!==0"
+>
+<div class="left">
+
+</div>
+<div class="right">
+
+</div>
+</div>
 </li>
 </ul>
 
@@ -39,9 +49,20 @@ const list=reactive( [
                 { id: 9, title: 'LPL', href: '#' },
                 { id: 10, icon: 'colourless xiazai', title: '下载客户端', href: '#' },
             ])
-
+            // document.querySelector
+const show=(e)=>{
+const card=e.currentTarget.querySelector('.card');
+if(!card) return
+card.style.display='grid'
+}
+const none=(e)=>{
+    const card=e.currentTarget.querySelector('.card');
+    if(!card) return
+card.style.display='none'
+}
 </script>
 <style scoped>
+
 .left {
     flex-grow: 0;
   flex-shrink: 0;
@@ -53,13 +74,45 @@ const list=reactive( [
     align-items: center;
     /* background-color: teal; */
 }
+.left li {
+    position: relative;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.left .card{
+    display: none;
+    transition: all 0.4s;
+    width: 507px;
+    height: 262px;
+    background-color: palegreen;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+  padding: 20px;
+border-radius: 8px;
+
+grid-template-columns: 70% 30%;
+grid-column-gap: 5px;
+}
+.left .card .left{
+    height: 100%;
+background-color: olivedrab;
+}
+.left .card .right{
+    height: 100%;
+    background-color: teal;
+}
 .item {
     font-size: 14px;
     display: block;
     transition: all 0.3s;
 }
-.item:hover {
+.left li:hover .item {
     transform: translateY(-30%);
 }
+
+
 </style>
 <style scoped src="@/assets/css/head/leftlist.css"></style>

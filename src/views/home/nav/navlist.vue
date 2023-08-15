@@ -1,15 +1,16 @@
 <template>
 
 <ul class="navlist" :style="style">
-<li v-for="item in navlist"  :href="item.href" >
+<li v-for="(item,index) in navlist"  :href="item.href" @mousemove.stop="show" @mouseout="none">
     <a :href="item.href">{{ item.title }}</a>
-   
+   <div class="card"></div>
 </li>
-<li class="more">
+<li class="more"  @mousemove.stop="show" @mouseout="none">
     <a href="#">
         <span>更多</span>
     <i class="colourless xialaxiao"></i>
     </a>
+    <div class="card"></div>
 </li>
 </ul>
 </template>
@@ -40,32 +41,42 @@ const dynamicWH=(width,height)=>{
 }
 
 const navlist=reactive([
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
-                {title:Mock.mock('@cword(2)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                {title:Mock.mock('@cword(2,3)'),href:'#',},              
+                          
                         
             ])
+            const show=(e)=>{
+const card=e.currentTarget.querySelector('.card');
+card.style.display='grid'
+}
+const none=(e)=>{
+    const card=e.currentTarget.querySelector('.card');
+card.style.display='none'
+}
 </script>
 <style scoped>
 .navlist{
+    position: relative;
    /* background-color: coral; */
    max-width:  calc(1436px + 30px + 2px);
    max-height: 78px;
@@ -91,6 +102,34 @@ justify-content: center;
 align-items: center;
  
 }
+
+.navlist  li .card{
+    display: none;
+    transition: all 0.4s;
+    width: 130%;
+    height: 60px;
+    background-color: palegreen;
+    position: absolute;
+  
+    left: 0%;
+  padding: 2px;
+border-radius: 8px;
+left: 50%;
+transform: translateX(-100%);
+}
+.navlist li:has(.card):hover a{
+    color: #00aeec;
+}
+.navlist  li:nth-child(-n+11) .card{
+    /* top: -50px; */
+    top: 0;
+    transform: translateY(-100%) translateX(-50%);
+}
+.navlist  li:nth-child(n+12) .card{
+   bottom: 0;
+   transform: translateY(100%) translateX(-50%);
+   z-index: 1;
+}
 .more i {
     transition: all 0.5s;
    display: inline-block;
@@ -100,4 +139,5 @@ align-items: center;
    /* background-color: blueviolet; */
    transform: rotate(180deg);
 }
+
 </style>

@@ -1,6 +1,7 @@
 <!-- 搜索页的搜索组件 -->
 <template>
 <div class="searchpage_search" :class="ca" :style="style">
+    
     <i class="colourless sousuo" style="font-size: 25px;color: #00aeec;margin-left: 15px;"></i>
     <input type="search" :style="dynamicWH({normal:466,max:468,min:308})" placeholder="请输入搜索内容"  v-model="text" @keyup.enter.native="submit">
     <button @click="submit" @keyup.enter="submit">搜索</button>
@@ -42,9 +43,10 @@ onMounted(()=>{
 })
 const submit=()=>{
     // console.log(text.value+"#"+Date.now())
-  const temp= text.value.trim()
+  const temp=text.value ? text.value.trim() : ''
  if(temp==='') {
     alert('请输入搜索内容')
+ text.value=route.query.text
     return false;
  }else {
     router.push({name:'searchpage',query:{text:temp}})
@@ -53,7 +55,7 @@ const submit=()=>{
 </script>
 <style scoped>
 .searchpage_search {
-   
+   position: relative;
     background-color: #f2f3f4;
     height: 48px;
     border-radius: 8px;
@@ -78,4 +80,5 @@ button {
   border-radius: 8px;
   border: none;
 }
+
 </style>

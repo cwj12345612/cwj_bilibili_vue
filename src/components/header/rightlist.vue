@@ -5,11 +5,21 @@
                 <img :src="headavatar.avatarsrc" :alt="headavatar.id">
             </a>
         </li>
-        <li class="item" v-for="li in list">
+        <li class="item" v-for="li in list" @mousemove.stop="show" @mouseout="none">
             <a :href="li.href" class="item">
                 <i :class="li.icon" v-if="li.icon"></i>
                 <span v-if="style.width.replace('px','') > 400">{{ li.title }}</span>
             </a>
+            <div class="card"
+          
+            >
+            <div class="left1">
+
+</div>
+<div class="right1">
+
+</div>
+            </div>
         </li>
 
 
@@ -50,6 +60,14 @@ const dynamicWH = (width, height) => {
     return dynamicsize.dynamicWH(
       width,height
     ).value
+}
+const show=(e)=>{
+const card=e.currentTarget.querySelector('.card');
+card.style.display='grid'
+}
+const none=(e)=>{
+    const card=e.currentTarget.querySelector('.card');
+card.style.display='none'
 }
 //#endregion 
 //#region 模拟数据
@@ -112,6 +130,31 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+}
+.right .item .card{
+    display: none;
+    width: 507px;
+    height: 262px;
+    background-color: #fb7299;
+    position: absolute;
+    top: 100%;
+    padding: 20px;
+    right: 0;
+    /* display: grid; */
+    top: 100%;
+    grid-template-columns: 70% 30%;
+grid-column-gap: 5px;
+  padding: 20px;
+border-radius: 8px;
+}
+.right .card .left1{
+    height: 100%;
+background-color: olivedrab;
+}
+.right .card .right1{
+    height: 100%;
+    background-color: teal;
 }
 .item i{
     font-size: 20px;

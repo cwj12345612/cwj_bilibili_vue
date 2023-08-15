@@ -22,7 +22,7 @@ ref
 import {
 useStore
     } from 'vuex'
-   
+   import  Mock  from 'mockjs';
     //#region 
 // 240x66
 const style=dynamicsize.dynamicWH(
@@ -32,21 +32,17 @@ const style=dynamicsize.dynamicWH(
 
 //#endregion
 const list=reactive([
-                {title:'专栏',herf:'#',iclass:'colourless wodeguanzhu'},
-                {title:'活动',herf:'#',iclass:'colourless wodeguanzhu'},
-                {title:'直播',herf:'#',iclass:'colourless wodeguanzhu'},
-                {title:'课堂',herf:'#',iclass:'colourless wodeguanzhu'},
-                {title:'社区中心',herf:'#',iclass:'colourless wodeguanzhu'},
-                {title:'新歌热榜',herf:'#',iclass:'colourless wodeguanzhu'},
+                {title:'专栏',herf:'#',iclass:'colourless chuangzuozhongxin'},
+                {title:'活动',herf:'#',iclass:'colourless huodongxiangqu'},
+                {title:'直播',herf:'#',iclass:'colourless zhiboguankanshu'},
+                {title:'课堂',herf:'#',iclass:'colourless ketang'},
+                {title:'社区中心',herf:'#',iclass:'colourless shequ'},
+                {title:'新歌热榜',herf:'#',iclass:'colourless yinle'},
             ])
 </script>
 <style scoped>
 .right{
     /* background-color: coral; */
-max-width: 258px;
-max-height: 78px;
-min-width: 168px;
-min-height: 66px;
 display: grid;
 grid-row-gap: 10px;
 grid-auto-flow: column;
@@ -55,5 +51,8 @@ grid-template-rows: repeat(2,1fr);
 .right li a {
     font-size: 14px;
     color: #61666d;
+}
+.right li:hover a{
+    color: #00aeec;
 }
 </style>
