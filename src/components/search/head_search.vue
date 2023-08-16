@@ -1,7 +1,7 @@
 <template>
     <div class="search" :class="Object.values(ca)"
         :style="dynamicWH({ normal: store.state.pageconfig.nowpage.scroll == 0 ? 413 : 337, max: 500, min: 253 })"
-        :aa="store.state.pageconfig.nowpage.scroll">
+       >
         <input v-model="text" type="search" @keyup.enter.native="submit" :placeholder="placeholder"
             :style="dynamicWH({ normal: store.state.pageconfig.nowpage.scroll == 0 ? 359 : 283, max: (2 + 8) * 2 + 424, min: (2 + 8) * 2 + 179 })">
         <button @click.prevent="submit" @keyup.enter.prevent="submit">
@@ -36,16 +36,8 @@ onMounted(() => {
         scrollTop.value = document.documentElement.scrollTop || document.body.scrollTop;
     })
 })
-const ca = computed(() => {
-    const cl = {};
-    const name = store.state.pageconfig.nowpage.name
-    cl.name = name
-    if (scrollTop.value != 0) {
-        cl.scroll = 'scroll'
-    } else {
-        cl.scroll = null
-    }
-    return cl
+defineProps({
+    ca:Object
 })
 //#endregion
 const placeholder = ref(Mock.mock('@cword(6,20)'))

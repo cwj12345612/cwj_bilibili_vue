@@ -1,6 +1,5 @@
 <template>
-    <!-- 视频分类 -->
-<div class="category"></div>
+
 
 </template>
  

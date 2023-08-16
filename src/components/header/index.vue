@@ -60,9 +60,10 @@ const ca = computed(()=>{
 
 <style scoped>
 header {
-    position: absolute;
+    position: fixed;
     /* transform: translateY(); */
     /* width: 100%; */
+    margin: 0 auto;
     padding: 0 24px;
     height: 64px;
     /* background-color: blueviolet; */

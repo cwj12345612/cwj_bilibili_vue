@@ -22,3 +22,15 @@ header.spacepage.scroll{
     position: relative;
     box-shadow: none;
 }
+.moviepage{
+    /* background-color: #242628; */
+    /* position: relative; */
+    margin-bottom: 5px;
+    /* position: fixed; */
+    z-index: 10086;
+}
+header.moviepage.scroll{
+    
+   box-shadow: none;
+    background-color: #242628;
+}

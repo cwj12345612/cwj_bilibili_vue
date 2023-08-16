@@ -1,6 +1,8 @@
 
 
-.right.homepage .item a{
+.right.homepage .item a,
+.right.moviepage .item a
+{
    color: #ffffff;
 }
 .right.playpage .item a,
@@ -11,4 +13,7 @@
 }
 .right.scroll .item a{   
     color: #18191c;
+}
+.right.moviepage.scroll .item a{   
+   color: #ffffff;
 }

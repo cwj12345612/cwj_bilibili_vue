@@ -23,7 +23,7 @@ component:()=>import('@/views/play')
     component:()=>import('@/views/article')
 },
 {
-    path:'/space/',
+    path:'/space',
     name:'spacepage',
     redirect:'/space/home',
     component:()=>import('@/views/space'),
@@ -46,6 +46,10 @@ component:()=>import('@/views/play')
         }
        
     ]
+},
+{
+    path:'/movie',
+    name:'moviepage',
+    component:()=>import('@/views/category/movie')
 }
-
 ]
