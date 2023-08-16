@@ -55,4 +55,5 @@ grid-template-rows: repeat(2,1fr);
 .right li:hover a{
     color: #00aeec;
 }
+
 </style>

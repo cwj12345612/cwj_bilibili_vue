@@ -13,12 +13,12 @@
             <div class="card"
           
             >
-            <div class="left1">
+            <!-- <div class="left1">
 
 </div>
 <div class="right1">
 
-</div>
+</div> -->
             </div>
         </li>
 
@@ -63,11 +63,13 @@ const dynamicWH = (width, height) => {
 }
 const show=(e)=>{
 const card=e.currentTarget.querySelector('.card');
-card.style.display='grid'
+card.style.display='block'
+card.style.animationPlayState='running'
 }
 const none=(e)=>{
     const card=e.currentTarget.querySelector('.card');
 card.style.display='none'
+card.style.animationPlayState='paused'
 }
 //#endregion 
 //#region 模拟数据
@@ -93,6 +95,46 @@ const list = reactive([
 
 </script>
 <style scoped>
+@keyframes showcard {
+    /* from {
+        display: none;
+        width: 0;
+        height: 0;
+    } */
+    10%{
+        height: calc(100px * 0.1);
+    }
+    25% {
+        display: block;
+        /* width: calc(507px ); */
+        height: calc(100px * 0.25);
+    }
+    40%{
+        height: calc(100px * 0.4);
+    }
+    50% { 
+        /* width: calc(507px ); */
+        height: calc(100px * 0.5);
+    }
+    60%{
+        height: calc(100px * 0.6);  
+    }
+    75% {
+        display: block;
+        /* width: calc(507px ); */
+        height: calc(100px * 0.75);
+    }
+    85%{
+        height: calc(100px * 0.8);
+    }
+    to {
+        display: block;
+        /* width: calc(507px * 1); */
+        height: calc(100px * 1);
+        padding: 20px;
+        border-radius: 8px;
+    }
+}
 .right {
     flex-grow: 0;
   flex-shrink: 0;
@@ -126,36 +168,35 @@ a {
     border-radius: calc(38px / 2);
 }
 .item {
+    height: 100%;
     font-size: 14px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     position: relative;
 }
 .right .item .card{
+    animation-name: showcard;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
     display: none;
-    width: 507px;
-    height: 262px;
+    width: 250px;
+    /* height: 262px; */
     background-color: #fb7299;
     position: absolute;
     top: 100%;
-    padding: 20px;
+    /* padding: 20px; */
     right: 0;
     /* display: grid; */
     top: 100%;
-    grid-template-columns: 70% 30%;
-grid-column-gap: 5px;
-  padding: 20px;
-border-radius: 8px;
+    /* grid-template-columns: 70% 30%;
+grid-column-gap: 5px; */
+  /* padding: 20px;
+border-radius: 8px; */
 }
-.right .card .left1{
-    height: 100%;
-background-color: olivedrab;
-}
-.right .card .right1{
-    height: 100%;
-    background-color: teal;
-}
+
 .item i{
     font-size: 20px;
     transition: all 0.3s;

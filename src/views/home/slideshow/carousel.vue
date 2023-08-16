@@ -79,7 +79,7 @@ const anime=()=>{
         // console.log('d')
         const ul= document.getElementById('homepage_carousel')
         num.value-=ul.querySelector('li').offsetWidth
-        console.log(ul.style.width,ul.getElementsByTagName('li')[index.value].offsetWidth)
+        // console.log(ul.style.width,ul.getElementsByTagName('li')[index.value].offsetWidth)
         if(Math.abs(num.value)>=list.length * ul.querySelector('li').offsetWidth){
             // console.log("最后一个")
             num.value=0;
