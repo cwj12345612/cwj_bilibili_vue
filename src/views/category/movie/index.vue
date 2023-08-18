@@ -56,9 +56,9 @@
                 </div>
             <ul class="items">
                 <li><a href="#">播放数量</a></li>
-                <li><a href="#">播放数量</a></li>
-                <li><a href="#">播放数量</a></li>
-                <li><a href="#">播放数量</a></li>
+                <li><a href="#">上映时间</a></li>
+                <li><a href="#">更新时间</a></li>
+                <li><a href="#">最高评分</a></li>
             </ul>
             </div>
             <div class="item" >
@@ -72,7 +72,7 @@
                     </a>
                 </div>
             <ul class="items">
-                <li v-for="index in 10"><a href="#">{{ mock('@ctitle(3,6)') }}</a></li>
+                <li v-for="index in 10"><a href="#">{{ mock('@ctitle(2,6)') }}</a></li>
                
             </ul>
             </div>
@@ -134,7 +134,7 @@
 <script setup>
 
 import {
-reactive,onMounted
+reactive,onMounted,onBeforeUnmount
 } from 'vue'
 
 import {
@@ -151,6 +151,7 @@ const mock = (str) => {
     return Mock.mock(str)
 }
 onMounted(()=>{
+    document.getElementById('app').style.backgroundColor='#242628'
    new Player({
     id: 'hotlistvideo',
     url: 'http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4',
@@ -163,13 +164,18 @@ onMounted(()=>{
    
  
 })
+onBeforeUnmount(()=>{
+    // document.getElementById('app').style.backgroundColor=''
+})
 })
 </script>
 <style scoped>
 @import url('xgplayer/dist/index.min.css');
+
 .movie {
     /* width: 100%; */
     height: 1000px;
+    /* background-color: #242628; */
     /* background-color: orange; */
 }
 .movie a{
@@ -242,6 +248,7 @@ onMounted(()=>{
 }
 
 .typelist {
+   margin: 10px 0;
     width: 100%;
     /* background-color: palegreen; */
     background: rgba(0, 0, 0, 0.3);
@@ -249,7 +256,9 @@ onMounted(()=>{
     justify-content: space-between;
 
 }
-
+.typelist a:hover,.typelist a:hover span ,.typelist a:hover i {
+    color: #00aeec;
+}
 .typelist .item {
     height: 100%;
     /* width: 25%; */
@@ -273,15 +282,15 @@ justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(2,1fr);
     grid-row-gap: 10px;
-    grid-column-gap: 10px;
+    grid-column-gap: 20px;
     grid-template-rows: repeat(2,1fr);
    
 }
 .typelist .item:nth-child(n+2) .items{
-grid-template-columns: repeat(5,1fr);
+grid-template-columns: repeat(5,auto);
 }
 .typelist .item:last-child .items{
-grid-template-columns: repeat(2,1fr);
+grid-template-columns: repeat(2,auto);
 
 }
 .hotlist{
