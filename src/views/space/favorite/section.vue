@@ -71,7 +71,7 @@
                             <span>3:09:14</span>
                             </div>
                             <div class="sectiontitle">
-                                {{ mock('@cword(100)') }}
+                                {{ mock('@cword(5,50)') }}
                             </div>
                             <div class="msg">
                                <span>收藏于: {{ mock('@date()') }}</span>
@@ -306,7 +306,7 @@ section>.list>.section>li>.sectiontitle {
     width: 100%;
     height: 23%;
     /* padding: 0; */
-    background-color: #f4f5f7;
+    /* background-color: #f4f5f7; */
     word-break: break-all;
     overflow: hidden;
     display: -webkit-box;

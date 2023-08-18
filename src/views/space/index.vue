@@ -59,23 +59,23 @@
         <ul class="rightlist">
             <li>
                 <span>关注数</span>
-                <span>222</span>
+                <span>{{mock({'num|100-5000':5000}).num}}</span>
             </li>
             <li>
                 <span>粉丝数</span>
-                <span>222</span>
+                <span>{{mock({'num|100-5000':5000}).num}}</span>
             </li>
             <li>
                 <span>获赞数</span>
-                <span>222</span>
+                <span>{{mock({'num|100-5000':5000}).num}}</span>
             </li>
             <li>
                 <span>播放数</span>
-                <span>222</span>
+                <span>{{mock({'num|100-5000':5000}).num}}</span>
             </li>
             <li>
                 <span>阅读数</span>
-                <span>222</span>
+                <span>{{mock({'num|100-5000':5000}).num}}</span>
             </li>
 
         </ul>
@@ -97,6 +97,10 @@ useStore
     } from 'vuex'
     const store=useStore()
     import dynamicsize from '@/utils/dynamicsize';
+    import Mock from 'mockjs'
+    const mock=(str)=>{
+        return Mock.mock(str)
+    }
 const dynamicWH = (w, h) => {
   return dynamicsize.dynamicWH(w, h).value
 }

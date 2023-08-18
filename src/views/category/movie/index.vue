@@ -143,6 +143,7 @@ import {
 import Player from 'xgplayer'
 import Mock from 'mockjs';
 import dynamicsize from '@/utils/dynamicsize'
+
 const dynamicWh = (w, h) => {
     return dynamicsize.dynamicWH(w, h).value
 }
@@ -157,15 +158,17 @@ onMounted(()=>{
     url: 'http://s2.pstatp.com/cdn/expire-1-M/byted-player-videos/1.0.0/xgplayer-demo.mp4',
     height:'100%',
     width:'100%',
-    // plugins:[FlvPlugin],
+    // plugins:[controls],
     // download:true,
   
     // mini: true,
-   
+    autoplayMuted: true,
+  autoplay: true,
+
  
 })
 onBeforeUnmount(()=>{
-    // document.getElementById('app').style.backgroundColor=''
+    document.getElementById('app').style.backgroundColor=''
 })
 })
 </script>
@@ -295,7 +298,7 @@ grid-template-columns: repeat(2,auto);
 }
 .hotlist{
 width: 100%;
-background-color: orange;
+/* background-color: orange; */
 display: grid;
 grid-template-columns: repeat(7,1fr);
 grid-row-gap: 24px;
@@ -303,12 +306,13 @@ grid-column-gap: 10px;
 grid-template-rows: repeat(2,1fr);
 }
 .hotlist .video{
-    background-color: palevioletred;
+ 
+    /* background-color: palevioletred; */
     grid-row: span 2;
     grid-column: span 3;
 }
 .hotlist .videolist{
-    background-color: teal;
+    /* background-color: teal; */
     grid-row: span 2;
     grid-column: span 4;
     display: grid;
@@ -322,7 +326,7 @@ grid-template-rows: repeat(2,1fr);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: chocolate;
+    /* background-color: chocolate; */
     width: 100%;
     height: 100%;
 

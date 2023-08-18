@@ -15,7 +15,7 @@
         </span>
         <span>
             <i class="colourless danmushu"></i>
-            1453
+            {{ mock({'num|100-5000':5000}).num }}
         </span>
         <span>
           13:12
@@ -27,14 +27,14 @@
      {normal:44,max:48,min:44},
 ),'padding-right':dynamicWH( {normal:16,max:24,min:16}).width}"  >
 <a href="#">
-    {{ title }}
+    {{  mock('@ctitle(4,50)') }}
 </a>
 </div>
 
 <a class="author" href="#" :style="dynamicWH(undefined, {normal:17,max:19,min:17})">
     <i class="colourless UPzhu"></i>
-    <span style="margin: 0 5px;">美国总统本统</span>
-     · <span style="margin-left: 5px;">2023-10-10</span>
+    <span style="margin: 0 5px;">{{ mock('@cword(2,7)') }}</span>
+     · <span style="margin-left: 5px;">{{ mock('@datetime("yyyy-MM-dd")') }}</span>
 </a>
 </div>
 </template>
@@ -51,6 +51,9 @@ import {
     import dynamicsize from '@/utils/dynamicsize.js'
     
 import Mock from 'mockjs'
+const mock=(str)=>{
+    return Mock.mock(str)
+}
 const title=ref('');
 onMounted(()=>{
     title.value=Mock.mock('@cword(10)')

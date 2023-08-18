@@ -36,7 +36,7 @@
                             <span>24:09</span>
                         </div>
                         <div class="title">
-                            {{ mock('@cword(50)') }}
+                            {{ mock('@cword(4,30)') }}
                         </div>
                         <div class="detail">
                             <span>
@@ -45,7 +45,7 @@
                             </span>
                             <span>
                                 <i class="colourless danmushu"></i>
-                                <span>111</span>
+                                <span>{{mock({'num|100-5000':5000}).num }}</span>
                             </span>
                         </div>
                     </li>
@@ -62,7 +62,7 @@
                             <span>24:09</span>
                         </div>
                         <div class="title">
-                            {{ mock('@cword(50)') }}
+                            {{ mock('@cword(4,40)') }}
                         </div>
                         <div class="detail">
                             <span>
@@ -71,7 +71,7 @@
                             </span>
                             <span>
                                 <i class="colourless danmushu"></i>
-                                <span>111</span>
+                                <span>{{ mock({'num|100-5000':5000}).num }}</span>
                             </span>
                         </div>
                     </li>

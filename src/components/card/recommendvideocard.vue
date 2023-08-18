@@ -7,20 +7,20 @@
 </div>
 <div class="detail">
     <a class="title" href="#">
-        {{ title }}
+        {{ mock('@cword(4,50)') }}
     </a>
     <a class="up" href="#">
         <i class="colourless UPzhu"></i>
-        <span>责任全在美方</span>
+        <span>{{ mock('@cword(2,7)') }}</span>
     </a>
     <div class="other">
         <span>
             <i class="colourless bofangshu"></i>
-            111万
+            11万
         </span>
         <span>
             <i class="colourless danmushu"></i>
-            1114
+            {{ mock({'num|100-5000':5000}).num }}
         </span>
     </div>
 </div>
@@ -37,6 +37,9 @@ import {
 
     } from 'vuex'
 import Mock from 'mockjs'
+const mock=(str)=>{
+    return Mock.mock(str)
+}
 const title=Mock.mock('@cword(5,50)')
 </script>
 <style scoped>
