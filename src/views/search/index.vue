@@ -37,7 +37,7 @@ const mock=(str)=>{
 const dynamicWH = (w, h) => {
   return dynamicsize.dynamicWH(w, h).value
 }
-const style = dynamicWH({ normal: 1305, max: 2024, min: 1004 },)
+const style = dynamicWH({ normal: 1297, max: 2008, min: 1004 },)
 
 import {
   useStore
