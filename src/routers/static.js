@@ -3,53 +3,7 @@ export default [
     {
         path:'/',
         name:'homepage',
-component:()=>import('@/views/home/index.vue')
-},
-{
-    path:'/search',
-    name:'searchpage',
-    component:()=>import('@/views/search'),
-  
-},
-{
-path:'/play',
-name:'playpage',
-component:()=>import('@/views/play')
+component:()=>import('@/views/homepage/index.vue')
 },
 
-{
-    path:'/article',
-    name:'articlepage',
-    component:()=>import('@/views/article')
-},
-{
-    path:'/space',
-    name:'spacepage',
-    redirect:'/space/home',
-    component:()=>import('@/views/space'),
-    children:[
-        {
-            path:'home',
-            component:()=>import('@/views/space/home')
-        },
-        {
-            path:'favorite',
-            component:()=>import('@/views/space/favorite')
-        },
-        {
-            path:'bangumi',
-            component:()=>import('@/views/space/bangumi')
-        },
-        {
-            path:'setting',
-            component:()=>import('@/views/space/setting')
-        }
-       
-    ]
-},
-{
-    path:'/movie',
-    name:'moviepage',
-    component:()=>import('@/views/category/movie')
-}
 ]

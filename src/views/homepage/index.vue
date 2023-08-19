@@ -1,7 +1,7 @@
 <template>
 
-<div class="setting">
-    设置
+<div id="homepage">
+    homepagedevfg bnb
 </div>
 </template>
  
@@ -17,5 +17,9 @@ import {
 
 </script>
 <style scoped>
-
+#homepage{
+    width: 100%;
+    height: 200px;
+    background-color: thistle;
+}
 </style>

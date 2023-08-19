@@ -1,7 +1,7 @@
 import {createApp} from 'vue'
 import App from './App.vue'
 import store from './store'
-import router from './routers'
+import router from './routers/index.js'
 import '@/assets/fonts/iconfont/colourless/iconfont.css'
 import '@/assets/fonts/iconfont/colour/iconfont.css'
 // import '@/utils/number'

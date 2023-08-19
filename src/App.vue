@@ -1,25 +1,22 @@
 <template>
-  <bilibili_header></bilibili_header>
 
+<cwj_header></cwj_header>
  <router-view></router-view>
- <!-- <bilibili_footer></bilibili_footer> -->
+
 </template>
 <script setup>
-import bilibili_header from '@/components/header'
-import {
-computed,
-ref,
-reactive,
-onMounted
-} from 'vue'
-import {
-  useStore
-} from 'vuex'
+// #region 引入组件
+import cwj_header from '@/components/header'
+
+//#endregion
+
+import {computed,ref,reactive,watch,toRef,toRefs,onMounted,onBeforeUnmount,} from 'vue'
+import {useStore,mapActions,mapGetters,mapMutations,mapState} from 'vuex'
+import {useRoute,useRouter} from 'vue-router'
 const store=useStore()
-onMounted(() => {
-  store.commit('pageconfig/initnowpagewidth')
-  store.commit('pageconfig/listenerscroll')
-})
+const route=useRoute()
+const router=useRouter()
+
 </script>
 <style scoped>
 
