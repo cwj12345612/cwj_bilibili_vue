@@ -1,7 +1,9 @@
 <template>
   <div class="search" :style="style">
     <searchpage_search class="searchpage_search" v-if="store.state.pageconfig.nowpage.scroll == 0"></searchpage_search>
-
+    <filter_wrapper></filter_wrapper>
+  <filter_all></filter_all>
+  
     <ul class="box">
       <li v-for="index in 14">
         <videocard></videocard>
@@ -19,6 +21,8 @@
 </template>
  
 <script setup>
+import filter_all from './filter/filter_all.vue'
+import filter_wrapper from './filter/filter_wrapper.vue'
 import videocard from '@/components/card/videocard.vue'
 import searchpage_search from '@/components/search/searchpage_search.vue'
 import {
@@ -26,6 +30,10 @@ import {
 } from 'vue'
 import { useRoute, useRouter } from 'vue-router';
 import dynamicsize from '@/utils/dynamicsize';
+import Mock from 'mockjs'
+const mock=(str)=>{
+  return Mock.mock(str)
+}
 const dynamicWH = (w, h) => {
   return dynamicsize.dynamicWH(w, h).value
 }
