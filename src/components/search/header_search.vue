@@ -1,13 +1,15 @@
 <template>
 <div class='header_search'
-:style="style"
+:style="!pageconfigStore.globalclass.includes('scroll') ? pageconfigStore.dynamicWH({ normal:  413 , max: 500, min: 253 }) : pageconfigStore.dynamicWH({ normal:  377 , max: 500, min: 253 })"
+:class="pageconfigStore.globalclass"
 >
 <input type="search" 
 :placeholder="placeholder"
  @mouseenter="mouseenter"
 @mouseleave="mouseleave"
+@keyup.enter="submit"
  >
-<button >
+<button @click.prevent="submit">
             <i class="colourless sousuo"></i>
         </button>
 </div>
@@ -24,13 +26,8 @@ import {useRoute,useRouter} from 'vue-router'
 const pageconfigStore = usepageconfigStore()
 const route=useRoute()
 const router=useRouter()
-const style=computed(()=>{
-    if(!pageconfigStore.globalclass.includes('scroll')){
-        return pageconfigStore.dynamicWH({ normal:  413 , max: 500, min: 253 })
-    }else{
-        return pageconfigStore.dynamicWH({ normal:  377 , max: 500, min: 253 })
-    }
-})
+
+
 // #endregion
 
 // #region  模拟数据 mockjs
@@ -43,6 +40,15 @@ onMounted(()=>{
     placeholder.value=mock('@cword(3,15)')
 })
 //#endregion
+const searchtext=ref('')
+
+const submit=()=>{
+    // console.log('搜索')
+    if(searchtext.value===''){
+        searchtext.value=placeholder.value
+    }
+    router.push({name:'searchpage',query:{text:searchtext.value}})
+}
 const mouseenter=(e)=>{
     e.currentTarget.style.backgroundColor='#e3e5e7'
  
@@ -88,5 +94,8 @@ padding-left: 5px;
 }
 .header_search button:hover{
     background: var( --transparency);
+}
+.header_search.searchpage{
+    display: none;
 }
 </style>

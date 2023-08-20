@@ -72,6 +72,12 @@ li {
 .item.scroll{
     color: #18191c;
 }
+.item.searchpage{
+    color: #18191c;
+}
+li:first-child.searchpage i {
+    color: #00aeec;
+}
 li:first-child.scroll i {
     color: #00aeec;
 }

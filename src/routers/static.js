@@ -5,5 +5,9 @@ export default [
         name:'homepage',
 component:()=>import('@/views/homepage/index.vue')
 },
-
+{
+    path:'/search',
+    name:'searchpage',
+    component:()=>import('@/views/searchpage')
+}
 ]

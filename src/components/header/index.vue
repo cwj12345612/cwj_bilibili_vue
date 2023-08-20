@@ -24,13 +24,12 @@ const  style=computed(()=>{
     
     return {
         ...pageconfigStore.dynamicWH({normal:1377+24*2,max:2512+24*2,min:1012+24*2}),
-        top: pageconfigStore.scroll +'px' 
+        // top: pageconfigStore.scroll +'px' 
     }
 })
 </script>
 <style scoped>
 header {
-
 z-index: 10086;
    padding: 0 24px;
     height: 64px;
@@ -48,5 +47,10 @@ header.homepage{
 }
 header.homepage.scroll{
     background-color: #ffffff;
+}
+header.searchpage{
+position: 'none';
+background-color: #ffffff;
+box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 </style>
