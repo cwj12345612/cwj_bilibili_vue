@@ -4,8 +4,8 @@
 >
 <input type="search" 
 :placeholder="placeholder"
- @mousedown="mousedown"
-
+ @mouseenter="mouseenter"
+@mouseleave="mouseleave"
  >
 <button >
             <i class="colourless sousuo"></i>
@@ -43,10 +43,15 @@ onMounted(()=>{
     placeholder.value=mock('@cword(3,15)')
 })
 //#endregion
-const mousedown=(e)=>{
+const mouseenter=(e)=>{
     e.currentTarget.style.backgroundColor='#e3e5e7'
  
 }
+const mouseleave=(e)=>{
+    e.currentTarget.style.backgroundColor=''
+ 
+}
+
 </script>
 <style scoped>
 .header_search{

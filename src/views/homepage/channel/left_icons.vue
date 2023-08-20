@@ -42,12 +42,12 @@ const mock=(str)=>{
 .left_icons{
 flex-grow: 0;
     /* background-color: teal; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
 
 }
 .left_icons li{
+  
     height: 100%;
 }
 .left_icons a{

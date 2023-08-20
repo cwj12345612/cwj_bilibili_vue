@@ -30,7 +30,7 @@ const router=useRouter()
 </script>
 <style scoped>
 .homepage_channel{
-background-color: palevioletred;
+/* background-color: palevioletred; */
 display: flex;
 justify-content: space-between;
 align-items: center;

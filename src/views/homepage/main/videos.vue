@@ -32,7 +32,7 @@ const mock=(str)=>{return Mock.mock(str)}
 .videos{
    grid-row: span 2;
    grid-column: span 3;
-    background-color: goldenrod;
+    /* background-color: goldenrod; */
     display: grid;
     grid-gap: 20px;
    

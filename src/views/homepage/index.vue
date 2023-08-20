@@ -3,7 +3,7 @@
     <homepage_banner></homepage_banner>
     <homepage_channel></homepage_channel>
   <homepage_main></homepage_main>
-  <homepage_more></homepage_more>
+  <!-- <homepage_more></homepage_more> -->
 </div>
 </template>
 <script setup>
@@ -25,8 +25,8 @@ const router=useRouter()
 <style scoped>
 #homepage{
   width: 100%;
-   
-    background-color: thistle;
+   height: 1000px;
+    /* background-color: thistle; */
     display: flex;
     flex-direction: column;
     align-items: center;

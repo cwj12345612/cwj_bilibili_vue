@@ -37,7 +37,7 @@ const mock=(str)=>{return Mock.mock(str)}
     border-radius: var(--border-radius-max);
     overflow: hidden;
     height: calc(calc(calc(100% - 20px) / 2) * 1.6 + 20px);
-    background-color: gold;
+   background: var(--transparency);
 }
 .carousel .imgs{
     width: 100%;

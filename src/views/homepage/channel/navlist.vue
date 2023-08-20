@@ -52,6 +52,7 @@ const mock=(str)=>{
     border: 1px solid #e3e5e7;
 }
 .homepage_navlist  a{
+    font-size: 14px;
     width: 100%;
     height: 100%;
     display: flex;
