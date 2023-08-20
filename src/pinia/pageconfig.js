@@ -1,3 +1,4 @@
+//页面参数相关属性 
 import { defineStore } from 'pinia'
 
 export const usepageconfigStore= defineStore('pageconfigStore',{
@@ -7,7 +8,9 @@ export const usepageconfigStore= defineStore('pageconfigStore',{
           // 页面宽度
           width: 0,
           // 页面高度 自定义和宽度相等
-          height: 0
+          height: 0,
+          //当前页面的name
+          pagename:undefined,
     }),
     actions:{
           // 初始化页面宽度高度等 并监听对应js事件
@@ -61,9 +64,16 @@ export const usepageconfigStore= defineStore('pageconfigStore',{
                 }
                 style.height=style.height+'px'
             }
-            console.log(JSON.stringify(style))
+            // console.log(JSON.stringify(style))
             return style
         }
+    },
+    //给元素添加部分的class 根据:  当前页面name  是否滚动scroll 等
+    globalclass(){
+        return [
+            this.pagename,
+           this.scroll >0 ? 'scroll': null
+        ]
     }
     }
 })

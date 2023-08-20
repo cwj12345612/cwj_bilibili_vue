@@ -6,7 +6,7 @@
 <script setup>
 // #region  引入组件
 
-//  #endgion
+//  #endregion
 
 import {computed,ref,reactive,watch,toRef,toRefs,onMounted,onBeforeUnmount,} from 'vue'
 
