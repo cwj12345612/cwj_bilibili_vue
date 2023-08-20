@@ -1,25 +1,37 @@
 <template>
-    <header>
-        头部组件
+    <header 
+    :style="pageconfigStore.dynamicWH({normal:1377+24*2,max:2512+24*2,min:1012+24*2})"
+    >
+      
+        <cwj_header_leftlist></cwj_header_leftlist>
     </header>
 </template>
 <script setup>
-
+//#region
+import cwj_header_leftlist from './leftlist.vue'
+//#endgion
 import { computed, ref, reactive, watch, toRef, toRefs, onMounted, onBeforeUnmount, } from 'vue'
-import { useStore, mapActions, mapGetters, mapMutations, mapState } from 'vuex'
+import { usepageconfigStore } from '@/pinia/pageconfig'
 import { useRoute, useRouter } from 'vue-router'
-const store = useStore()
+const pageconfigStore = usepageconfigStore()
 const route = useRoute()
 const router = useRouter()
+onMounted(()=>{
 
+})
 </script>
 <style scoped>
 header {
-    width: 100%;
-    height: 64px;
     /* background: var(--transparency); */
     background-color: coral;
-    position: fixed;
-   
+
+   padding: 0 24px;
+    height: 64px;
+
+  display: flex;
+  align-items: center;
+
+  /*  */
+  position: fixed;
 }
 </style>

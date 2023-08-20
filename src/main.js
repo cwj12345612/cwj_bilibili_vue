@@ -1,8 +1,8 @@
 import {createApp} from 'vue'
 import App from './App.vue'
-import store from './store'
 import router from './routers/index.js'
+import {createPinia} from 'pinia'
 import '@/assets/fonts/iconfont/colourless/iconfont.css'
 import '@/assets/fonts/iconfont/colour/iconfont.css'
 // import '@/utils/number'
-createApp(App).use(store).use(router).mount('#app')
+createApp(App).use(createPinia()).use(router).mount('#app')
