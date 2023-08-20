@@ -31,7 +31,7 @@ const  style=computed(()=>{
 <style scoped>
 header {
 
-
+z-index: 10086;
    padding: 0 24px;
     height: 64px;
 /* 弹性布局flex */
@@ -40,13 +40,13 @@ header {
     justify-content: space-between;
   /*  */
  /* 临时属性 开发用 */
-background-color: coral;
+/* background-color: coral; */
   
 }
 header.homepage{
     position: absolute;
 }
 header.homepage.scroll{
-    /* background-color: #ffffff; */
+    background-color: #ffffff;
 }
 </style>

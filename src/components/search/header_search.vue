@@ -1,9 +1,15 @@
 <template>
 <div class='header_search'
-:style="pageconfigStore.dynamicWH({ normal: pageconfigStore.scroll == 0 ? 359 : 283, max: (2 + 8) * 2 + 424, min: (2 + 8) * 2 + 179 })"
+:style="style"
 >
-<input type="search">
+<input type="search" 
+:placeholder="placeholder"
+ @mousedown="mousedown"
 
+ >
+<button >
+            <i class="colourless sousuo"></i>
+        </button>
 </div>
 </template>
 <script setup>
@@ -18,12 +24,29 @@ import {useRoute,useRouter} from 'vue-router'
 const pageconfigStore = usepageconfigStore()
 const route=useRoute()
 const router=useRouter()
+const style=computed(()=>{
+    if(!pageconfigStore.globalclass.includes('scroll')){
+        return pageconfigStore.dynamicWH({ normal:  413 , max: 500, min: 253 })
+    }else{
+        return pageconfigStore.dynamicWH({ normal:  377 , max: 500, min: 253 })
+    }
+})
 // #endregion
 
 // #region  模拟数据 mockjs
-
+import  Mock  from 'mockjs';
+const mock=(str)=>{
+    return Mock.mock(str)
+}
+const placeholder=ref('')
+onMounted(()=>{
+    placeholder.value=mock('@cword(3,15)')
+})
 //#endregion
-
+const mousedown=(e)=>{
+    e.currentTarget.style.backgroundColor='#e3e5e7'
+ 
+}
 </script>
 <style scoped>
 .header_search{
@@ -32,8 +55,7 @@ height: 40px;
 border: 1px solid #ffffff;
 border-radius: var(--border-radius-max);
 overflow: hidden;
-background-color: aqua;
-
+background-color: #f1f2f3;
 display:flex;
 align-items: center;
 justify-content: space-between;
@@ -41,6 +63,25 @@ justify-content: space-between;
 .header_search input{
     height: 80%;
     width: 90%;
-background-color: #ffffff;
+    border-radius: var(--border-radius-max);
+/* background-color: palegoldenrod; */
+background: none;
+padding-left: 5px;
+}
+.header_search button{
+    width: 10%;
+    height: 80%;
+    flex-shrink: 1;
+    background: none;
+    border-radius: var(--border-radius-max);
+    border: none;
+    color: #18272a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+.header_search button:hover{
+    background: var( --transparency);
 }
 </style>

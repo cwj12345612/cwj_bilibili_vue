@@ -126,6 +126,6 @@ const list = reactive([
     transform: translateY(-30%);
 }
 .item a.scroll{
-    color: #61666d;
+    color: #18191c;
 }
 </style>

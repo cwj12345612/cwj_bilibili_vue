@@ -48,7 +48,7 @@ const list=reactive([
 /* #region 默认状态 */
 .leftlist {
     height: 100%;
-    background-color: plum;
+    /* background-color: plum; */
     display: flex;
     justify-content: space-between;
     align-items: center;

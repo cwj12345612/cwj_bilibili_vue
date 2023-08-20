@@ -72,7 +72,7 @@ export const usepageconfigStore= defineStore('pageconfigStore',{
     globalclass(){
         return [
             this.pagename,
-           this.scroll >0 ? 'scroll': null
+           this.scroll >0 ? 'scroll': undefined
         ]
     }
     }
