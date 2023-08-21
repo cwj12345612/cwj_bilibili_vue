@@ -4,10 +4,12 @@
 id="searchpage_searchinput"
 :class="ca"
 >
-<div class="logo">
+<div class="logo"
+v-if="ca.scroll"
+>
     <a href="/">
         <i class="colourless bilibili"></i>
-    <span>首页</span>
+   
     </a>
 </div>
 <div class="input"
@@ -84,14 +86,20 @@ onMounted(()=>{
     align-items: center;
 }
 .searchpage_searchinput .logo i {
+    font-size: 30px;
     color: #00aeec;
 }
 .searchpage_searchinput.scroll{
+    z-index: 10086;
     position: fixed;
     top: 0;
     margin-top: 0;
 }
 .searchpage_searchinput .input{
+    /* z-index: 10086;
+    position: absolute;
+    right: 50%;
+    transform: translateX(50%); */
     width: 640px;
     padding: 5px;
     border: 1px solid #f1f2f3;
