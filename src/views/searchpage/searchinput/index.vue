@@ -4,13 +4,18 @@
 id="searchpage_searchinput"
 :class="ca"
 >
-
+<div class="logo">
+    <a href="/">
+        <i class="colourless bilibili"></i>
+    <span>首页</span>
+    </a>
+</div>
 <div class="input"
 :style="pageconfigStore.dynamicWH(undefined,{normal:48,max:54,min:44})"
 
 >
 <i class="colourless sousuo"></i>
-<input type="search" placeholder="请输入搜索内容">
+<input type="search" placeholder="请输入搜索内容" v-model="text">
 <button>
     搜索
 </button>
@@ -39,7 +44,7 @@ const ca=computed(()=>{
     height+=64
     // height+=20
    
-   console.log(height,pageconfigStore.scroll)
+//    console.log(height,pageconfigStore.scroll)
     return {
         'scroll':height<pageconfigStore.scroll
     }
@@ -52,6 +57,11 @@ const mock=(str)=>{return Mock.mock(str)}
 
 //#endregion
 
+const text=ref('')
+onMounted(()=>{
+    text.value=route.query.text
+})
+
 </script>
 <style scoped>
 .searchpage_searchinput{
@@ -62,6 +72,19 @@ const mock=(str)=>{return Mock.mock(str)}
     justify-content: center;
     align-items: center;
    /* transition: all 0.3s; */
+}
+.searchpage_searchinput .logo{
+    margin-right: 10px;
+    height: 100%;
+}
+.searchpage_searchinput .logo a{
+    height: 100%;
+  
+   display: flex;
+    align-items: center;
+}
+.searchpage_searchinput .logo i {
+    color: #00aeec;
 }
 .searchpage_searchinput.scroll{
     position: fixed;
@@ -91,7 +114,7 @@ const mock=(str)=>{return Mock.mock(str)}
 border: none;
 }
 .searchpage_searchinput .input button{
-    height: 90%;
+height: 90%;
    padding: 0 30px;
    background-color: #00aeec;
    color: #ffffff;

@@ -1,13 +1,16 @@
 <template>
-<div id="searchpage">
-  <searchpage_searchinput></searchpage_searchinput>
-  <searchpage_filter></searchpage_filter>
+<div class="searchpage_filter"
+:style="pageconfigStore.dynamicWH({normal:1297,min:988,max:2028})"
+>
+<searchpage_filtertitle></searchpage_filtertitle>
+<searchpage_filterall></searchpage_filterall>
 </div>
 </template>
 <script setup>
 // #region  引入组件
-import searchpage_searchinput from './searchinput'
-import searchpage_filter from './filter'
+import searchpage_filtertitle from './filter_title.vue'
+import searchpage_filterall from './filter_all.vue'
+
 //  #endregion
 
 // #region 引入vue pinia 路由
@@ -29,13 +32,12 @@ const mock=(str)=>{return Mock.mock(str)}
 
 </script>
 <style scoped>
-#searchpage{
-width: 100%;
-height: 1000px;
-background-color: orange;
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
+.searchpage_filter{
+    /* background-color: aqua; */
+    /* height: 300px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
 }
 </style>

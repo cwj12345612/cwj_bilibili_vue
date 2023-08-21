@@ -4,7 +4,7 @@
 >
 <li v-for="index in 6"><a href="#">
     <i class="colourless yinle"></i>
-    <span>{{mock('@cword(2,4)')}}</span>
+    <span>{{mock('@cword(2)')}}</span>
 </a></li>
 </ul>
 </template>
