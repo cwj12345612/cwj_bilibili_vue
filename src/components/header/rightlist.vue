@@ -128,7 +128,9 @@ const list = reactive([
 .item a.scroll{
     color: #18191c;
 }
-.item a.searchpage{
+.item a.searchpage,
+.item a.playpage
+{
     color: #18191c;
 }
 </style>

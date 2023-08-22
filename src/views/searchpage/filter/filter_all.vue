@@ -65,10 +65,7 @@ const openmore=()=>{
       }else{
         // el.style.height='0px'
         el.style.display='none'
-        
-      
         el.style.animationPlayState='paused'
-
       }
 //    el.style.animationName='show'
 }

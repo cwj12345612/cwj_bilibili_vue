@@ -50,6 +50,7 @@ export const usepageconfigStore= defineStore('pageconfigStore',{
                 style.width=temp
                }
                style.width=style.width+'px'
+            //    console.log(JSON.stringify(style),factor,this.width,temp,JSON.stringify(width))
             }
             if(height){
                 const factor=height.normal / normalHeight

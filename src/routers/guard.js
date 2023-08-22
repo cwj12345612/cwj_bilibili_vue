@@ -7,6 +7,7 @@ const router= createRouter({
     routes:static_routes
 })
 router.beforeEach((to,from,next)=>{
+    // console.log(to.name)
     if(to.name){
         const pageconfig=usepageconfigStore()
         pageconfig.pagename=to.name

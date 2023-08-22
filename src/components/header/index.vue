@@ -42,16 +42,23 @@ z-index: 10086;
 /* background-color: coral; */
   
 }
-header.homepage{
+header.homepage
+{
     position: absolute;
 }
-header.homepage.scroll{
+
+header.homepage.scroll,
+header.playpage.scroll
+{
     position: absolute;
     background-color: #ffffff;
 }
-header.searchpage{
+header.searchpage,
+header.playpage
+{
 /* position: 'none'; */
 background-color: #ffffff;
 box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+
 }
 </style>

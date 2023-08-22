@@ -9,5 +9,10 @@ component:()=>import('@/views/homepage/index.vue')
     path:'/search',
     name:'searchpage',
     component:()=>import('@/views/searchpage')
+},
+{
+    path:'/play',
+    name:'playpage',
+    component:()=>import('@/views/playpage')
 }
 ]

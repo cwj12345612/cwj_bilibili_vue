@@ -1,10 +1,12 @@
 <template>
 <div class="searchpage_searchinput"
-:style="pageconfigStore.dynamicWH(undefined,{normal:48,max:64,min:48})"
+:style="style"
 id="searchpage_searchinput"
 :class="ca"
 >
-<div class="logo"
+
+
+    <div class="logo"
 v-if="ca.scroll"
 >
     <a href="/">
@@ -21,6 +23,7 @@ v-if="ca.scroll"
 <button>
     搜索
 </button>
+
 </div>
 </div>
 </template>
@@ -51,6 +54,12 @@ const ca=computed(()=>{
         'scroll':height<pageconfigStore.scroll
     }
 })
+const style=computed(()=>{
+    return {
+        ...pageconfigStore.dynamicWH(undefined,{normal:48,max:64,min:48}),
+        'top':!ca.scroll ? pageconfigStore.scroll+'px':undefined
+    }
+})
 // #region  模拟数据 mockjs
 
 import Mock from 'mockjs'
@@ -70,16 +79,20 @@ onMounted(()=>{
     margin: 20px 0;
     width: 100%;
     background-color: #ffffff;
+    /* background-color: palevioletred; */
     display: flex;
+
     justify-content: center;
   align-content: center;
    
    /* transition: all 0.3s; */
 }
 .searchpage_searchinput .logo{
+ 
    margin-right: 10px;
     height: 100%;
 }
+
 .searchpage_searchinput .logo a{
     height: 100%;
   
@@ -91,17 +104,15 @@ onMounted(()=>{
     color: #00aeec;
 }
 .searchpage_searchinput.scroll{
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     z-index: 10086;
-    position: fixed;
-    top: 0;
+   position: absolute;
+    /* top: 0; */
     margin-top: 0;
 }
 .searchpage_searchinput .input{
-   
-    /* z-index: 10086;
-    position: absolute;
-    right: 50%;
-    transform: translateX(50%); */
+    align-self: center;
+  height: 100%;
     width: 640px;
     padding: 5px;
     border: 1px solid #f1f2f3;

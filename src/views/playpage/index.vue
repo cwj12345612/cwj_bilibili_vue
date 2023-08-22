@@ -1,15 +1,8 @@
-<template>
-<div id="searchpage">
-  <searchpage_searchinput></searchpage_searchinput>
-  <searchpage_filter></searchpage_filter>
-  <searchpage_reslist></searchpage_reslist>
-</div>
-</template>
 <script setup>
 // #region  引入组件
-import searchpage_searchinput from './searchinput'
-import searchpage_filter from './filter'
-import searchpage_reslist from './reslist'
+import playpage_leftmain from './leftmain'
+import playpage_rightlist from './rightlist'
+
 //  #endregion
 
 // #region 引入vue pinia 路由
@@ -30,14 +23,26 @@ const mock=(str)=>{return Mock.mock(str)}
 //#endregion
 
 </script>
+<!-- 播放页面 -->
+<template>
+<div id="playpage"
+
+>
+<playpage_leftmain></playpage_leftmain>
+<playpage_rightlist></playpage_rightlist>
+</div>
+</template>
+
 <style scoped>
-#searchpage{
-width: 100%;
-/* height: 1000px; */
-/* background-color: orange; */
-display: flex;
-flex-direction: column;
-justify-content: flex-start;
-align-items: center;
+#playpage{
+    width: 85%;
+    margin-top: 15px;
+    height: 1000px;
+    background-color: orange;
+   display: flex;
+ flex-shrink: 0;
+  justify-content: space-between;
 }
+
 </style>
+
