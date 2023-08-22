@@ -61,7 +61,9 @@ const openmore=()=>{
       if(open.value){
         el.style.display='block'
         el.style.animationPlayState='running'
+        // el.style.height='auto'
       }else{
+        // el.style.height='0px'
         el.style.display='none'
         
       
@@ -148,17 +150,12 @@ transition: all 0.3s;
     100%{opacity:1}
     
 }
-@keyframes disnone{
-   0%{opacity: 1;}
-    100%{opacity:0}
-    
-  
-}
+
 .morelist{
     display: none;
     animation-play-state: paused;
     width: 100%;
-
+/* height: 0; */
     /* background-color: chartreuse; */
  animation-name: show ;
     animation-duration: 3s;

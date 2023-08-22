@@ -72,11 +72,12 @@ onMounted(()=>{
     background-color: #ffffff;
     display: flex;
     justify-content: center;
-    align-items: center;
+  align-content: center;
+   
    /* transition: all 0.3s; */
 }
 .searchpage_searchinput .logo{
-    margin-right: 10px;
+   margin-right: 10px;
     height: 100%;
 }
 .searchpage_searchinput .logo a{
@@ -96,6 +97,7 @@ onMounted(()=>{
     margin-top: 0;
 }
 .searchpage_searchinput .input{
+   
     /* z-index: 10086;
     position: absolute;
     right: 50%;
