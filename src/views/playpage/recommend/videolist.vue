@@ -1,7 +1,8 @@
+<template>
+
+</template>
 <script setup>
 // #region  引入组件
-import playpage_leftmain from './leftmain'
-import playpage_rightlist from './rightlist'
 
 //  #endregion
 
@@ -23,25 +24,6 @@ const mock=(str)=>{return Mock.mock(str)}
 //#endregion
 
 </script>
-<!-- 播放页面 -->
-<template>
-<div id="playpage"
-
->
-<playpage_leftmain></playpage_leftmain>
-<playpage_rightlist></playpage_rightlist>
-</div>
-</template>
-
 <style scoped>
-#playpage{
-  
-    margin-top: 15px;
-    height: 1000px;
-    background-color: orange;
-   display: flex;
- 
-}
 
 </style>
-

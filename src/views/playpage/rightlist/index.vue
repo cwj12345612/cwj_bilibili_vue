@@ -1,11 +1,17 @@
 <template>
-<div class="playpage_rightlist">
+<div class="playpage_rightlist"
+:style="pageconfigStore.dynamicWH({normal:411,max:350,min:350})"
+>
 <rightlist_upZhu></rightlist_upZhu>
+<rightlist_danmulist></rightlist_danmulist>
+<rightlist_videolist></rightlist_videolist>
 </div>
 </template>
 <script setup>
 // #region  引入组件
 import rightlist_upZhu from './upZhu.vue'
+import rightlist_danmulist from './danmulist.vue'
+import rightlist_videolist from './videolist.vue'
 //  #endregion
 
 // #region 引入vue pinia 路由
@@ -28,9 +34,12 @@ const mock=(str)=>{return Mock.mock(str)}
 </script>
 <style scoped>
 .playpage_rightlist{
-    background-color: blueviolet;
+    margin-left: 30px;
+    /* background-color: blueviolet; */
+    background-color: #ffffff;
     width: 30%;
-    display: flex;
+   
+     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;

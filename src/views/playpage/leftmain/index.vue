@@ -23,6 +23,7 @@ const mock=(str)=>{return Mock.mock(str)}
 </script>
 <template>
 <div class="playpage_leftmain" 
+:style="pageconfigStore.dynamicWH({normal:668,max:1694,min:668})"
 >
 <div class="title">
 <h1>
@@ -52,12 +53,11 @@ const mock=(str)=>{return Mock.mock(str)}
 
 <style scoped>
 .playpage_leftmain{
+
 background-color: palevioletred;
-width: 67%;
+
 display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: flex-start;
+
 }
 .playpage_leftmain .title{
     height: 86px;
