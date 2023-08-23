@@ -42,6 +42,7 @@ const mock=(str)=>{return Mock.mock(str)}
 </script>
 <style scoped>
 .searchpage_res{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;

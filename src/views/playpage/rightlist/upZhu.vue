@@ -12,9 +12,9 @@
     </a>
    
 </div>
-<!-- <div class="signature">
+<div class="signature">
         {{ mock('@cword(50)') }}
-</div> -->
+</div>
 
 </div>
 </div>
@@ -66,13 +66,13 @@ position: relative;
 }
 .upZhu .rightdetail{
    
-    flex-grow: 0;
+    
     padding-bottom: 15px;
     height: 100%;
     width: 100%;
-    flex-grow: 1;
+    overflow: hidden;
     display: flex;
-    flex-direction: column;
+flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
     background-color: peru;
@@ -94,17 +94,14 @@ position: relative;
     color: #61666d;
     font-size: 13px;
 }
-.rightdetail .signature{
-    
-   height: 20px;
-   /* display: inline-block; */
-    width: 100%;
+.upZhu .rightdetail .signature{
+    background-color: #fb7299;
+   /* height: 20px; */
+   width: 100%;
+font-size: 13px;
     color: #9499a0;
-    font-size: 13px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    word-break: break-all;
     white-space: nowrap;
-
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 </style>

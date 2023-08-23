@@ -36,6 +36,7 @@
     </script>
     <style scoped>
     .searchpage_videolist{
+        margin-top: 10px;
     /* background-color: orange; */
     /* height: 400px; */
     display: grid;
