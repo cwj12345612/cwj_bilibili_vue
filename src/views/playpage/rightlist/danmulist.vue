@@ -100,7 +100,7 @@ const mock=(str)=>{return Mock.mock(str)}
     transform: rotate(180deg);
 }
 .playpage_danmulist .danmulist {
-    padding: 0 15px;
+   
     width: 100%;
     /* background-color: burlywood; */
  color: #61666d;
@@ -115,6 +115,7 @@ transition: all 3s;
     display: flex;
 }
 .playpage_danmulist .danmulist .danmulist_header{
+    padding: 0 15px;
    flex-shrink: 0;
     font-size: 12px;
     /* background-color: aqua; */
@@ -138,6 +139,8 @@ transition: all 3s;
     border-radius: var(--border-radius-min);
 }
 .playpage_danmulist .danmulist .list {
+    padding-left: 15px;
+    font-size: 12px;
   /* height: 0; */
     width: 100%;
     /* background-color: chartreuse; */
@@ -151,7 +154,7 @@ transition: all 3s;
     height: 24px;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 3fr  1.8fr;
+    grid-template-columns: 1fr 3.5fr  2fr;
    margin: 5px 0;
     grid-template-rows: 100%;
     

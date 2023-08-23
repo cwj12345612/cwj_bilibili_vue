@@ -5,7 +5,7 @@
                 <span>视频选集</span>
                 <span>(23/33)</span>
                 <span>
-                    <i class="colourless guanlishipin" style="cursor: pointer;"></i>
+                    <i class="colourless guanlishipin" ></i>
                 </span>
             </div>
             <div class="playauto">
@@ -70,6 +70,7 @@ const mock = (str) => { return Mock.mock(str) }
     flex-grow: 0;
     width: 100%;
     height: 24px;
+    margin-bottom: 10px;
     padding: 0 16px;
     /* background-color: turquoise; */
     display: flex;
@@ -102,12 +103,13 @@ const mock = (str) => { return Mock.mock(str) }
 }
 .rightlist_videolist .list{
     overflow: auto;
-    padding: 0 15px;
+    padding-left: 15px;
     width: 100%;
 height: 340px;
     /* background-color: palegoldenrod; */
 }
 .rightlist_videolist .list li {
+    font-size: 13px;
     width: 100%;
     height: 30px;
     margin: 5px  0;
@@ -117,7 +119,7 @@ height: 340px;
 }
 .rightlist_videolist .list li a{
     display: grid;
-    grid-template-columns: 1fr 4fr 1fr;
+    grid-template-columns: 0.6fr 4fr 1fr;
 }
 .rightlist_videolist .list li a .title{
         text-overflow: ellipsis;
