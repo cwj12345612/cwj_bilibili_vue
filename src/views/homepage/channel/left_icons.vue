@@ -51,6 +51,7 @@ flex-grow: 0;
     height: 100%;
 }
 .left_icons a{
+    align-items: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;

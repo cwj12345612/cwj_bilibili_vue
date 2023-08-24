@@ -103,6 +103,9 @@ const list = reactive([
     border-radius: 50%;
 }
 .constcontribute{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 34px;
     background-color: #fb7299;
     border-radius: var( --border-radius-max);
@@ -111,8 +114,12 @@ const list = reactive([
     color: #ffffff;
 }
 .item a{
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
+    align-items: center;
+
   color: #ffffff;
 }
 .item  span{

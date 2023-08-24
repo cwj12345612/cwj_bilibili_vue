@@ -18,4 +18,8 @@ onMounted(() => {
   pageconfigStore.initproperty()
 })
 </script>
-<style scoped></style>
+<style >
+#app:has(>header.moviepage){
+
+}
+</style>

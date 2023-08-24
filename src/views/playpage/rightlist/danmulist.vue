@@ -1,6 +1,8 @@
 <template>
 <div class="playpage_danmulist">
-    <div class="header">
+    <div class="header"
+
+    >
         <div class="left">
             <span>弹幕列表</span>
             <i class="colourless diandiandianshu setting"></i>
@@ -13,7 +15,7 @@
     </div>
     
     <div class="danmulist show"
-   
+
     :style="pageconfigStore.dynamicWH(undefined,{normal:376,max:962,min:376})"
     >
         <div class="danmulist_header">
@@ -21,7 +23,9 @@
             <span class="content">弹幕内容</span>
             <span class="sendtime">发送时间</span>
         </div>
-        <ul  class="list">
+        <ul  class="list"
+     
+        >
             <li v-for="index in 66">
                 <span class="time">00:42</span>
             <span class="content">{{ mock('@cword(5,20)') }}</span>
@@ -100,7 +104,7 @@ const mock=(str)=>{return Mock.mock(str)}
     transform: rotate(180deg);
 }
 .playpage_danmulist .danmulist {
-   
+   overflow: hidden;
     width: 100%;
     /* background-color: burlywood; */
  color: #61666d;
@@ -141,16 +145,14 @@ transition: all 3s;
 .playpage_danmulist .danmulist .list {
     padding-left: 15px;
     font-size: 12px;
-  /* height: 0; */
     width: 100%;
-    /* background-color: chartreuse; */
-    overflow: auto;
   
-   transition: all 5s;
+    overflow: auto;
 
 }
+
 .playpage_danmulist .danmulist .list li{
-  
+min-height: 0;
     height: 24px;
     width: 100%;
     display: grid;

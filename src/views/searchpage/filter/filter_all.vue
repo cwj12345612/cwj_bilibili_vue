@@ -7,7 +7,8 @@
          :class="index==1 ?'checked' :undefined"
         ><a href="#" >
             <span >{{ mock('@cword(4)') }}</span>
-        </a></li>
+        </a>
+    </li>
     </ul>
     <button class="more" 
     @click="openmore" 
@@ -20,7 +21,7 @@
 <div class="morelist"
 id="searchpage_filterall_morelist"
 >
-<ul class="item" v-for="index in 2">
+<ul class="item" v-for="index in mock({'num|2-4':4}).num">
 <li 
 class="checked"
  >
@@ -30,7 +31,7 @@ class="checked"
 </li>
 <div class="content">
     <li 
-   
+  
     v-for="index in mock({'num|7-20':20}).num">
     <a href="#">
     <span >{{ mock('@cword(2,8)') }}</span>    
@@ -79,12 +80,17 @@ const mock=(str)=>{return Mock.mock(str)}
 
 </script>
 <style scoped>
+li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .searchpage_filterall{
     overflow: hidden;
     margin-top: 30px;
     /* height: 200px; */
 width: 100%;
-/* background-color: blueviolet; */
+/* background-color: gold; */
 
 }
 .searchpage_filterall .top {
@@ -98,9 +104,9 @@ width: 100%;
 .searchpage_filterall .top .toplist{
     height: 100%;
     display: flex;
-
 }
 .toplist li{
+   
     height: 100%;
     padding: 0 15px;
     margin-right: 10px;
@@ -149,8 +155,8 @@ transition: all 0.3s;
 }
 
 .morelist{
-    display: none;
-    animation-play-state: paused;
+    /* display: none; */
+    /* animation-play-state: paused; */
     width: 100%;
 /* height: 0; */
     /* background-color: chartreuse; */
@@ -167,9 +173,7 @@ transition: all 0.3s;
  grid-template-columns: 94px 1fr; 
 }
 .morelist ul.item>li:first-child{
-    align-items: center;
-    display: flex;
-    justify-content: center;
+  
     margin-top: 10px;
     height: 34px;
     width: 94px;
@@ -183,6 +187,7 @@ transition: all 0.3s;
 flex-wrap: wrap;
 }
 .morelist .content li{
+  
     margin-right: 10px;
     margin-top: 10px;
     /* width: 94px; */

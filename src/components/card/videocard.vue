@@ -1,7 +1,8 @@
 <template>
     <div class="videocard">
-        <div class="img">
-            <img src="@/assets/images/视频图片.png" alt="">
+        
+            <a class="img" href="#">
+                <img src="@/assets/images/视频图片.png" alt="">
             <div class="videodeatail">
                <div>
                 <i class="colourless bofangshu"></i>
@@ -16,7 +17,8 @@
                 <span>13:11</span>
                </div>
             </div>
-        </div>
+            </a>
+        
         <a class="title" href="/play">
             {{ mock('@cword(4,60)') }}
         </a>
@@ -63,6 +65,7 @@ const mock = (str) => { return Mock.mock(str) }
 }
 
 .videocard .img {
+    display: block;
     width: 100%;
     height: 60%;
     border-radius: var(--border-radius-max);
@@ -81,11 +84,10 @@ const mock = (str) => { return Mock.mock(str) }
 justify-content: space-between;
 }
 .videocard .title {
-    height: auto;
+   
     font-size: 15px;
     /* background-color: aqua; */
     width: 100%;
-
     word-break: break-all;
     overflow: hidden;
     display: -webkit-box;
@@ -102,9 +104,9 @@ justify-content: space-between;
 .videocard .info {
     width: 100%;
     display: flex;
-    height: auto;
+  
     align-items: center;
-    padding: 5px 0;
+   
     font-size: 13px;
     color: #9499a0;
     justify-content: flex-start;

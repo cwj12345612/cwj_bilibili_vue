@@ -40,10 +40,10 @@ const router=useRouter()
     bottom: 0;
     width: 180px;
     left: 100px;
-    color: #ffffff;
+   
 }
 .homepage_banner .logo i{
      font-size: 50px; 
-
+     color: #ffffff;
 }
 </style>

@@ -3,8 +3,9 @@
 :style="pageconfigStore.dynamicWH({normal:411,max:350,min:350})"
 >
 <rightlist_upZhu></rightlist_upZhu>
-<rightlist_danmulist></rightlist_danmulist>
-<rightlist_videolist></rightlist_videolist>
+<!-- <rightlist_danmulist></rightlist_danmulist> -->
+<!-- <rightlist_videolist></rightlist_videolist> -->
+<rightlist_recommend></rightlist_recommend>
 </div>
 </template>
 <script setup>
@@ -12,6 +13,7 @@
 import rightlist_upZhu from './upZhu.vue'
 import rightlist_danmulist from './danmulist.vue'
 import rightlist_videolist from './videolist.vue'
+import rightlist_recommend from './recommend'
 //  #endregion
 
 // #region 引入vue pinia 路由

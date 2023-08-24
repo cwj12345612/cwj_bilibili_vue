@@ -78,7 +78,9 @@ const mock = (str) => { return Mock.mock(str) }
 .rankinglist .list li{
     width: 100%;
     height: 100%;
-  padding: 0 10px 0 10px;
+    display: flex;
+    align-items: center;
+  padding: 0 10px;
 }
 .rankinglist .list li a{
     /* background-color: antiquewhite; */
@@ -87,9 +89,14 @@ const mock = (str) => { return Mock.mock(str) }
     grid-template-columns: 30px 1fr;
 
 }
+.rankinglist .list li:hover a span,
+.rankinglist .list li:nth-child(n+4):hover a h4
+{
+      color: rgb(0, 174, 236);
+}
 .rankinglist .list li a h4{
   font-style: oblique;
-    height: 100%;
+  
     display: flex;
     justify-content: flex-end;
     align-items: center;

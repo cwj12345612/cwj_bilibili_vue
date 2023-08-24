@@ -1,10 +1,10 @@
 <template>
     <ul class="searchpage_filtertitle">
         <li 
-        v-for="index in mock({'num|7':7}).num" 
+        v-for="index in 8" 
         :class="index == 1 ? 'checked' : undefined">
             <a href="#">
-                <span class="title">{{ mock('@cword(2,3)') }}</span>
+                <span class="title">{{ mock('@cword(4)') }}</span>
                 <span class="count" v-if="index != 1">99+</span>
             </a>
         </li>
@@ -40,45 +40,37 @@ const mock = (str) => { return Mock.mock(str) }
     /* background-color: goldenrod; */
     border-bottom: 2px solid #f1f2f3;
    display: flex;
+align-items: center;
 }
 .searchpage_filtertitle li:first-child{
    
     padding-left: 0;
 }
 .searchpage_filtertitle li{
-   padding: 0 24px;
+  height: 100%;
+  padding: 0 24px;
 }
-.searchpage_filtertitle li a {
-
+.searchpage_filtertitle li a{
+   
+ height: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
+ align-items: center;
 }
-
-.searchpage_filtertitle li a span {
-    color: #61666d;
-}
-
-.searchpage_filtertitle li a .title {
-    font-size: 16px;
-    margin-right: 5px;
+li a span.title{
+    /* background-color: thistle; */
     height: 90%;
     display: flex;
     align-items: center;
 }
-
-.searchpage_filtertitle li a .count {
-    font-size: 12px;
-    border-radius: 50%;
-    background-color: #f1f2f3;
-}
-
-.searchpage_filtertitle li.checked a .title {
-    color: #0aaeec;
-    border-bottom: 2px solid #0aaeec;
-}
-
-.searchpage_filtertitle li:hover .title {
-    color: #0aaeec;
-}
+ li a span.count{
+  border-radius: 50%;
+  background-color: #ffffff;  
+ }
+ li.checked a span.title{
+    color: rgb(0, 174, 236);
+    border-bottom: 2px solid rgb(0, 174, 236);
+ }
+ li:hover span.title{
+    color: rgb(0, 174, 236);
+ }
 </style>

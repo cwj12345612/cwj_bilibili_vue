@@ -3,6 +3,7 @@ module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave:false,
   devServer: {
+    port:80,
     // 配置服务器代理
     proxy: {
       "/api": { // 代理接口前缀为/apis的请求

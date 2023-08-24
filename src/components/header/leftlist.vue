@@ -3,10 +3,10 @@
     :style="pageconfigStore.dynamicWH({ normal: 458, max: 537, min: 423 })"
     :class="pageconfigStore.globalclass"
     >
-    <li v-for="li in list" :key="li.id"
+    <li class="item" v-for="li in list" :key="li.id"
     :class="pageconfigStore.globalclass"
     >
-        <a class="item" :href="li.href"
+        <a  :href="li.href"
         :class="pageconfigStore.globalclass"
         >
                 <i v-if="li.icon" :class="li.icon"></i>
@@ -53,12 +53,10 @@ const list=reactive([
     justify-content: space-between;
     align-items: center;
 }
-li {
-    height: 100%;
-    
-}
+
 /* 默认情况 */
  .item{
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -66,14 +64,17 @@ li {
     color: #ffffff;
     transition: all 0.3s;
 }
+.item a{
+    color: #ffffff;
+}
 .item:hover{
     transform: translateY(-10%);
 }
-.item.scroll{
+.item a.scroll{
     color: #18191c;
 }
-.item.searchpage,
-.item.playpage
+.item a.searchpage,
+.item a.playpage
 {
     color: #18191c;
 }

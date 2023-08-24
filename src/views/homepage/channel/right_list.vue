@@ -1,10 +1,11 @@
 <template>
 <ul class="right_list"
-:style="pageconfigStore.dynamicWH({normal:240,max:258,min:168},{normal:66,max:78,min:66})"
+:style="pageconfigStore.dynamicWH({normal:240,max:258,min:240},{normal:66,max:78,min:66})"
 >
-<li v-for="index in 6"><a href="#">
+<li v-for="index in 6">
+    <a href="#">
     <i class="colourless yinle"></i>
-    <span>{{mock('@cword(2)')}}</span>
+    <span>{{mock('@cword(2,4)')}}</span>
 </a></li>
 </ul>
 </template>
@@ -43,6 +44,9 @@ const mock=(str)=>{return Mock.mock(str)}
 .right_list li {
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     /* background-color: crimson; */
 }
 .right_list li a {
