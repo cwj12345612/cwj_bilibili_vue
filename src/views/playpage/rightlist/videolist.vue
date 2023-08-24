@@ -108,6 +108,7 @@ const mock = (str) => { return Mock.mock(str) }
 height: 340px;
     /* background-color: palegoldenrod; */
 }
+/* .rightlist_videolist .list::-webkit-scrollbar{display: none;} */
 .rightlist_videolist .list li {
     font-size: 13px;
     width: 100%;

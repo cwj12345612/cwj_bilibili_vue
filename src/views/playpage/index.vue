@@ -37,7 +37,7 @@ const mock=(str)=>{return Mock.mock(str)}
 #playpage{
   
     margin-top: 15px;
-    height: 1000px;
+    /* height: 1000px; */
     background-color: orange;
    display: flex;
  

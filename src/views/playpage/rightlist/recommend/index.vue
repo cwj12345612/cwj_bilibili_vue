@@ -30,12 +30,12 @@ const mock=(str)=>{return Mock.mock(str)}
 </script>
 <style scoped>
 .rightlist_recommend{
-    margin-top: 18px;
+    margin-top: 20px;
     width: 100%;
-    background-color: orchid;
+    /* background-color: orchid; */
     max-height: 500px;
     overflow: auto;
 
 }
-
+.rightlist_recommend::-webkit-scrollbar{display: none;}
 </style>

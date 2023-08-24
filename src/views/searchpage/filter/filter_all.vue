@@ -155,8 +155,8 @@ transition: all 0.3s;
 }
 
 .morelist{
-    /* display: none; */
-    /* animation-play-state: paused; */
+    display: none;
+    animation-play-state: paused;
     width: 100%;
 /* height: 0; */
     /* background-color: chartreuse; */

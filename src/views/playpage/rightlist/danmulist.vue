@@ -112,6 +112,7 @@ const mock=(str)=>{return Mock.mock(str)}
  flex-direction: column;
 transition: all 3s;
 }
+.playpage_danmulist .danmulist .list::-webkit-scrollbar{display: none;}
 .playpage_danmulist .danmulist.none{
     display: none;
 }

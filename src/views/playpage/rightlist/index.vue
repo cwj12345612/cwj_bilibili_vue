@@ -3,8 +3,8 @@
 :style="pageconfigStore.dynamicWH({normal:411,max:350,min:350})"
 >
 <rightlist_upZhu></rightlist_upZhu>
-<!-- <rightlist_danmulist></rightlist_danmulist> -->
-<!-- <rightlist_videolist></rightlist_videolist> -->
+<rightlist_danmulist></rightlist_danmulist>
+<rightlist_videolist></rightlist_videolist>
 <rightlist_recommend></rightlist_recommend>
 </div>
 </template>
@@ -40,7 +40,7 @@ const mock=(str)=>{return Mock.mock(str)}
     /* background-color: blueviolet; */
     background-color: #ffffff;
     width: 30%;
-   
+   /* max-height: 1000px; */
      display: flex;
     flex-direction: column;
     align-items: center;
