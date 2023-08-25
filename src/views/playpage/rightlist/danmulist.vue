@@ -157,7 +157,9 @@ min-height: 0;
     height: 24px;
     width: 100%;
     display: grid;
-    grid-template-columns: 1fr 3.5fr  2fr;
+    grid-template-columns: 1fr 3.5fr  1.5fr;
+    align-items: center;
+    justify-content: flex-start;
    margin: 5px 0;
     grid-template-rows: 100%;
     

@@ -123,7 +123,7 @@ onMounted(() => {
 .left_main_playwarp .bottom {
     width: 100%;
     background-color: #ffffff;
-    padding: 0 12px;
+    padding-right: 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -145,7 +145,7 @@ onMounted(() => {
     display: flex;
    
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .root .send {
@@ -210,6 +210,7 @@ flex-shrink: 1;
   
 }
 .root .setting{
+    margin-right: 12px;
     transition: all 0.5s;
 }
 .root .setting:hover {
