@@ -2,6 +2,9 @@
 // #region  引入组件
 import left_main_playwarp from './playwarp.vue'
 import left_main_toolbar from './toolbar.vue'
+import leftmain_videodesc from './video_desc.vue'
+import leftmain_tags from './tags.vue'
+import leftmain_comment from './comment'
 //  #endregion
 
 // #region 引入vue pinia 路由
@@ -50,13 +53,16 @@ const mock = (str) => { return Mock.mock(str) }
 
 <left_main_playwarp></left_main_playwarp>
 <left_main_toolbar></left_main_toolbar>
+<leftmain_videodesc></leftmain_videodesc>
+<leftmain_tags></leftmain_tags>
+<leftmain_comment></leftmain_comment>
     </div>
 </template>
 
 <style scoped>
 .playpage_leftmain {
 
-    background-color: palevioletred;
+    /* background-color: palevioletred; */
 
     display: flex;
 flex-direction: column;
@@ -66,7 +72,7 @@ justify-content: flex-start;
 
 .playpage_leftmain .title {
     height: 86px;
-    background-color: paleturquoise;
+    /* background-color: paleturquoise; */
     width: 100%;
     display: flex;
     flex-direction: column;
