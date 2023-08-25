@@ -28,13 +28,13 @@
                         <i class="colourless cai"></i>
                     </span>
                     <span>回复
-                        
+
                     </span>
 
                 </div>
             </div>
             <ul class="chidren">
-                <li v-for="index in 6">
+                <li v-for="index in mock({'num|3-10':10}).num">
                     <div class="img">
                         <img src="@/assets/images/头像.png" alt="">
                     </div>

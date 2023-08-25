@@ -14,7 +14,7 @@
 <comment_sendinput></comment_sendinput>
 <ul class="comment_cards">
 
-    <comment_card v-for="index in 3"></comment_card>
+    <comment_card v-for="index in mock({'num|2-10':10}).num"></comment_card>
 
 </ul>
 </div>
