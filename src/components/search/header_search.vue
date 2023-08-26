@@ -92,10 +92,17 @@ padding-left: 5px;
     justify-content: center;
     transition: all 0.5s;
 }
+.header_search.moviepage button{
+    color: #f1f2f3;
+}
 .header_search button:hover{
     background: var( --transparency);
 }
 .header_search.searchpage{
     display: none;
+}
+.header_search.moviepage{
+    
+    background-color: #242628;
 }
 </style>

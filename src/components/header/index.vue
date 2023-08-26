@@ -24,7 +24,7 @@ const  style=computed(()=>{
     
     return {
         ...pageconfigStore.dynamicWH({normal:1377+24*2,max:2512+24*2,min:1012+24*2}),
-        top: pageconfigStore.scroll +'px' 
+        // top: pageconfigStore.scroll +'px' 
     }
 })
 </script>
@@ -45,14 +45,14 @@ z-index: 10086;
 header.homepage,
 header.animepage
 {
-    position: absolute;
+    position: fixed;
 }
 
 header.homepage.scroll,
 header.animepage.scroll,
 header.playpage.scroll
 {
-    position: absolute;
+    position: fixed;
     background-color: #ffffff;
 }
 header.searchpage,
@@ -64,7 +64,7 @@ box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
 header.moviepage{
-    position: absolute;
+    position: fixed;
 }
 header.moviepage.scroll{
     background-color: #242628;

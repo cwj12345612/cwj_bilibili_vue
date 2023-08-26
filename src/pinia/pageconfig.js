@@ -1,10 +1,12 @@
 //页面参数相关属性 
 import { defineStore } from 'pinia'
-
+import {dataUtils} from '@/utils/dataUtils'
 export const usepageconfigStore= defineStore('pageconfigStore',{
     state:()=>({
           // 页面滚动距离
           scroll: 0,
+          //是否滚动
+          isscroll:false,
           // 页面宽度
           width: 0,
           // 页面高度 自定义和宽度相等
@@ -16,14 +18,31 @@ export const usepageconfigStore= defineStore('pageconfigStore',{
           // 初始化页面宽度高度等 并监听对应js事件
         //app组件挂载后调用
         initproperty() {
+            const app=document.querySelector('#app')
             // console.log('初始化页面')
-            this.width = document.querySelector('#app').getBoundingClientRect().width
+            this.width = app.getBoundingClientRect().width
+        
             this.height = this.width
             this.scroll = document.documentElement.scrollTop || document.body.scrollTop
-            window.addEventListener('scroll', () => this.scroll = document.documentElement.scrollTop || document.body.scrollTop)
+       let temp=null
+            window.addEventListener('scroll', () => {
+               this.isscroll= (document.documentElement.scrollTop || document.body.scrollTop) >0
+                    if(temp){
+                    clearTimeout(temp)
+                }
+                temp=setTimeout(()=>{   
+                    this.scroll = document.documentElement.scrollTop || document.body.scrollTop
+                },100)
+            })
             window.addEventListener('resize', () => {
-                this.width = document.querySelector('#app').getBoundingClientRect().width
+                
+                if(temp){
+                    clearTimeout(temp)
+                }
+                temp=setTimeout(()=>{   
+                    this.width = app.getBoundingClientRect().width
                 this.height = this.width
+                },1)
             })
         }
     },
@@ -73,7 +92,7 @@ export const usepageconfigStore= defineStore('pageconfigStore',{
     globalclass(){
         return [
             this.pagename,
-           this.scroll >0 ? 'scroll': undefined
+          this.isscroll ? 'scroll': undefined
         ]
     }
     }

@@ -37,7 +37,7 @@ const mock=(str)=>{return Mock.mock(str)}
 </script>
 <style scoped>
 .navlist_map{
-    background: rgb(0,0,0.3);
+    border-radius: var(--border-radius-max);
     width: 100%;
     height: 100%;
 display: flex;
