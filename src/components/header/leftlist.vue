@@ -87,6 +87,7 @@ const list=reactive([
 }
 
 
+
 li:first-child.searchpage i,
 li:first-child.playpage i
  {

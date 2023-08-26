@@ -42,12 +42,14 @@ z-index: 10086;
 /* background-color: coral; */
   
 }
-header.homepage
+header.homepage,
+header.animepage
 {
     position: absolute;
 }
 
 header.homepage.scroll,
+header.animepage.scroll,
 header.playpage.scroll
 {
     position: absolute;
