@@ -20,6 +20,6 @@ onMounted(() => {
 </script>
 <style >
 #app:has(>header.moviepage){
-
+background-color: #242628;
 }
 </style>

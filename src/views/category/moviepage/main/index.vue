@@ -1,17 +1,16 @@
 <template>
-<div class="moviepage">
-   <moviepage_carousel></moviepage_carousel>
-   <moviepage_navlist></moviepage_navlist>
-   <moviepage_main></moviepage_main>
-   <moviepage_more></moviepage_more>
+<div class="moviepage_main"
+:style="pageconfigStore.dynamicWH({normal:1244,max:2014,min:1244},{normal:300,max:428,min:300})"
+>
+<moviepage_main_videowarp></moviepage_main_videowarp>
+<moviepage_main_videos></moviepage_main_videos>
 </div>
 </template>
 <script setup>
 // #region  引入组件
-import moviepage_carousel from './carousel'
-import moviepage_navlist from './navlist'
-import moviepage_main from './main'
-import moviepage_more from './more'
+import moviepage_main_videowarp from './videowarp.vue'
+import moviepage_main_videos from './videos.vue'
+
 //  #endregion
 
 // #region 引入vue pinia 路由
@@ -33,17 +32,15 @@ const mock=(str)=>{return Mock.mock(str)}
 
 </script>
 <style scoped>
-.moviepage{
+.moviepage_main{
+   margin-top: 20px;
     width: 100%;
-    flex-shrink: 0;
-    flex-grow: 1;
-    /* background-color: gold; */
-
-  
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
+    height: 300px;
+    /* background-color: chocolate; */
+    display: grid;
+    grid-column-gap: 16px;
+    grid-row-gap: 24px;
+    grid-template-rows: repeat(2,1fr);
+    grid-template-columns: repeat(7,1fr);
 }
-
 </style>

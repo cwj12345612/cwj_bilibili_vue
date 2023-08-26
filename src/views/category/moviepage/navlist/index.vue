@@ -12,7 +12,7 @@
     </div>
     <ul class="items">
         <li v-for="index in mock({'num|4':4}).num">
-            <a href="#">{{ mock('@cword(4)') }}</a>
+            <a href="#">{{ mock('@cword(2,4)') }}</a>
         </li>
     </ul>
 </div>
@@ -54,7 +54,7 @@
     </div>
     <ul class="items">
         <li v-for="index in mock({'num|4':4}).num">
-            <a href="#">{{ mock('@cword(2,4)') }}</a>
+            <a href="#">{{ mock('@cword(4)') }}</a>
         </li>
     </ul>
 </div>
@@ -87,13 +87,13 @@ const mock=(str)=>{return Mock.mock(str)}
 .moviepage_navlist{
     width: 100%;
   margin-top: 10px;
-    background-color: teal;
+    /* background-color: teal; */
   display: flex;
     /* align-items: center; */
     
 }
 .map{
-    margin-right: 50px;
+    margin-right: 30px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -127,7 +127,7 @@ margin-right: 6px;
     grid-template-rows: repeat(2,1fr);
    
     grid-row-gap: 10px;
-    grid-column-gap: 30px;
+    grid-column-gap: 20px;
 }
 .map.hot .items,
 .map.other .items

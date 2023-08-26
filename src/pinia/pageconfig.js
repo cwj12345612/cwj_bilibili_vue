@@ -17,12 +17,12 @@ export const usepageconfigStore= defineStore('pageconfigStore',{
         //app组件挂载后调用
         initproperty() {
             // console.log('初始化页面')
-            this.width = document.querySelector('#app').clientWidth
+            this.width = document.querySelector('#app').getBoundingClientRect().width
             this.height = this.width
             this.scroll = document.documentElement.scrollTop || document.body.scrollTop
             window.addEventListener('scroll', () => this.scroll = document.documentElement.scrollTop || document.body.scrollTop)
             window.addEventListener('resize', () => {
-                this.width = document.querySelector('#app').clientWidth
+                this.width = document.querySelector('#app').getBoundingClientRect().width
                 this.height = this.width
             })
         }
