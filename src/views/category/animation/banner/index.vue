@@ -36,7 +36,7 @@ const mock=(str)=>{return Mock.mock(str)}
 <style scoped>
 .banner{
     width: 100%;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     height: 480px;
 position: relative;
 display: flex;
