@@ -45,6 +45,7 @@ const mock=(str)=>{return Mock.mock(str)}
 </script>
 <style scoped>
 .leftmain_comment{
+    margin-top: 20px;
   max-height: 800px;
     /* background-color: thistle; */
     flex-grow: 1;

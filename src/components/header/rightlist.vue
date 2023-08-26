@@ -90,8 +90,12 @@ const list = reactive([
     width: 60px;
     height: 50px;
     padding-right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 .headavatar a{
+
     display: flex;
     justify-content: flex-end;
     align-items: center;

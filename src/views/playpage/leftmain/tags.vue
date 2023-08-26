@@ -1,12 +1,13 @@
 <template>
 <ul class="leftmain_tags sq" >
-<li v-for="index in mock({'num|3-20':7}).num" class="tag">
+<li v-for="index in mock({'num|20':7}).num" class="tag">
     <i class="colourless fenquxuanzhong"></i>
     <span>{{ mock('@cword(3,7)') }}</span>
 </li>
-<li class="more"  >
-<i class="colourless xialaxiao"></i>
+<li class="more"  @click="changeHeight">
+<i class="colourless xialaxiao" ></i>
 </li>
+
 </ul>
 </template>
 <script setup>
@@ -30,7 +31,18 @@ import Mock from 'mockjs'
 const mock=(str)=>{return Mock.mock(str)}
 
 //#endregion
+const changeHeight=(e)=>{
 
+ const ul=   e.currentTarget.parentElement
+
+  if(ul.className.indexOf('sq')>-1){
+    ul.classList.remove('sq')
+    ul.classList.add('zk')
+  }else{
+    ul.classList.add('sq')
+    ul.classList.remove('zk')
+  }
+}
 </script>
 <style scoped>
 .leftmain_tags{
@@ -43,8 +55,7 @@ padding-left: 5px;
 padding-right: 30px;
 position: relative;
 overflow: hidden;
-transition: all 0.5s;
-
+transition: all  0.5s;
 border-bottom: 2px solid #f1f2f3;
 }
 .leftmain_tags.sq{

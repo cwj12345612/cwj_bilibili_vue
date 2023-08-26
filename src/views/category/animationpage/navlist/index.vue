@@ -34,7 +34,7 @@ const mock=(str)=>{return Mock.mock(str)}
 .animepage_navlist{
     margin-top: 20px;
  height: 118px;
-    background-color: aquamarine;
+    background-color: #fff;
     display: grid;
     grid-template-columns:repeat(4,1fr);
     grid-column-gap: 20px;

@@ -9,13 +9,13 @@
         </div>
         <div class="right" 
       
-        @click="$event.currentTarget.classList.add('open')">
+        @click="changedanmulist">
             <i class="colourless xialada"></i>
         </div>
     </div>
     
-    <div class="danmulist show"
-
+    <div class="danmulist none"
+    ref="playpage_danmulist"
     :style="pageconfigStore.dynamicWH(undefined,{normal:376,max:962,min:376})"
     >
         <div class="danmulist_header">
@@ -26,7 +26,7 @@
         <ul  class="list"
      
         >
-            <li v-for="index in 66">
+            <li v-for="index in 6">
                 <span class="time">00:42</span>
             <span class="content">{{ mock('@cword(5,20)') }}</span>
             <span class="sendtime">10-10 15:32</span>
@@ -51,7 +51,7 @@ import {useRoute,useRouter} from 'vue-router'
 const pageconfigStore = usepageconfigStore()
 const route=useRoute()
 const router=useRouter()
-
+const playpage_danmulist=ref(null)
 // #endregion
 
 // #region  模拟数据 mockjs
@@ -61,12 +61,26 @@ import Mock from 'mockjs'
 const mock=(str)=>{return Mock.mock(str)}
 
 //#endregion
-
+const changedanmulist=(e)=>{
+const button= e.currentTarget
+const list= playpage_danmulist.value
+// console.log(playpage_danmulist.value.classList)
+if(button.className.indexOf('open')==-1){
+   list.classList.add('show')
+    list.classList.remove('none')
+    button.classList.add('open')
+}else{
+    list.classList.remove('show')
+    list.classList.add('none')
+    button.classList.remove('open')
+}
+}
 </script>
 <style scoped>
 .playpage_danmulist{
     width: 100%;
-  
+  display: flex;
+  flex-direction: column;
     /* background-color: gold; */
     overflow: hidden;
     border-radius: var(--border-radius-min);
@@ -109,6 +123,7 @@ const mock=(str)=>{return Mock.mock(str)}
     /* background-color: burlywood; */
  color: #61666d;
  display: flex;
+ 
  flex-direction: column;
 transition: all 3s;
 }
@@ -136,6 +151,7 @@ transition: all 3s;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+
     width: 100%;
     /* background-color: olivedrab; */
     height: 31px;
@@ -147,7 +163,7 @@ transition: all 3s;
     padding-left: 15px;
     font-size: 12px;
     width: 100%;
-  
+  flex-grow: 1;
     overflow: auto;
 
 }

@@ -1,11 +1,9 @@
 <template>
-    <div class="leftmain_videodesc"
-   
-    >
+    <div class="leftmain_videodesc"   >
 <div class="content sl" id="content">
-    {{ mock('@cword(10,30)') }}
+    {{ mock('@cword(300)') }}
 </div>
-<button class="more" >展开更多</button>
+<button class="more" @click="more">展开简介</button>
     </div>
 </template>
 <script setup>
@@ -31,7 +29,18 @@ const mock = (str) => {
     return Mock.mock(str) }
 
 //#endregion
+const more=(e)=>{
+  const div=  e.currentTarget.previousElementSibling
+//   console.log(div)
+if(div.className.indexOf('sl')!=-1){
+    div.classList.remove('sl')
+    e.currentTarget.innerHTML='收起简介'
+}else{
+    div.classList.add('sl')
+    e.currentTarget.innerHTML='张开简介'   
+}
 
+}
 </script>
 <style scoped>
 .leftmain_videodesc {

@@ -26,7 +26,7 @@ const categoryage=[
     {
         path:'/anime',
         name:'animepage',
-        component:()=>import('@/views/category/animation')
+        component:()=>import('@/views/category/animationpage')
     }
 ]
 

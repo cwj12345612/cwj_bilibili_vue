@@ -37,6 +37,7 @@ const mock=(str)=>{return Mock.mock(str)}
 </script>
 <style scoped>
 .navlist_map{
+    background: rgb(0,0,0.3);
     width: 100%;
     height: 100%;
 display: flex;
@@ -58,7 +59,7 @@ align-items: flex-start;}
     color: #0aaeec;
 }
 .navlist_map .items{
-    background-color: darkcyan;
+    /* background-color: darkcyan; */
 display: grid;
 grid-row-gap: 10px;
 grid-column-gap: 10px;
@@ -68,5 +69,8 @@ grid-template-columns: repeat(4,auto);
 .items li a{
     font-size: 15px;
     color: #61666d;
+}
+.items li a:hover{
+    color: #0aaeec;
 }
 </style>
