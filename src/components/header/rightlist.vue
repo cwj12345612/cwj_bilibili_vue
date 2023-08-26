@@ -140,4 +140,10 @@ const list = reactive([
 {
     color: #18191c;
 }
+.item a.moviepage{
+    color: #ffffff;
+}
+.item a.moviepage.scroll{
+    color: #ffffff;
+}
 </style>

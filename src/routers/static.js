@@ -14,5 +14,10 @@ component:()=>import('@/views/homepage/index.vue')
     path:'/play',
     name:'playpage',
     component:()=>import('@/views/playpage')
+},
+{
+    path:'/movie',
+    name:'moviepage',
+    component:()=>import('@/views/category/moviepage')
 }
 ]

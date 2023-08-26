@@ -78,6 +78,15 @@ const list=reactive([
 {
     color: #18191c;
 }
+
+.item a.moviepage{
+    color: #ffffff;
+}
+.item a.moviepage.scroll{
+    color: #ffffff;
+}
+
+
 li:first-child.searchpage i,
 li:first-child.playpage i
  {

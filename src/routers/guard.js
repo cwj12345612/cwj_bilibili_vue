@@ -7,11 +7,14 @@ const router= createRouter({
     routes:static_routes
 })
 router.beforeEach((to,from,next)=>{
-    // console.log(to.name)
-    if(to.name){
-        const pageconfig=usepageconfigStore()
-        pageconfig.pagename=to.name
-    }
+    const pageconfig=usepageconfigStore()
+  const list= to.matched
+  let i;
+  for( i=list.length,i>=0 ;i--;){
+   if(list[i]?.name){
+    pageconfig.pagename=to.name
+   }
+  }
     next()
 })
 export default router

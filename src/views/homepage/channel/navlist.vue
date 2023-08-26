@@ -2,7 +2,7 @@
 <ul class="homepage_navlist"
 :style="pageconfigStore.dynamicWH({normal:847,max:1436,min:677},{normal:66,max:78,min:66})"
 >
-<li v-for="index in 21"><a href="#">{{ mock('@cword(2,3)') }}</a></li>
+<li v-for="index in 21"><a href="/movie">{{ mock('@cword(2,3)') }}</a></li>
 <li class="more"><a href="#">
     <span>更多</span>
     <i class="colourless xialaxiao"></i>
