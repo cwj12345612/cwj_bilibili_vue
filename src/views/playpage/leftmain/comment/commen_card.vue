@@ -9,7 +9,7 @@
                 <div class="up">
                     <span>{{ mock('@cword(4,10)') }}</span>
                     <span>
-                        <i class="colour ic_userlevel_6"></i>
+                        <i :class="`colour ic_userlevel_${mock({'num|1-6':6}).num}`"></i>
                     </span>
                 </div>
                 <div class="content">
@@ -22,7 +22,7 @@
 
                     <span>
                         <i class="colourless zan"></i>
-                        112
+                        {{ mock({'num|100-3224':3224}).num }}
                     </span>
                     <span>
                         <i class="colourless cai"></i>
@@ -44,7 +44,7 @@
                               <span >
                                 <span class="zhu">{{ mock('@cword(4,10)') }}</span>
                                 <span>
-                                    <i class="colour ic_userlevel_6"></i>
+                                    <i :class="`colour ic_userlevel_${mock({'num|1-6':6}).num}`"></i>
                                 </span>
                           <span>:</span>
 
@@ -61,7 +61,7 @@
 
                             <span>
                                 <i class="colourless zan"></i>
-                                112
+                                {{mock({'num|100-2453':2453}).num}}
                             </span>
                             <span>
                                 <i class="colourless cai"></i>

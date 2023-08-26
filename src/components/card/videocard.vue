@@ -2,7 +2,7 @@
     <div class="videocard">
         
             <a class="img" href="#">
-                <img src="@/assets/images/视频图片.png" alt="">
+                <img :src="require(`@/assets/images/视${mock({'num|1-10':10}).num}.webp`)" alt="">
             <div class="videodeatail">
                <div>
                 <i class="colourless bofangshu"></i>

@@ -1,10 +1,11 @@
 <template>
 <div class="carousel">
 
-    <ul class="imgs">
-            <img src="@/assets/images/1.webp" alt="">
+    <ul class="imgs" ref="carousel_imgs" id="carousel_imgs">
+           <li v-for="(li,index) in list" :index="index"> <img  :src="li.src" alt=""></li>
     </ul>
-</div>
+
+   </div>
 </template>
 <script setup>
 // #region  引入组件
@@ -18,15 +19,53 @@ import {useRoute,useRouter} from 'vue-router'
 const pageconfigStore = usepageconfigStore()
 const route=useRoute()
 const router=useRouter()
-// #endregion
-
 // #region  模拟数据 mockjs
 
 import Mock from 'mockjs'
 
 const mock=(str)=>{return Mock.mock(str)}
-
+const list=[
+    {id:mock('@id()'),src:require('@/assets/images/1.webp')},
+    {id:mock('@id()'),src:require('@/assets/images/2.webp')},
+    {id:mock('@id()'),src:require('@/assets/images/3.webp')},
+    {id:mock('@id()'),src:require('@/assets/images/4.webp')},
+    {id:mock('@id()'),src:require('@/assets/images/5.webp')},
+    {id:mock('@id()'),src:require('@/assets/images/6.webp')},
+    {id:mock('@id()'),src:require('@/assets/images/7.webp')},
+    {id:mock('@id()'),src:require('@/assets/images/8.webp')},
+    {id:mock('@id()'),src:require('@/assets/images/9.webp')},
+]
 //#endregion
+
+const carousel=reactive(
+    {
+    
+    index:1, //当前图片的索引
+    total:0, //图片个数
+    setup:0,//步长
+    left:0 //当前移动距离
+})
+carousel.total=computed(()=>{
+    return list.length
+})
+//设置步长 为li的10分之1
+carousel.setup=computed(()=>{
+ 
+    // if(!carousel_imgs.value) return 0
+   return carousel_imgs.value.querySelector('li').getBoundingClientRect().width / 10  
+})
+const ainame=()=>{
+     Interval=setInterval(()=>{
+
+    },100)
+}
+//定时器
+let Interval=null;
+// 整个轮播图的ul
+const carousel_imgs=ref()
+
+// #endregion
+
 
 </script>
 <style scoped>
@@ -35,12 +74,26 @@ const mock=(str)=>{return Mock.mock(str)}
     grid-row: span 2;
     width: 100%;
     border-radius: var(--border-radius-max);
-    overflow: hidden;
+    /* overflow: hidden; */
     height: calc(calc(calc(100% - 20px) / 2) * 1.6 + 20px);
    background: var(--transparency);
+   position: relative;
+   overflow: hidden;
 }
 .carousel .imgs{
-    width: 100%;
+    width: 1000%;
     height: 80%;
+    position: absolute;
+    left: 0;
+display: flex;
+
 }
+.carousel .imgs li{
+
+    flex-shrink: 0;
+  
+    height: 100%;
+    width: 10%;
+}
+
 </style>
