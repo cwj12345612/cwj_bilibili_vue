@@ -29,7 +29,7 @@
     
 #### homepage(首页)
 
-![输入图片说明](public/renderings/homepage1.png)
+![输入图片说明](/public/renderings/homepage1.png)
 
 ![输入图片说明](public/renderings/homepage2.png)
 
