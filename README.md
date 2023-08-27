@@ -12,7 +12,7 @@
 ##### 地址: [github](https://github.com/cwj12345612/cwj_bilibili_vue.git )    [(国内)gitee](https://gitee.com/cwjaxx123/cwj-bilibili-vue.git)
 
  #### 1. 安装[nodejs](https://nodejs.org/en)(16版本要求及以上),和 [git](https://git-scm.com/downloads)
-##### 2. clone项目到本地: ```git clone https://gitee.com/cwjaxx123/cwj-bilibili-vue.git```或者 ```https://github.com/cwj12345612/cwj_bilibili_vue.git```
+##### 2. clone项目到本地: ```git clone https://gitee.com/cwjaxx123/cwj-bilibili-vue.git```或者 ```git clone https://github.com/cwj12345612/cwj_bilibili_vue.git```
 ##### 3. [配置npm淘宝镜像](https://www.cnblogs.com/tanyiqu/p/14532462.html)(非必须) 及 安装依赖 ```npm install```
 ##### 4. cmd运行 ```npm run serve``` 及 打开浏览器访问  [localhost:80](http://locolhost:80)
 
