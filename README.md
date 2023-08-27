@@ -33,19 +33,19 @@ vue3  + Mockjs + 原生h5/css/js + xgplayer + 阿里icon
 ```
 #### homepage(首页)
 
-![输入图片说明](public/homepage1.png)
-![输入图片说明](public/homepage2.png)
-![输入图片说明](public/homepage3.png)
+![输入图片说明](public/效果图/homepage1.png)
+![输入图片说明](public/效果图/homepage2.png)
+![输入图片说明](public/效果图/homepage3.png)
 
 #### playpage(播放页面)
-![输入图片说明](public/playpage1.png)
-![输入图片说明](public/playpage2.png)
-![输入图片说明](public/playpage3.png)
+![输入图片说明](public/效果图/playpage1.png)
+![输入图片说明](public/效果图/playpage2.png)
+![输入图片说明](public/效果图/playpage3.png)
 
 #### moviepage(电影页面)
-![输入图片说明](public/movie1.png)
-![输入图片说明](public/movie2.png)
-![输入图片说明](public/movie3.png)
-![输入图片说明](public/movie4.png)
-![输入图片说明](public/movie5.png)
+![输入图片说明](public/效果图/movie1.png)
+![输入图片说明](public/效果图/movie2.png)
+![输入图片说明](public/效果图/movie3.png)
+![输入图片说明](public/效果图/movie4.png)
+![输入图片说明](public/效果图/movie5.png)
     
