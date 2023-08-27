@@ -5,7 +5,7 @@
 ### 使用技术
 
 
-#### [vue3](https://vuejs.org/) + [Mockjs](http://mockjs.com/examples.html) + 原生h5/css/js +[ xgplayer](http://h5player.bytedance.com/guide/) + [阿里iconfont](https://www.iconfont.cn/)
+#### [vue3](https://vuejs.org/) + [Mockjs](http://mockjs.com/examples.html) + [原生h5/css/js](https://developer.mozilla.org/zh-CN/) +[ xgplayer](http://h5player.bytedance.com/guide/) + [阿里iconfont](https://www.iconfont.cn/)
 
 
 ### 项目下载及运行
