@@ -67,6 +67,7 @@ align-items: center;
     color: #000000;
 }
 .day{
+    margin-left: 10px;
     border-radius: 10px;
 display: flex;
 align-items: center;

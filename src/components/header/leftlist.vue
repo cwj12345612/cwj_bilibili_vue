@@ -7,6 +7,7 @@
     :class="pageconfigStore.globalclass"
     >
         <a  :href="li.href"
+
         :class="pageconfigStore.globalclass"
         >
                 <i v-if="li.icon" :class="li.icon"></i>
@@ -32,7 +33,7 @@ const router = useRouter()
 const list=reactive([
 { id: 1, icon: 'colourless bilibili', title: '首页', href: '/' },
     { id: 2, title: '番剧', href: '/anime' },
-    { id: 3, title: '直播', href: '#' },
+    { id: 3, title: '电影', href: '/movie' },
     { id: 4, title: '游戏中心', href: '#' },
 
     { id: 7, title: '赛事', href: '#' },

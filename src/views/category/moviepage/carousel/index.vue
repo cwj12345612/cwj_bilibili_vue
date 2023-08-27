@@ -7,7 +7,7 @@
             <ul class="items" :style="pageconfigStore.dynamicWH({ normal: 196, max: 256, min: 196 })">
 
                 <li v-for="index in 10" 
-                :class="(index === mock({ 'num|1-10': 10 }).num) ? 'checked' : undefined">
+                :class="(index === 5) ? 'checked' : undefined">
                     <a href="#">
                         <div class="title">
                             {{ mock('@cword(3,8)') }}

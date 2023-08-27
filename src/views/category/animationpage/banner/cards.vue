@@ -10,7 +10,7 @@ v-for="index in 7"
 :class="index==4 ?'checked' :undefined"
 :style="`background-color: ${mock('@color()')};`"
 >
-<a class="card_img" href="#">
+<a class="card_img" href="/play">
     <img :src="require(`@/assets/images/视${mock('@integer(1,10)')}.webp`)" alt="">
 <div class="title">
     {{ mock('@cword(4,30)') }}
