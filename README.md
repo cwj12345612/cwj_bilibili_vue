@@ -34,27 +34,27 @@
 
 #### homepage(首页)
 
-![输入图片说明](public/效果图/homepage1.png)
+![输入图片说明](public/renderings/homepage1.png)
 
-![输入图片说明](public/效果图/homepage2.png)
+![输入图片说明](public/renderings/homepage2.png)
 
-![输入图片说明](public/效果图/homepage3.png)
+![输入图片说明](public/renderings/homepage3.png)
 
 #### playpage(播放页面)
-![输入图片说明](public/效果图/playpage1.png)
+![输入图片说明](public/renderings/playpage1.png)
 
-![输入图片说明](public/效果图/playpage2.png)
+![输入图片说明](public/renderings/playpage2.png)
 
-![输入图片说明](public/效果图/playpage3.png)
+![输入图片说明](public/renderings/playpage3.png)
 
 #### moviepage(电影页面)
-![输入图片说明](public/效果图/movie1.png)
+![输入图片说明](public/renderings/movie1.png)
 
-![输入图片说明](public/效果图/movie2.png)
+![输入图片说明](public/renderings/movie2.png)
 
 <!-- 暴露了个人信息 所以注释掉 -->
 <!-- ![输入图片说明](public/效果图/movie3.png) -->
-![输入图片说明](public/效果图/movie4.png)
+![输入图片说明](public/renderings/movie4.png)
 
-![输入图片说明](public/效果图/movie5.png)
+![输入图片说明](public/renderings/movie5.png)
     
