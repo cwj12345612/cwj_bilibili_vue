@@ -1,6 +1,6 @@
 # 模仿b站pc版前台
 
-## 使用技术
+### 使用技术
 
 ```
 vue3  + Mockjs + 原生h5/css/js + xgplayer + 阿里icon
@@ -20,9 +20,10 @@ vue3  + Mockjs + 原生h5/css/js + xgplayer + 阿里icon
 
 ```
 每周5晚上和周六一天写 其他时间学.netcore。211月时准备逃离工地，不想一辈子在工地
+因为网络问题 没有发布在github 
 ```
 
-#### 因为网络问题 没有发布在github 
+
 
 
 ### 效果图 
@@ -31,6 +32,7 @@ vue3  + Mockjs + 原生h5/css/js + xgplayer + 阿里icon
 现在只是完成静态页面(数据通过Mockjs模拟的)，路由、接口那些还没做
 ```
 #### homepage(首页)
+
 ![输入图片说明](public/homepage1.png)
 ![输入图片说明](public/homepage2.png)
 ![输入图片说明](public/homepage3.png)
