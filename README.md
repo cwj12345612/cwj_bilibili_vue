@@ -29,7 +29,7 @@
     
 #### homepage(首页)
 
-![输入图片说明](https://gitee.com/cwjaxx123/cwj-bilibili-vue/blob/master/public/renderings/homepage1.png)
+![输入图片说明](public/renderings/homepage1.png)
 
 ![输入图片说明](public/renderings/homepage2.png)
 
