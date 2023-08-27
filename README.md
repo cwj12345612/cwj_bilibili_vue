@@ -12,7 +12,7 @@ vue3  + Mockjs + 原生h5/css/js + xgplayer + 阿里icon
 1. 安装nodejs(16版本要求及以上),和 git
 2. clone项目到本地: git clone https://gitee.com/cwjaxx123/cwj-bilibili-vue.git
 3. 配置npm淘宝镜像(非必须) 及 安装依赖 npm install
-4. cmd运行 npm run serve 及 打开浏览器访问 [localhost:80](http://localhost:80)
+4. cmd运行 npm run serve 及 打开浏览器访问 localhost:80
  
 ```
 
