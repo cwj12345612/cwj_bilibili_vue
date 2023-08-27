@@ -9,7 +9,7 @@
 
 
 ### 项目下载及运行
-
+##### 地址: [github](https://github.com/cwj12345612/cwj_bilibili_vue.git )    [(国内)gitee](https://gitee.com/cwjaxx123/cwj-bilibili-vue.git)
 
  #### 1. 安装[nodejs](https://nodejs.org/en)(16版本要求及以上),和 [git](https://git-scm.com/downloads)
 ##### 2. clone项目到本地: ```git clone https://gitee.com/cwjaxx123/cwj-bilibili-vue.git```或者 ```https://github.com/cwj12345612/cwj_bilibili_vue.git```
