@@ -5,5 +5,5 @@ import {createPinia} from 'pinia'
 import '@/assets/fonts/iconfont/colourless/iconfont.css'
 import '@/assets/fonts/iconfont/colour/iconfont.css'
 // import '@/utils/number'
-//测试1
+//测试122
 createApp(App).use(createPinia()).use(router).mount('#app')
