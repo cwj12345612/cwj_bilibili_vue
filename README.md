@@ -41,7 +41,8 @@
 #### moviepage(电影页面)
 ![输入图片说明](public/效果图/movie1.png)
 ![输入图片说明](public/效果图/movie2.png)
-![输入图片说明](public/效果图/movie3.png)
+<!-- 暴露了个人信息 所以注释掉 -->
+<!-- ![输入图片说明](public/效果图/movie3.png) -->
 ![输入图片说明](public/效果图/movie4.png)
 ![输入图片说明](public/效果图/movie5.png)
     
