@@ -32,16 +32,12 @@ vue3  + Mockjs + 原生h5/css/js + xgplayer + 阿里icon
 ```
 #### homepage(首页)
 ![输入图片说明](public/homepage1.png)
-
 ![输入图片说明](public/homepage2.png)
-
 ![输入图片说明](public/homepage3.png)
 
 #### playpage(播放页面)
 ![输入图片说明](public/playpage1.png)
-
 ![输入图片说明](public/playpage2.png)
-
 ![输入图片说明](public/playpage3.png)
 
 #### moviepage(电影页面)
