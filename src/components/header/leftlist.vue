@@ -1,6 +1,6 @@
 <template>
     <ul class="leftlist" 
-    :style="pageconfigStore.dynamicWH({ normal: 458, max: 537, min: 423 })"
+   
     :class="pageconfigStore.globalclass"
     >
     <li class="item" v-for="li in list" :key="li.id"
@@ -48,6 +48,9 @@ const list=reactive([
 <style scoped>
 /* #region 默认状态 */
 .leftlist {
+    max-width: 537px;
+    min-width: 423px;
+    width: calc(calc(458 / 1425) * 100%);
     height: 100%;
     /* background-color: plum; */
     display: flex;

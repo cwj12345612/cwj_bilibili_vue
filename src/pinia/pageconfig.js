@@ -21,7 +21,6 @@ export const usepageconfigStore= defineStore('pageconfigStore',{
             const app=document.querySelector('#app')
             // console.log('初始化页面')
             this.width = app.getBoundingClientRect().width
-        
             this.height = this.width
             this.scroll = document.documentElement.scrollTop || document.body.scrollTop
        let temp=null

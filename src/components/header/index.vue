@@ -32,6 +32,7 @@ const  style=computed(()=>{
 header {
 z-index: 10086;
    padding: 0 24px;
+ 
     height: 64px;
 /* 弹性布局flex */
   display: flex;

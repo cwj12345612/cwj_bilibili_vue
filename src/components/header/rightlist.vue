@@ -1,6 +1,6 @@
 <template>
 <ul class="rightlist"
-:style="pageconfigStore.dynamicWH({normal:466,max:482,min:326})"
+
 >
 <li class="headavatar">
             <a :href="headavatar.href">
@@ -16,7 +16,7 @@
                 <i :class="li.icon" v-if="li.icon"></i>
                 <span 
                 v-if="isshowspan"
-                >{{ li.title }}</span>
+                >{{ mock('@cword(2)') }}</span>
             </a>
           
         </li>
@@ -57,6 +57,9 @@ const isshowspan=computed(()=>{
 })
 // #region  模拟数据 mockjs
 import  Mock  from 'mockjs';
+const mock=(str)=>{
+    return Mock.mock(str)
+}
 const headavatar = reactive({
     id: Mock.mock('@id()'),
     avatarsrc: require('@/assets/images/头像.png'),
@@ -80,6 +83,9 @@ const list = reactive([
 </script>
 <style scoped>
 .rightlist{
+    max-width: 482px;
+    min-width: 326px;
+    width: calc(calc(466 / 1425) * 100%);
     height: 50px;
     /* background-color: teal; */
     display: flex;
@@ -107,6 +113,8 @@ const list = reactive([
     border-radius: 50%;
 }
 .constcontribute{
+
+
     display: flex;
     justify-content: center;
     align-items: center;
