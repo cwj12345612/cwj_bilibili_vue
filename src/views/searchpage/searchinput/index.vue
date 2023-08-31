@@ -1,13 +1,12 @@
 <template>
 <div class="searchpage_searchinput"
-:style="style"
+:style="pageconfigStore.dynamicWH(undefined,{normal:48,max:64,min:48})"
 id="searchpage_searchinput"
-:class="ca"
+:class="{'scroll':pageconfigStore.scroll>(64+20)}"
 >
 
-
     <div class="logo"
-v-if="ca.scroll"
+v-if="pageconfigStore.scroll>(64+20)"
 >
     <a href="/">
         <i class="colourless bilibili"></i>
@@ -41,25 +40,8 @@ const route=useRoute()
 const router=useRouter()
 // #endregion
 
-const ca=computed(()=>{
-    let height=0
-    const searchpage_searchinput=document.getElementById('searchpage_searchinput')
-  
-    height+=searchpage_searchinput? searchpage_searchinput.offsetHeight :0
-    height+=64
-    // height+=20
-   
-//    console.log(height,pageconfigStore.scroll)
-    return {
-        'scroll':height<pageconfigStore.scroll
-    }
-})
-const style=computed(()=>{
-    return {
-        ...pageconfigStore.dynamicWH(undefined,{normal:48,max:64,min:48}),
-        'top':!ca.scroll ? pageconfigStore.scroll+'px':undefined
-    }
-})
+
+
 // #region  模拟数据 mockjs
 
 import Mock from 'mockjs'
@@ -87,6 +69,7 @@ onMounted(()=>{
    
    /* transition: all 0.3s; */
 }
+
 .searchpage_searchinput .logo{
  
    margin-right: 10px;
@@ -105,10 +88,12 @@ onMounted(()=>{
 }
 .searchpage_searchinput.scroll{
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    margin: 0;
+    position: fixed;
+    top: 0;
     z-index: 10086;
-   position: absolute;
-    /* top: 0; */
-    margin-top: 0;
+    
+   margin: 0;
 }
 .searchpage_searchinput .input{
     align-self: center;
