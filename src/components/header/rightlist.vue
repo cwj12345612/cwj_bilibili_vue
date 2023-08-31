@@ -16,7 +16,7 @@
                 <i :class="li.icon" v-if="li.icon"></i>
                 <span 
                 v-if="isshowspan"
-                >{{ mock('@cword(2)') }}</span>
+                >{{li.title }}</span>
             </a>
           
         </li>

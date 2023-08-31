@@ -33,8 +33,8 @@ const mock=(str)=>{return Mock.mock(str)}
 <style scoped>
 .bingewatch{
     margin-top: 50px;
-   
-    background-color: aqua;
+   background-color: #fff;
+    /* background-color: aqua; */
     display: grid;
     grid-column-gap: 16px;
     grid-template-columns: repeat(6,1fr);

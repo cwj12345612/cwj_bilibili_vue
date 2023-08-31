@@ -16,7 +16,6 @@ v-for="index in 7"
     {{ mock('@cword(4,30)') }}
 </div>
 </a>
-
 </div>
 
 </li>
@@ -50,7 +49,7 @@ const mock=(str)=>{return Mock.mock(str)}
  .cards{
     /* background-color: olivedrab; */
     position: absolute;   
-    height: 25%;
+    height: 20%;
     bottom: 0;
     display: grid;
     grid-template-columns: repeat(7,1fr);
