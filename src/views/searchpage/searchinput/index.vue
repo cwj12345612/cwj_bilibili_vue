@@ -6,11 +6,10 @@ id="searchpage_searchinput"
 >
 
     <div class="logo"
-v-if="pageconfigStore.scroll>(64+20)"
+v-show="pageconfigStore.scroll>(64+20)"
 >
     <a href="/">
         <i class="colourless bilibili"></i>
-   
     </a>
 </div>
 <div class="input"

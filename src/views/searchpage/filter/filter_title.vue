@@ -64,7 +64,7 @@ li a span.title{
 }
  li a span.count{
   border-radius: 50%;
-  background-color: #ffffff;  
+  background-color: #e6e7e8;  
  }
  li.checked a span.title{
     color: rgb(0, 174, 236);
