@@ -1,5 +1,26 @@
 <template>
+<ul class="list">
+<li v-for="index in 7">
+<span class="time">
+    周日21:30
+</span>
 
+<div class="img">
+   <a href="#">
+    <img src="@/assets/images/anime_timeline1.webp" alt="">
+   </a>
+</div>
+<div class="title">
+    <a href="#">
+        {{ mock("@cword(10)") }}
+    </a>
+</div>
+<span class="progress">
+    更新至33话
+</span>
+</li>
+
+</ul>
 </template>
 <script setup>
 // #region  引入组件
@@ -25,5 +46,48 @@ const mock=(str)=>{return Mock.mock(str)}
 
 </script>
 <style scoped>
-
+.list{
+    /* background-color: blueviolet; */
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: 100%;
+    grid-column-gap: 20px;
+    border-top: 2px rgb(235, 64, 199) solid;
+}
+.list li {
+    /* background-color: aquamarine; */
+  position: relative; 
+  padding-top: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.list li .time{
+    position: absolute;
+background-color: #fbdbf4;
+color: rgb(235, 64, 199);
+padding: 2px 10px;
+top: 0;
+transform: translateY(-50%);
+border-radius: 6px;
+}
+li .img {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+    border-radius: 6px;
+   
+}
+li .title a{
+    color: #18191c;
+    font-size: 15px;
+}
+li .title a:hover{
+    color: #0aaeec;
+}
+.progress{
+    font-size: 13px;
+    color: #9499a0;
+}
 </style>

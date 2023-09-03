@@ -1,8 +1,8 @@
 <template>
 <div id="animepage">
 <animepage_banner></animepage_banner>
-<!-- <animepage_navlist></animepage_navlist> -->
-<animepage_bingewatch></animepage_bingewatch>
+<!-- <animepage_navlist></animepage_navlist>
+<animepage_bingewatch></animepage_bingewatch> -->
 <animepage_timeline></animepage_timeline>
 </div>
 </template>
