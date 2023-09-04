@@ -6,12 +6,12 @@
 </span>
 
 <div class="img">
-   <a href="#">
+   <a href="/play">
     <img src="@/assets/images/anime_timeline1.webp" alt="">
    </a>
 </div>
 <div class="title">
-    <a href="#">
+    <a href="/play">
         {{ mock("@cword(11)") }}
     </a>
 </div>

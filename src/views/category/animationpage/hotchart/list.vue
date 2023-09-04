@@ -3,7 +3,7 @@
 
 <li v-for="index  in 7">
 <div class="img">
-    <a href="#">
+    <a href="/play">
         <img src="@/assets/images/anime_hotchart1.webp" alt="">
     </a>
 </div>
@@ -13,7 +13,7 @@
  </div>
 <div class="content" >
 <div class="title">
-   <a href="#">
+   <a href="/play">
     {{ mock('@cword(5)') }}
    </a>
 </div>

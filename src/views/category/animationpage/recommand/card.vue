@@ -4,12 +4,12 @@
 >
 
 <div class="img">
-    <a href="#">
+    <a href="/play">
         <img src="@/assets/images/anime_hotchart1.webp" alt="">
     </a>
 </div>
 <div class="title">
-   <a href="#">
+   <a href="/play">
     {{ mock('@cword(100)') }}
    </a>
 </div>

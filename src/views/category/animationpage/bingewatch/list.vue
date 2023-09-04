@@ -6,10 +6,12 @@ v-for="index in 7"
 >
 
 <div class="img">
+   <a href="/play">
     <img :src="require(`@/assets/images/视${mock('@integer(1,10)')}.webp`)" alt="">
+   </a>
 </div>
 <div class="title">
-   <a href="#">
+   <a href="/play">
     {{ mock('@cword(100)') }}
    </a>
 </div>
