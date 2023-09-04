@@ -1,15 +1,15 @@
 <template>
-<div class="timeline"
+<div class="hotchart"
 :style="pageconfigStore.dynamicWH({normal:1297,max:1780,min:1020},{normal:367,max:460,min:367})"
 >
-<timeline_top></timeline_top>
-<timeline_list></timeline_list>
+<hotchart_top></hotchart_top>
+<hotchart_list></hotchart_list>
 </div>
 </template>
 <script setup>
 // #region  引入组件
-import timeline_top from './top.vue'
-import timeline_list from './list.vue'
+import hotchart_top from './top.vue'
+import hotchart_list from './list.vue'
 //  #endregion
 
 // #region 引入vue pinia 路由
@@ -31,9 +31,9 @@ const mock=(str)=>{return Mock.mock(str)}
 
 </script>
 <style scoped>
-.timeline{
+.hotchart{
     margin-top: 50px;
-    /* background-color: blanchedalmond; */
+    /* background-color: orange; */
     display: grid;
     grid-template-rows: 50px 1fr;
     grid-row-gap: 20px;

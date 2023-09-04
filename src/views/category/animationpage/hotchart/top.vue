@@ -2,17 +2,10 @@
 <div class="timeline_top">
 <div class="left">
 <div class="h">
-    <i class="colour shijianbiao"></i>
-    <h3>新番时间表</h3>
+    <i class="colour fanjutuijian"></i>
+    <h3>番剧热播榜</h3>
 </div>
-<ul class="day">
-<li >
-    最近更新
-</li>
-<li v-for="index in 7" 
-:class="index == 3? 'checked' :undefined"
->周{{ index }}</li>
-</ul>
+
 </div>
 <button class="all">
     <span>查看更多</span>
@@ -65,29 +58,6 @@ align-items: center;
 .h h3{
     font-size: 24px;
     color: #000000;
-}
-.day{
-    margin-left: 10px;
-    border-radius: 10px;
-display: flex;
-align-items: center;
-background-color: #f1f2f3;
-}
-.day li{
-    cursor: pointer;
-    color: #61666d;
-    font-size: 14px;
-    padding: 7px 14px;
-}
-.day li.checked{
-    color: #18191c;
-    background-color: #ffffff;
-    border-radius: 10px;
-}
-.day li:hover{
-    color: #18191c;
-    background-color: #e6e7e8;
-    border-radius: 10px;
 }
 .all{
     height: 80%;

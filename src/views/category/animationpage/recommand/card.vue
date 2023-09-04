@@ -1,12 +1,12 @@
 <template>
-<ul class="bingewatch_list">
-<li
-v-for="index in 7"
-
+<div class="card"
+:style="pageconfigStore.dynamicWH(undefined,{normal:275,max:367,min:255})"
 >
 
 <div class="img">
-    <img :src="require(`@/assets/images/视${mock('@integer(1,10)')}.webp`)" alt="">
+    <a href="#">
+        <img src="@/assets/images/anime_hotchart1.webp" alt="">
+    </a>
 </div>
 <div class="title">
    <a href="#">
@@ -14,10 +14,9 @@ v-for="index in 7"
    </a>
 </div>
 <div class="desc">
-    {{ mock('@cword(50)') }}
+{{ mock('@cword(10)') }}
 </div>
-</li>
-</ul>
+</div>
 </template>
 <script setup>
 // #region  引入组件
@@ -43,51 +42,40 @@ const mock=(str)=>{return Mock.mock(str)}
 
 </script>
 <style scoped>
-.bingewatch_list{
-    grid-column: span 7;
+.card{
     /* background-color: chocolate; */
-    display: grid;
-    grid-column-gap: 16px;
-    grid-template-columns: repeat(7,1fr);
-}
-li{
-    border-radius: var(--border-radius-max);
-    overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: flex-start;
-  
+    justify-content: space-between;
+    border-radius: 8px;
+ overflow: hidden;
+   
 }
-li .img{
+.card .img{
     width: 100%;
-    height: 65%;
+    height: 80%;
+    border-radius: 8px;
     overflow: hidden;
-    border-radius: var(--border-radius-max);
 }
-.title{
-   overflow: hidden;
-  width: 100%; 
-}
-li .title a{
-    display: inline-block;
-    width: 100%;
+.card .title{
+    font-size: 15px;
+width: 100%;
     text-overflow: ellipsis;
     overflow: hidden;
     word-break: break-all;
     white-space: nowrap;
-    color: #18191c;
-    font-size: 15px;
 }
-li .title a:hover{
+.card .title a{
+  
+    color: #18191c;
+ 
+}
+.card .title a:hover{
     color: #0aaeec;
 }
-li .desc{
+.desc{
     font-size: 13px;
-    color: #7f7f7f;
-    overflow: hidden;
-    width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
+    color: rgb(118, 119, 126);
 }
 </style>

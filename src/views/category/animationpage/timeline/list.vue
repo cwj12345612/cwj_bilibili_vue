@@ -12,7 +12,7 @@
 </div>
 <div class="title">
     <a href="#">
-        {{ mock("@cword(10)") }}
+        {{ mock("@cword(11)") }}
     </a>
 </div>
 <span class="progress">
@@ -62,6 +62,7 @@ const mock=(str)=>{return Mock.mock(str)}
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+
 }
 .list li .time{
     position: absolute;
@@ -79,7 +80,9 @@ li .img {
     border-radius: 6px;
    
 }
+
 li .title a{
+   
     color: #18191c;
     font-size: 15px;
 }
@@ -87,6 +90,10 @@ li .title a:hover{
     color: #0aaeec;
 }
 .progress{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    word-break: break-all;
+    white-space: nowrap;
     font-size: 13px;
     color: #9499a0;
 }
