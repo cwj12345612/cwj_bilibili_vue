@@ -2,9 +2,7 @@
 ### [效果图](/效果图.md)
 
 
-### 进度
-    完成: homepage playpage moviepage
-    进行中: animepage
+
 ### 使用技术
 #### [vue3](https://vuejs.org/) + [Mockjs](http://mockjs.com/examples.html) + [原生h5/css/js](https://developer.mozilla.org/zh-CN/) +[ xgplayer](http://h5player.bytedance.com/guide/) + [阿里iconfont](https://www.iconfont.cn/)
 
