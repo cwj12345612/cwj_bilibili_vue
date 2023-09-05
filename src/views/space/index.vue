@@ -1,20 +1,15 @@
 <template>
     <div id="spacepage" :style="pageconfigStore.dynamicWH({ normal: 1283, max: 1283, min: 1101 })">
-        <div class="header">
-            <button class="visualangle">
-                <span>视角: </span>
-                <span>我自己</span>
-                <i class="colourless xialada"></i>
-            </button>
+        <spacepage_top></spacepage_top>
+        <div class="content">
+            <spacepage_home></spacepage_home>
         </div>
-<div class="userinfo">
-
-</div>
     </div>
 </template>
 <script setup>
 // #region  引入组件
-
+import spacepage_top from './top'
+import spacepage_home from './routespage/home'
 //  #endregion
 
 // #region 引入vue pinia 路由
@@ -25,18 +20,19 @@ const pageconfigStore = usepageconfigStore()
 const route = useRoute()
 const router = useRouter()
 // #endregion
-
-// #region  模拟数据 mockjs
-
 import Mock from 'mockjs'
 
 const mock = (str) => { return Mock.mock(str) }
+
+
+// #region  模拟数据 mockjs
 
 //#endregion
 
 </script>
 <style scoped>
 #spacepage {
+
 
     height: 1000px;
     background-color: orange;
@@ -45,35 +41,11 @@ const mock = (str) => { return Mock.mock(str) }
     align-items: center;
     justify-content: flex-start;
 }
-
-.header {
+.content{
+    margin-top: 10px;
     width: 100%;
-    height: 192px;
-
-    background: url('../../assets/images/spacepage/header_bigpic.webp') no-repeat ;
-    background-size:cover ;
-    position: relative;
-   padding-left: 20px;
+    background-color: aqua;
+    /* height: 700px; */
+    border-radius: 8px;
 }
-.visualangle {
-    position: absolute;
-    top: 15px;
-    right: 60px;
-   background: var(--transparency);
-   color: #fff;
-    padding: 5px 10px;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    border: none;
-    border-radius: 4px;
-
-}
-.visualangle:hover{
-    background: rgba(0, 0, 0, 0.6);
-}
-.visualangle span{
-    margin-right: 5px;
-}
-
 </style>

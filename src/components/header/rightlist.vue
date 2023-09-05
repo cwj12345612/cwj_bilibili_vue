@@ -63,7 +63,7 @@ const mock=(str)=>{
 const headavatar = reactive({
     id: Mock.mock('@id()'),
     avatarsrc: require('@/assets/images/头像.png'),
-    href: Mock.mock('@url()')
+    href: '/space'
 })
 const constcontribute = reactive({
     url: Mock.mock('@url()'),

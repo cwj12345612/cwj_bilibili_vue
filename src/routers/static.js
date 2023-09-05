@@ -33,7 +33,7 @@ const category=[
 const spacepage={
     path:'/space',
     name:'spacepage',
-    component:()=>import('@/views/spacepage')
+    component:()=>import('@/views/space')
 }
 const routes=[
     ...main,

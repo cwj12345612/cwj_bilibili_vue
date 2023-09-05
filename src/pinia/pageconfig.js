@@ -25,7 +25,7 @@ export const usepageconfigStore = defineStore('pageconfigStore', {
             let temp = null
             window.addEventListener('scroll', () => {
                              this.scroll = document.documentElement.scrollTop || document.body.scrollTop
-
+// console.log(this.scroll)
             })
             window.addEventListener('resize', () => {
                 this.width = app.getBoundingClientRect().width
