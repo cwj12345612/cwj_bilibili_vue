@@ -57,7 +57,9 @@ header.playpage.scroll
     background-color: #ffffff;
 }
 header.searchpage,
-header.playpage
+header.playpage,
+header.spacepage
+
 {
 /* position: 'none'; */
 background-color: #ffffff;

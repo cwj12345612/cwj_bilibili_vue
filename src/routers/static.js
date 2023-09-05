@@ -18,7 +18,7 @@ component:()=>import('@/views/homepage/index.vue')
 },
 
 ]
-const categoryage=[
+const category=[
     {
         path:'/movie',
         name:'moviepage',
@@ -30,9 +30,14 @@ const categoryage=[
         component:()=>import('@/views/category/animationpage')
     }
 ]
-
+const spacepage={
+    path:'/space',
+    name:'spacepage',
+    component:()=>import('@/views/spacepage')
+}
 const routes=[
     ...main,
-    ...categoryage,
+    ...category,
+    spacepage,
 ]
 export default routes

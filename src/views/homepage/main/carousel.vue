@@ -4,7 +4,26 @@
     <ul class="imgs" ref="carousel_imgs" id="carousel_imgs">
            <li v-for="(li,index) in list" :index="index"> <img  :src="li.src" alt=""></li>
     </ul>
-
+    <div class="bottom">
+        <div class="top">
+            <h3>
+               <a href="#">
+                {{ mock('@cword(10)') }}
+               </a>
+            </h3>
+            <div class="button">
+                <button>
+                    <i class="colourless fanhui"></i>
+                </button>
+                <button>
+                    <i class="colourless gengduo"></i>
+                </button>
+            </div>
+        </div>
+        <ol class="indicator">
+            <li :class="`${index === 3 ?'checked':undefined}`" v-for="index in 8"></li>
+        </ol>
+    </div>
    </div>
 </template>
 <script setup>
@@ -76,7 +95,7 @@ const carousel_imgs=ref()
     border-radius: var(--border-radius-max);
     /* overflow: hidden; */
     height: calc(calc(calc(100% - 20px) / 2) * 1.6 + 20px);
-   background: var(--transparency);
+   /* background: var(--transparency); */
    position: relative;
    overflow: hidden;
 }
@@ -95,5 +114,49 @@ display: flex;
     height: 100%;
     width: 10%;
 }
-
+.bottom{
+    position: absolute;
+    bottom: 0;
+    height: 20%;
+    width: 100%;
+    background: var(--transparency);
+   padding: 5px 10px 15px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+}
+.bottom .top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom .top h3 a{
+    color: #fff;
+    font-size: 18px;
+}
+.bottom .top button{
+    background-color:var(--transparency);
+    color: #fff;
+    border: none;
+   padding: 5px;
+   border-radius: 6px;
+   margin: 0 5px;
+}
+.indicator{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.indicator li{
+    cursor: pointer;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin: 4px;
+    background-color: var(--transparency);
+}
+.indicator li.checked{
+    transform: scale(1.5);
+    background-color: #fff;
+}
 </style>

@@ -78,7 +78,8 @@ const list=reactive([
     color: #18191c;
 }
 .item a.searchpage,
-.item a.playpage
+.item a.playpage,
+.item a.spacepage
 {
     color: #18191c;
 }
