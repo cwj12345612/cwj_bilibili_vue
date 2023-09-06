@@ -1,4 +1,6 @@
-// 静态路由 不用从后台获取
+
+
+//#region   静态路由 不用从后台获取
 
 const main= [
     {
@@ -35,9 +37,21 @@ const spacepage={
     name:'spacepage',
     component:()=>import('@/views/space')
 }
+//#endregion
+
+// #region 开发文档路由 正常使用时删除
+const dev=[
+    {
+        path:'/admindev',
+        name:'admindev',
+        component:()=>import('@/AdiminDev')
+    }
+]
+//  #endregion
 const routes=[
     ...main,
     ...category,
     spacepage,
+    ...dev
 ]
 export default routes
