@@ -9,7 +9,7 @@
         </div>
         <ul class="list">
 
-            <li  v-for="index in 10">
+            <li  v-for="index in 14">
                 <div class="img">
                   <a href="#">
                     <img src="@\assets\images\spacepage\homepage\coin1.webp" alt="">

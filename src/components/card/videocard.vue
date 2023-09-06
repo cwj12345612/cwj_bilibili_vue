@@ -22,7 +22,7 @@
         <a class="title" href="/play">
             {{ mock('@cword(4,60)') }}
         </a>
-        <a class="info">
+        <a class="info" href="/space">
             <i class="colourless UPzhu"></i>
             <span>{{ mock('@cword(2,7)') }}</span>
             <span>·</span>

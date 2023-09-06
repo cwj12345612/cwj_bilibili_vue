@@ -157,4 +157,7 @@ font-size: 18px;
     background: none;
     border: none;
 }
+.desc .input input::placeholder{
+    color: #e6e7e8;
+}
 </style>

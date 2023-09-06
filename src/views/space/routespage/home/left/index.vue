@@ -32,7 +32,7 @@ const mock=(str)=>{return Mock.mock(str)}
 <style scoped>
 div.left{
     width: 68%;
-    height: 1000px;
+    /* height: 1000px; */
     background-color: burlywood;
     border: 1px solid #eeeeee;
     border-radius: 8px;

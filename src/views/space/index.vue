@@ -34,7 +34,7 @@ const mock = (str) => { return Mock.mock(str) }
 #spacepage {
 
 
-    height: 1000px;
+    /* height: 1000px; */
     background-color: orange;
     display: flex;
     flex-direction: column;

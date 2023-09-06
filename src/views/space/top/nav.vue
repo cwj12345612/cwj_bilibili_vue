@@ -10,7 +10,7 @@
     <a href="#">
        <i 
        v-if="li.icon"
-       :style="`color: ${mock('@color()')};`"
+       :style="li.style"
        :class="li.icon"></i>
        <span>{{ li.title }}</span>
     </a>
@@ -50,13 +50,13 @@ import Mock from 'mockjs'
 
 const mock=(str)=>{return Mock.mock(str)}
 const icons=[
-    {icon:'colourless shouyeweixuanzhong',title:'首页'},
-    {icon:'colourless dongtaiweixuanzhong',title:'动态'},
-    {icon:'colourless chuangzuozhongxin',title:'投稿'},
-    {icon:'colourless shoucangjia',title:'合集和列表'},
-    {icon:'colourless shoucang',title:'收藏'},
-    {icon:'colourless zhuifanshu',title:'订阅'},
-    {icon:'colourless shezhi',title:'设置'},
+    {icon:'colourless shouyeweixuanzhong',title:'首页',style:`color: ${mock('@color()')};`},
+    {icon:'colourless dongtaiweixuanzhong',title:'动态',style:`color: ${mock('@color()')};`},
+    {icon:'colourless chuangzuozhongxin',title:'投稿',style:`color: ${mock('@color()')};`},
+    {icon:'colourless shoucangjia',title:'合集和列表',style:`color: ${mock('@color()')};`},
+    {icon:'colourless shoucang',title:'收藏',style:`color: ${mock('@color()')};`},
+    {icon:'colourless zhuifanshu',title:'订阅',style:`color: ${mock('@color()')};`},
+    {icon:'colourless shezhi',title:'设置',style:`color: ${mock('@color()')};`},
     
 ]
 const rightlist=[
@@ -134,7 +134,7 @@ color: #e6e7e8;
 }
 .rightlist{
     height: 100%;
-    background-color: bisque;
+    /* background-color: bisque; */
     display: flex;
     align-items: center;
 }
@@ -148,7 +148,7 @@ color: #e6e7e8;
     justify-content: space-evenly;
 margin-right: 10px;
 }
-.rightlist li:hover h4{
+.rightlist li:hover>*{
     color: #0aaeec;
 }
 .rightlist li h4{
