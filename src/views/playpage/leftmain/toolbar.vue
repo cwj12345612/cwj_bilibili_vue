@@ -63,12 +63,13 @@ const mock = (str) => { return Mock.mock(str) }
 </script>
 <style scoped>
 .toolbar {
-    padding: 16px 0 12px 0;
+    padding: 16px 0 15px 0;
     width: 100%;
-    /* background-color: antiquewhite; */
-    background-color: #fff;
+    /* background-color: blueviolet; */
+    /* background-color: #fff; */
     display: flex;
     justify-content: space-between;
+    border-bottom: 2px solid #e6e7e8;
 }
 
 .sanlian {
