@@ -71,7 +71,7 @@ const list=reactive([
 .item a{
     color: #ffffff;
 }
-.item:hover{
+.item:has(>a:hover){
     transform: translateY(-10%);
 }
 .item a.scroll{
