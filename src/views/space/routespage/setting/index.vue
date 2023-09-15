@@ -1,15 +1,10 @@
 <template>
-<div class="left">
-<home_left_fav></home_left_fav>  
-<home_left_coin></home_left_coin>
-<home_left_subbangumi></home_left_subbangumi>
+<div class="spacepage_setting">
+    设置
 </div>
 </template>
 <script setup>
 // #region  引入组件
-import home_left_fav from './fav.vue'
-import home_left_coin from './coin.vue'
-import home_left_subbangumi from './subbangumi.vue'
 
 //  #endregion
 
@@ -32,13 +27,5 @@ const mock=(str)=>{return Mock.mock(str)}
 
 </script>
 <style scoped>
-div.left{
-    width: 68%;
-    /* height: 1000px; */
-    /* background-color: burlywood; */
-    background-color: #fff;
-    border: 1px solid #eeeeee;
-    border-radius: 8px;
-    padding: 15px  20px;
-}
+
 </style>

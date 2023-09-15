@@ -14,8 +14,10 @@ export const usepageconfigStore = defineStore('pageconfigStore', {
         pagename: undefined,
     }),
     actions: {
-        // 初始化页面宽度高度等 并监听对应js事件
-        //app组件挂载后调用
+        /**
+         * 初始化页面宽度高度等 并监听对应js事件.
+         * app组件挂载后调用
+         */
         initproperty() {
             const app = document.querySelector('#app')
             // console.log('初始化页面')
@@ -32,6 +34,13 @@ export const usepageconfigStore = defineStore('pageconfigStore', {
                 this.height = this.width
 
             })
+        },
+        /**
+         * 设置当前页面name
+         * @param {*} pagename 
+         */
+        setpagename(pagename){
+            this.pagename=pagename
         }
     },
     getters: {

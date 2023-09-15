@@ -53,7 +53,7 @@ const mock=(str)=>{return Mock.mock(str)}
     padding-bottom: 20px;
    border-bottom: 1px solid #b8c0cc;
    width: 100%;
-   background-color: chocolate;
+   /* background-color: chocolate; */
 }
 .fav .top{
    margin-bottom: 10px;

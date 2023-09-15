@@ -9,10 +9,14 @@ const router= createRouter({
 router.beforeEach((to,from,next)=>{
     const pageconfig=usepageconfigStore()
   const list= to.matched
+//  list.forEach(li=>{
+//   console.log(li.name)
+//  })
   let i;
   for( i=list.length,i>=0 ;i--;){
-   if(list[i]?.name){
-    pageconfig.pagename=to.name
+   if(list[i]?.name){  
+    // console.log('你好'+list[i].name)
+    pageconfig.setpagename(list[i].name)
    }
   }
     next()

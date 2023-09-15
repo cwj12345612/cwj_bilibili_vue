@@ -2,14 +2,17 @@
     <div id="spacepage" :style="pageconfigStore.dynamicWH({ normal: 1283, max: 1283, min: 1101 })">
         <spacepage_top></spacepage_top>
         <div class="content">
-            <spacepage_home></spacepage_home>
+            <!-- <spacepage_home></spacepage_home> -->
+            <!-- <spacepage_video></spacepage_video> -->
+            <router-view></router-view>
         </div>
     </div>
 </template>
 <script setup>
 // #region  引入组件
 import spacepage_top from './top'
-import spacepage_home from './routespage/home'
+
+
 //  #endregion
 
 // #region 引入vue pinia 路由

@@ -9,7 +9,7 @@
         </div>
         <ul class="list">
 
-            <li  v-for="index in 14">
+            <li  v-for="index in 7">
                 <div class="img">
                   <a href="#">
                     <img src="@\assets\images\spacepage\homepage\coin1.webp" alt="">
@@ -62,6 +62,8 @@ const mock=(str)=>{return Mock.mock(str)}
     margin-top: 20px;
     width: 100%;
     background-color: #fff;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #b8c0cc;
 /* height: 400px; */
 }
 

@@ -5,15 +5,16 @@
 >
 <ul class="navlist">
 <li v-for="(li,index) in icons"
-:class="index ===0 ?'checked' :undefined"
+
 >
-    <a href="#">
+    <router-link :to="li.href"
+    >
        <i 
        v-if="li.icon"
        :style="li.style"
        :class="li.icon"></i>
        <span>{{ li.title }}</span>
-    </a>
+    </router-link>
 </li>
 </ul>
 <div class="search">
@@ -50,13 +51,13 @@ import Mock from 'mockjs'
 
 const mock=(str)=>{return Mock.mock(str)}
 const icons=[
-    {icon:'colourless shouyeweixuanzhong',title:'首页',style:`color: ${mock('@color()')};`},
-    {icon:'colourless dongtaiweixuanzhong',title:'动态',style:`color: ${mock('@color()')};`},
-    {icon:'colourless chuangzuozhongxin',title:'投稿',style:`color: ${mock('@color()')};`},
-    {icon:'colourless shoucangjia',title:'合集和列表',style:`color: ${mock('@color()')};`},
-    {icon:'colourless shoucang',title:'收藏',style:`color: ${mock('@color()')};`},
-    {icon:'colourless zhuifanshu',title:'订阅',style:`color: ${mock('@color()')};`},
-    {icon:'colourless shezhi',title:'设置',style:`color: ${mock('@color()')};`},
+    {icon:'colourless shouyeweixuanzhong',title:'首页',style:`color: ${mock('@color()')};`,href:'/space/home'},
+    {icon:'colourless dongtaiweixuanzhong',title:'动态',style:`color: ${mock('@color()')};`,href:'/space/dynamic'},
+    {icon:'colourless chuangzuozhongxin',title:'投稿',style:`color: ${mock('@color()')};`,href:'/space/contribute'},
+    {icon:'colourless shoucangjia',title:'合集和列表',style:`color: ${mock('@color()')};`,href:'/space/compilations'},
+    {icon:'colourless shoucang',title:'收藏',style:`color: ${mock('@color()')};`,href:'/space/favlist'},
+    {icon:'colourless zhuifanshu',title:'订阅',style:`color: ${mock('@color()')};`,href:'/space/subscription'},
+    {icon:'colourless shezhi',title:'设置',style:`color: ${mock('@color()')};`,href:'/space/setting'},
     
 ]
 const rightlist=[
@@ -103,7 +104,7 @@ const rightlist=[
     font-size: 13px;
     color: #18191c;
 }
-.navlist li.checked{
+.navlist li:has(>a.router-link-active){
     border-bottom: 3px solid #0aaeec;
 }
 .search{
@@ -146,7 +147,7 @@ color: #e6e7e8;
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-margin-right: 10px;
+    margin-right: 10px;
 }
 .rightlist li:hover>*{
     color: #0aaeec;

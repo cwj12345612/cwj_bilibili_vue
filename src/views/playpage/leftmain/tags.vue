@@ -78,7 +78,7 @@ border-bottom: 2px solid #f1f2f3;
     height: 28px;
     padding: 0 12px;
    
-    margin-right: 5px;
+    margin-right: 8px;
 }
 li.more{
     right: 0;
