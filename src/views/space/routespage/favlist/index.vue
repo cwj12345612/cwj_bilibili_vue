@@ -1,10 +1,13 @@
 <template>
 <div class="spacepage_favlist">
-    收藏
+    <space_favlist_navlist></space_favlist_navlist>
+<space_favlist_createcard></space_favlist_createcard>
 </div>
 </template>
 <script setup>
 // #region  引入组件
+import space_favlist_navlist from './navlist.vue'
+import space_favlist_createcard from './createcard.vue'
 
 //  #endregion
 
@@ -27,5 +30,11 @@ const mock=(str)=>{return Mock.mock(str)}
 
 </script>
 <style scoped>
-
+.spacepage_favlist{
+    width: 100%;
+    display: flex;
+    /* height: 1000px; */
+    /* background-color: orangered; */
+    background-color: #fff;
+}
 </style>

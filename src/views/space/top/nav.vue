@@ -1,6 +1,6 @@
 <template>
 <div class="nav" 
-:class="pageconfigStore.scroll>(192+64)?'scroll':undefined"
+:class="pageconfigStore.scroll>(192+64)? 'scroll':undefined"
 :style="pageconfigStore.dynamicWH({ normal: 1283, max: 1283, min: 1101 })"
 >
 <ul class="navlist">
@@ -86,6 +86,7 @@ const rightlist=[
 .nav.scroll{
     position: fixed;
     top: 0;
+    z-index: 10086;
 }
 .navlist{
     /* background-color: cadetblue; */

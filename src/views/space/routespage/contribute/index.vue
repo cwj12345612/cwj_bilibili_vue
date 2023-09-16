@@ -12,7 +12,7 @@
      </router-link>
 </li>
   </ul>
-    <!-- <router-view></router-view> -->
+    <router-view></router-view>
 </div>
 </template>
 <script setup>
@@ -45,15 +45,17 @@ const list=reactive([
 </script>
 <style scoped>
 .spacepage_contribute{
-    height: 400px;
+    /* height: 1000px; */
     width: 100%;
-    background-color: blueviolet;
+    background-color: #fff;
     display: flex;
 }
 .navlist{
     background-color: #fff;
     width: 200px;
     height: 100%;
+    flex-shrink: 0;
+    flex-grow: 0;
     border-right: 2px solid #e6e7e8;
 }
 .navlist li{

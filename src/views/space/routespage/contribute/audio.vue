@@ -27,5 +27,8 @@ const mock=(str)=>{return Mock.mock(str)}
 
 </script>
 <style scoped>
-
+.contribute_audio{
+    background-color: blueviolet;
+    width: 100%;
+}
 </style>
